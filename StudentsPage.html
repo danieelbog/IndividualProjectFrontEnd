@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" href="/IndividualProject/FrontEndIndividual/CSS for Individual Project.css" />
+
+    <title>PrivateSchoolStudentsPage</title>
+</head>
+<body>
+
+
+    <header>
+        <p>Header, Logo, Search, Login Icon</p>
+    </header>
+
+    <nav>
+        <ul>
+            <a href="http://127.0.0.1:5500/IndividualProject/FrontEndIndividual/Html%20Folder/PrivateSchoolHome.html">
+                <li>Home</li>
+            </a>
+            <a href="http://127.0.0.1:5500/IndividualProject/FrontEndIndividual/Html%20Folder/CoursesPage.html">
+                <li>Courses</li>
+            </a>
+            <a href="http://127.0.0.1:5500/IndividualProject/FrontEndIndividual/Html%20Folder/StudentsPage.html">
+                <li>Students</li>
+            </a>
+            <a href="http://127.0.0.1:5500/IndividualProject/FrontEndIndividual/Html%20Folder/TrainersPage.html">
+                <li>Trainers</li>
+            </a>
+            <a href="http://127.0.0.1:5500/IndividualProject/FrontEndIndividual/Html%20Folder/AssignmentsPage.html">
+                <li>Assignments</li>
+            </a>
+            <a href="#">
+                <li>About</li>
+            </a>
+        </ul>
+    </nav>
+
+    <section class="S_euqualContainerA">
+        <div class="S_firstConstainerA">
+            <p class="S_textSection"><b>Welcome to the Students section. Here you will be able to:</b><br> <br> 1) Add Students to your Private school. <br><br> 2) See how many Students are already studying in your private school. <br><br> 3) Enroll Students to Courses. <br><br> 4) Check each Student based on the Course he is studying. <br><br> 5) See the students that belong to more than one Courses.</p>
+            </div>
+
+            <div class="S_secondContainerB">
+                <div class="S_InsideDivA">
+                    <p class="addStudents" id="addStudents" onclick="AddStudents()">Add Students to Private School</p>
+                </div>
+                <div class="S_InsideDivB">
+                    <p class="seeStudents" id="seeStudents" onclick="SeeStudents()">Check Students in Private School</p>
+                </div>  
+                <div class="S_InsideDivC">
+                    <p class="enrollStudents" id="enrollStudents" onclick="EnrollStudents()">Enroll Students to Courses</p>
+                </div>  
+                <div class="S_InsideDivD">
+                    <p class="checkStudentsPerCourse" id="checkStudentsPerCourse" onclick="CheckStudentsPerCourse()">Check Students per Course</p>
+                </div>  
+                <div class="S_InsideDivE">
+                    <p class="checkStudentsMoreThanOneCourses" id="checkStudentsMoreThanOneCourses" onclick="CheckStudentsMoreThanOneCourses()">Check student studying more than one courses</p>
+                </div>  
+            </div>
+    </section>
+
+    <section class="POPUP_addStudentsSection">
+        <div class="POPUP_addStudents" id="POPUP_addStudents">
+            <span class="POPUP_addStudents_QuitSection" id="POPUP_addStudents_QuitSection" onclick="POPUP_addStudents_QuitSection()">X</span>
+        </div>
+    </section>
+
+    <section class= "POPUP_seeStudentsSection">
+        <div class="POPUP_seeStudents" id="POPUP_seeStudents">
+            <span class="POPUP_seeStudents_QuitSection" id="POPUP_seeStudents_QuitSection" onclick="POPUP_seeStudents_QuitSection()">X</span>
+        </div>
+    </section>
+
+    <section class="POPUP_enrollStudentsSection">
+        <div class="POPUP_enrollStudents" id="POPUP_enrollStudents">
+            <span class="POPUP_enrollStudents_QuitSection" id="POPUP_enrollStudents_QuitSection" onclick="POPUP_enrollStudents_QuitSection()">X</span>
+        </div>
+    </section>
+
+    <section class= "POPUP_checkStudentsPerCourseSection">
+        <div class="POPUP_checkStudentsPerCourse" id="POPUP_checkStudentsPerCourse">
+            <span class="POPUP_checkStudentsPerCourse_QuitSection" id="POPUP_checkStudentsPerCourse_QuitSection" onclick="POPUP_checkStudentsPerCourse_QuitSection()">X</span>
+        </div>
+    </section>
+
+    <section class="POPUP_checkStudentsMoreThanOneCoursesSection">
+        <div class="POPUP_checkStudentsMoreThanOneCourses" id="POPUP_checkStudentsMoreThanOneCourses">
+            <span class="POPUP_checkStudentsMoreThanOneCourses_QuitSection" id="POPUP_checkStudentsMoreThanOneCourses_QuitSection" onclick="POPUP_checkStudentsMoreThanOneCourses_QuitSection()">X</span>
+        </div>
+    </section>
+
+    <footer>Copyright, Fb, etc</footer>    
+
+</body>
+
+<script src="/IndividualProject/FrontEndIndividual/JSForPrivateSchool.js"></script>
+
+</html>

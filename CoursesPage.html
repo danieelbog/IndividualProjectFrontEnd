@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" href="/IndividualProject/FrontEndIndividual/CSS for Individual Project.css" />
+
+    <title>PrivateSchoolCoursesPage</title>
+</head>
+<body>
+
+
+    <header>
+        <p>Header, Logo, Search, Login Icon</p>
+    </header>
+
+    <nav>
+        <ul>
+            <a href="http://127.0.0.1:5500/IndividualProject/FrontEndIndividual/Html%20Folder/PrivateSchoolHome.html">
+                <li>Home</li>
+            </a>
+            <a href="http://127.0.0.1:5500/IndividualProject/FrontEndIndividual/Html%20Folder/CoursesPage.html">
+                <li>Courses</li>
+            </a>
+            <a href="http://127.0.0.1:5500/IndividualProject/FrontEndIndividual/Html%20Folder/StudentsPage.html">
+                <li>Students</li>
+            </a>
+            <a href="http://127.0.0.1:5500/IndividualProject/FrontEndIndividual/Html%20Folder/TrainersPage.html">
+                <li>Trainers</li>
+            </a>
+            <a href="http://127.0.0.1:5500/IndividualProject/FrontEndIndividual/Html%20Folder/AssignmentsPage.html">
+                <li>Assignments</li>
+            </a>
+            <a href="#">
+                <li>About</li>
+            </a>
+        </ul>
+    </nav>
+
+    <section class="C_euqualContainerA">
+        <div class="C_firstConstainerA">
+            <p class="C_textSection"><b>Welcome to the Courses section. Here you will be able to:</b><br> <br> 1) Add Courses to your Private school. <br><br> 2) See how many Courses are already being tought in your private school.</p>
+            </div>
+
+            <div class="C_secondContainerB">
+                <div class="C_InsideDivA">
+                    <p class="addCourses" id="addCourses" onclick="addCourses()">Add Courses to Private School</p>
+                </div>
+                <div class="C_InsideDivB">
+                    <p class="seeCourses" id="seeCourses" onclick="seeCourses()">See Courses in Private School</p>
+                </div>  
+            </div>
+    </section>
+
+    <section class="POPUP_addCoursesSection">
+        <div class="POPUP_addCourses" id="POPUP_addCourses">
+            <span class="POPUPaddCourses_QuitSection" id="POPUP_addCourses_QuitSection" onclick="POPUP_addCourses_QuitSection()">X</span>
+        </div>
+    </section>
+
+    <section class= "POPUP_seeCoursesSection">
+        <div class="POPUP_seeCourses" id="POPUP_seeCourses">
+            <span class="POPUP_seeCourses_QuitSection" id="POPUP_seeCourses_QuitSection" onclick="POPUP_seeCourses_QuitSection()">X</span>
+        </div>
+    </section>
+
+    <footer>Copyright, Fb, etc</footer>    
+
+</body>
+
+<script src="/IndividualProject/FrontEndIndividual/JSForPrivateSchool.js"></script>
+
+</html>

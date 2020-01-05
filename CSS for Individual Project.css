@@ -1,0 +1,984 @@
+/* Home Page and general values Starts */
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header {
+    background-color: #2f3542;
+    overflow: hidden;
+    color: gainsboro;
+}
+
+nav {
+    background-color:#ff4757;
+    float: left;
+    height: 100vh;
+    width: 5em;
+    position: sticky;
+    display: flex;
+    text-align: center;
+    border-right: solid 1px #b4878a;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    display: flex;
+}
+
+li {
+    color: #f5f6fa;
+    position: relative;
+    left: -50%;
+    margin: 3em auto;
+    font-size: small;
+    flex-direction: column;
+}
+
+.euqualContainerA {
+    display: flex;
+    height: 20rem;
+    position: relative;
+    top: 2vh;
+    justify-content: space-evenly;
+}
+
+.firstConstainerA {
+    width: 65%;
+    box-sizing: border-box;
+    background-color: #2f3542;
+    color: #f5f6fa;
+    display: flex;
+}
+
+.textSection {
+    margin: auto;
+    padding: 2em;
+
+}
+
+.secondContainerA {
+    width: 48%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.InsideDivA {
+    background-color: #ff4757;
+    flex: 1;
+    border-bottom: solid 0.2px #f3ecec;
+    color: #f5f6fa;
+    display: flex;
+}
+
+.textInsideDivA {
+    margin: auto;
+}
+
+.InsideDivB {
+    background-color:#ff4757;
+    flex: 1;
+    border-top: solid 0.2px #f3ecec;
+    color: #f5f6fa;
+    display: flex;
+}
+
+.textInsideDivB {
+    margin: auto;
+}
+
+.equalContainerB {
+    display: flex;
+    height: 58vh;
+    position: relative;
+    top:2.6em;
+    justify-content: space-evenly;
+}
+
+.firstConstainerB {
+    background-color: #2f3542;
+    width: 65%;
+    color: #f5f6fa;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.textSectionB {
+    margin: auto;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+footer {
+    background-color: #2f3542;
+    display: flex;
+    height: 8em;
+    width: 100%;
+    position: relatives;
+    color: gainsboro;
+}
+
+/* Home Page Section Ends */
+
+/* Courses Page Section Start */
+
+.C_euqualContainerA {
+    display: flex;
+    height: 20rem;
+    position: relative;
+    top: 25vh;
+    justify-content: center;
+}
+
+.C_firstConstainerA {
+    width: 65%;
+    box-sizing: border-box;
+    background-color: #2f3542;
+    color: #f5f6fa;
+    display: flex;
+    flex-basis: 50%;
+}
+
+.C_textSection {
+    margin: auto;
+    padding: 1em;
+}
+
+.C_secondContainerB {
+    width: 35%;
+    box-sizing: border-box;
+    color: #f5f6fa;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.C_InsideDivA {
+    background-color: #ff4757;
+    flex: 1;
+    border-bottom: solid 0.2px #f3ecec;
+    color: #f5f6fa;
+    display: flex;
+}
+
+.addCourses {
+    margin: auto;
+}
+
+.C_InsideDivB {
+    background-color: #ff4757;
+    flex: 1;
+    border-bottom: solid 0.2px #f3ecec;
+    color: #f5f6fa;
+    display: flex;
+}
+
+.seeCourses {
+    margin: auto;
+
+}
+
+/* Popup Section for Courses */
+
+.POPUP_addCoursesSection {
+    display: flex;
+}
+
+.POPUP_seeCoursesSection{
+    display: flex;
+}
+
+.POPUP_addCourses {
+    background-color: aqua;
+    height: 100vh;
+    width:100%;
+    position: absolute;
+    top: 3.2em;
+    left: 52%;
+    z-index: 1;
+    display: none;
+}
+
+.POPUP_seeCourses {
+    background-color: yellow;
+    height: 100vh;
+    width:100%;
+    position: absolute;
+    top: 3.2em;
+    left: 52%;
+    z-index: 1;
+    display: none;
+}
+
+.POPUPaddCourses_QuitSection {
+    background-color: teal;
+    padding: 3px;
+    position: relative;
+    top: 0.4em;
+    left: 0.1em;
+    font-size: 17px;
+    border: violet solid;
+    border-radius: 50%;
+}
+
+.POPUP_seeCourses_QuitSection {
+    background-color: teal;
+    padding: 3px;
+    position: relative;
+    top: 0.4em;
+    left: 0.1em;
+    font-size: 17px;
+    border: violet solid;
+    border-radius: 50%;
+}
+
+
+/* Courses Page Section Ends */
+
+/* Students Page Section Start */
+
+.S_euqualContainerA {
+    display: flex;
+    height: 20rem;
+    position: relative;
+    top: 25vh;
+    justify-content: center;
+}
+
+.S_firstConstainerA {
+    width: 65%;
+    box-sizing: border-box;
+    background-color: #2f3542;
+    color: #f5f6fa;
+    display: flex;
+    flex-basis: 50%;
+}
+
+.S_textSection {
+    margin: auto;
+    padding: 1em;
+}
+
+.S_secondContainerB {
+    width: 35%;
+    box-sizing: border-box;
+    color: #f5f6fa;
+    display: flex;
+    flex-direction: column;
+    height: 35em;
+    top: -7.5em;
+    position: relative;
+}
+
+.S_InsideDivA {
+    background-color: #ff4757;
+    flex: 1;
+    border-bottom: solid 0.2px #f3ecec;
+    color: #f5f6fa;
+    display: flex;
+}
+
+.addStudents {
+    margin: auto;
+}
+
+.S_InsideDivB {
+    background-color: #ff4757;
+    flex: 1;
+    border-bottom: solid 0.2px #f3ecec;
+    color: #f5f6fa;
+    display: flex;
+}
+
+.seeStudents {
+    margin: auto;
+
+}
+
+.S_InsideDivC {
+    background-color: #ff4757;
+    flex: 1;
+    border-bottom: solid 0.2px #f3ecec;
+    color: #f5f6fa;
+    display: flex;
+}
+
+.enrollStudents {
+    margin: auto;
+
+}
+
+.S_InsideDivD {
+    background-color: #ff4757;
+    flex: 1;
+    border-bottom: solid 0.2px #f3ecec;
+    color: #f5f6fa;
+    display: flex;
+}
+
+.checkStudentsPerCourse {
+    margin: auto;
+
+}
+
+.S_InsideDivE {
+    background-color: #ff4757;
+    flex: 1;
+    border-bottom: solid 0.2px #f3ecec;
+    color: #f5f6fa;
+    display: flex;
+}
+
+.checkStudentsMoreThanOneCourses {
+    margin: auto;
+
+}
+
+/* Popup Section for Students */
+
+.POPUP_addStudentsSection {
+    display: flex;
+}
+
+.POPUP_seeStudentsSection{
+    display: flex;
+}
+
+.POPUP_enrollStudentsSection {
+    display: flex;
+}
+
+.POPUP_checkStudentsPerCourseSection{
+    display: flex;
+}
+
+.POPUP_checkStudentsMoreThanOneCoursesSection {
+    display: flex;
+}
+
+.POPUP_addStudents {
+    background-color: aqua;
+    height: 100vh;
+    width:100%;
+    position: absolute;
+    top: 3.2em;
+    left: 52%;
+    z-index: 1;
+    display: none;
+}
+
+.POPUP_seeStudents {
+    background-color: yellow;
+    height: 100vh;
+    width:100%;
+    position: absolute;
+    top: 3.2em;
+    left: 52%;
+    z-index: 1;
+    display: none;
+}
+
+.POPUP_enrollStudents {
+    background-color: aqua;
+    height: 100vh;
+    width:100%;
+    position: absolute;
+    top: 3.2em;
+    left: 52%;
+    z-index: 1;
+    display: none;
+}
+
+.POPUP_checkStudentsPerCourse {
+    background-color: yellow;
+    height: 100vh;
+    width:100%;
+    position: absolute;
+    top: 3.2em;
+    left: 52%;
+    z-index: 1;
+    display: none;
+}
+
+.POPUP_checkStudentsMoreThanOneCourses {
+    background-color: aqua;
+    height: 100vh;
+    width:100%;
+    position: absolute;
+    top: 3.2em;
+    left: 52%;
+    z-index: 1;
+    display: none;
+}
+
+.POPUP_addStudents_QuitSection {
+    background-color: teal;
+    padding: 3px;
+    position: relative;
+    top: 0.4em;
+    left: 0.1em;
+    font-size: 17px;
+    border: violet solid;
+    border-radius: 50%;
+}
+
+.POPUP_seeStudents_QuitSection {
+    background-color: teal;
+    padding: 3px;
+    position: relative;
+    top: 0.4em;
+    left: 0.1em;
+    font-size: 17px;
+    border: violet solid;
+    border-radius: 50%;
+}
+
+.POPUP_enrollStudents_QuitSection {
+    background-color: teal;
+    padding: 3px;
+    position: relative;
+    top: 0.4em;
+    left: 0.1em;
+    font-size: 17px;
+    border: violet solid;
+    border-radius: 50%;
+}
+
+.POPUP_checkStudentsPerCourse_QuitSection {
+    background-color: teal;
+    padding: 3px;
+    position: relative;
+    top: 0.4em;
+    left: 0.1em;
+    font-size: 17px;
+    border: violet solid;
+    border-radius: 50%;
+}
+
+.POPUP_checkStudentsMoreThanOneCourses_QuitSection {
+    background-color: teal;
+    padding: 3px;
+    position: relative;
+    top: 0.4em;
+    left: 0.1em;
+    font-size: 17px;
+    border: violet solid;
+    border-radius: 50%;
+}
+
+/* Students Page Section Ends */
+
+/* Trainers Page Section Start */
+
+.T_euqualContainerA {
+    display: flex;
+    height: 20rem;
+    position: relative;
+    top: 25vh;
+    justify-content: center;
+}
+
+.T_firstConstainerA {
+    width: 65%;
+    box-sizing: border-box;
+    background-color: #2f3542;
+    color: #f5f6fa;
+    display: flex;
+    flex-basis: 50%;
+}
+
+.T_textSection {
+    margin: auto;
+    padding: 1em;
+}
+
+.T_secondContainerB {
+    width: 35%;
+    box-sizing: border-box;
+    color: #f5f6fa;
+    display: flex;
+    flex-direction: column;
+    height: 35em;
+    top: -7.5em;
+    position: relative;
+}
+
+.T_InsideDivA {
+    background-color: #ff4757;
+    flex: 1;
+    border-bottom: solid 0.2px #f3ecec;
+    color: #f5f6fa;
+    display: flex;
+}
+
+.addTrainers {
+    margin: auto;
+}
+
+.T_InsideDivB {
+    background-color: #ff4757;
+    flex: 1;
+    border-bottom: solid 0.2px #f3ecec;
+    color: #f5f6fa;
+    display: flex;
+}
+
+.seeTrainers {
+    margin: auto;
+
+}
+
+.T_InsideDivC {
+    background-color: #ff4757;
+    flex: 1;
+    border-bottom: solid 0.2px #f3ecec;
+    color: #f5f6fa;
+    display: flex;
+}
+
+.enrollTrainers {
+    margin: auto;
+
+}
+
+.T_InsideDivD {
+    background-color: #ff4757;
+    flex: 1;
+    border-bottom: solid 0.2px #f3ecec;
+    color: #f5f6fa;
+    display: flex;
+}
+
+.checkTrainersPerCourse {
+    margin: auto;
+
+}
+
+.T_InsideDivE {
+    background-color: #ff4757;
+    flex: 1;
+    border-bottom: solid 0.2px #f3ecec;
+    color: #f5f6fa;
+    display: flex;
+}
+
+.putMarks {
+    margin: auto;
+
+}
+
+/* Popup Section for Trainers */
+
+.POPUP_addTrainersSection {
+    display: flex;
+}
+
+.POPUP_seeTrainersSection{
+    display: flex;
+}
+
+.POPUP_enrollTrainersSection {
+    display: flex;
+}
+
+.POPUP_checkTrainersPerCourseSection{
+    display: flex;
+}
+
+.POPUP_putMarksSection {
+    display: flex;
+}
+
+.POPUP_addTrainers {
+    background-color: aqua;
+    height: 100vh;
+    width:100%;
+    position: absolute;
+    top: 3.2em;
+    left: 52%;
+    z-index: 1;
+    display: none;
+}
+
+.POPUP_seeTrainers {
+    background-color: yellow;
+    height: 100vh;
+    width:100%;
+    position: absolute;
+    top: 3.2em;
+    left: 52%;
+    z-index: 1;
+    display: none;
+}
+
+.POPUP_enrollTrainers {
+    background-color: aqua;
+    height: 100vh;
+    width:100%;
+    position: absolute;
+    top: 3.2em;
+    left: 52%;
+    z-index: 1;
+    display: none;
+}
+
+.POPUP_checkTrainersPerCourse {
+    background-color: yellow;
+    height: 100vh;
+    width:100%;
+    position: absolute;
+    top: 3.2em;
+    left: 52%;
+    z-index: 1;
+    display: none;
+}
+
+.POPUP_putMarks {
+    background-color: aqua;
+    height: 100vh;
+    width:100%;
+    position: absolute;
+    top: 3.2em;
+    left: 52%;
+    z-index: 1;
+    display: none;
+}
+
+.POPUP_addTrainers_QuitSection {
+    background-color: teal;
+    padding: 3px;
+    position: relative;
+    top: 0.4em;
+    left: 0.1em;
+    font-size: 17px;
+    border: violet solid;
+    border-radius: 50%;
+}
+
+.POPUP_seeTrainers_QuitSection {
+    background-color: teal;
+    padding: 3px;
+    position: relative;
+    top: 0.4em;
+    left: 0.1em;
+    font-size: 17px;
+    border: violet solid;
+    border-radius: 50%;
+}
+
+.POPUP_enrollTrainers_QuitSection {
+    background-color: teal;
+    padding: 3px;
+    position: relative;
+    top: 0.4em;
+    left: 0.1em;
+    font-size: 17px;
+    border: violet solid;
+    border-radius: 50%;
+}
+
+.POPUP_checkTrainersPerCourse_QuitSection {
+    background-color: teal;
+    padding: 3px;
+    position: relative;
+    top: 0.4em;
+    left: 0.1em;
+    font-size: 17px;
+    border: violet solid;
+    border-radius: 50%;
+}
+
+.POPUP_putMarks_QuitSection {
+    background-color: teal;
+    padding: 3px;
+    position: relative;
+    top: 0.4em;
+    left: 0.1em;
+    font-size: 17px;
+    border: violet solid;
+    border-radius: 50%;
+}
+
+/* Trainers Page Section Ends */
+
+/* Assignments Page Section Starts */
+
+.A_euqualContainerA {
+    display: flex;
+    height: 20rem;
+    position: relative;
+    top: 25vh;
+    justify-content: center;
+}
+
+.A_firstConstainerA {
+    width: 65%;
+    box-sizing: border-box;
+    background-color: #2f3542;
+    color: #f5f6fa;
+    display: flex;
+    flex-basis: 50%;
+}
+
+.A_textSection {
+    margin: auto;
+    padding: 1em;
+}
+
+.A_secondContainerB {
+    width: 35%;
+    box-sizing: border-box;
+    color: #f5f6fa;
+    display: flex;
+    flex-direction: column;
+    height: 35em;
+    top: -7.5em;
+    position: relative;
+}
+
+.A_InsideDivA {
+    background-color: #ff4757;
+    flex: 1;
+    border-bottom: solid 0.2px #f3ecec;
+    color: #f5f6fa;
+    display: flex;
+}
+
+.addAssignments {
+    margin: auto;
+}
+
+.A_InsideDivB {
+    background-color: #ff4757;
+    flex: 1;
+    border-bottom: solid 0.2px #f3ecec;
+    color: #f5f6fa;
+    display: flex;
+}
+
+.seeAssignments {
+    margin: auto;
+
+}
+
+.A_InsideDivC {
+    background-color: #ff4757;
+    flex: 1;
+    border-bottom: solid 0.2px #f3ecec;
+    color: #f5f6fa;
+    display: flex;
+}
+
+.enrollAssignmnets {
+    margin: auto;
+
+}
+
+.A_InsideDivD {
+    background-color: #ff4757;
+    flex: 1;
+    border-bottom: solid 0.2px #f3ecec;
+    color: #f5f6fa;
+    display: flex;
+}
+
+.checkAssignmnetPerCourse {
+    margin: auto;
+
+}
+
+.A_InsideDivE {
+    background-color: #ff4757;
+    flex: 1;
+    border-bottom: solid 0.2px #f3ecec;
+    color: #f5f6fa;
+    display: flex;
+}
+
+.enrollAssignmentsToStudents {
+    margin: auto;
+
+}
+
+.A_InsideDivF {
+    background-color: #ff4757;
+    flex: 1;
+    border-bottom: solid 0.2px #f3ecec;
+    color: #f5f6fa;
+    display: flex;
+}
+
+.checkAssignmentsPerStudentPerCourse {
+    margin: auto;
+    padding: 1em;
+
+}
+
+/* Popup Section for Assignments */
+
+.POPUP_addAssignmentsSection {
+    display: flex;
+}
+
+.POPUP_seeAssignmentsSection{
+    display: flex;
+}
+
+.POPUP_enrollAssignmnetsSection {
+    display: flex;
+}
+
+.POPUP_checkAssignmnetPerCourseSection{
+    display: flex;
+}
+
+.POPUP_enrollAssignmentsToStudentsSection {
+    display: flex;
+}
+
+.POPUP_checkAssignmentsPerStudentPerCourseSection{
+    display: flex;
+}
+
+.POPUP_addAssignments {
+    background-color: aqua;
+    height: 100vh;
+    width:100%;
+    position: absolute;
+    top: 3.2em;
+    left: 52%;
+    z-index: 1;
+    display: none;
+}
+
+.POPUP_seeAssignments {
+    background-color: yellow;
+    height: 100vh;
+    width:100%;
+    position: absolute;
+    top: 3.2em;
+    left: 52%;
+    z-index: 1;
+    display: none;
+}
+
+.POPUP_enrollAssignmnets {
+    background-color: aqua;
+    height: 100vh;
+    width:100%;
+    position: absolute;
+    top: 3.2em;
+    left: 52%;
+    z-index: 1;
+    display: none;
+}
+
+.POPUP_checkAssignmnetPerCourse {
+    background-color: yellow;
+    height: 100vh;
+    width:100%;
+    position: absolute;
+    top: 3.2em;
+    left: 52%;
+    z-index: 1;
+    display: none;
+}
+
+.POPUP_enrollAssignmentsToStudents {
+    background-color: aqua;
+    height: 100vh;
+    width:100%;
+    position: absolute;
+    top: 3.2em;
+    left: 52%;
+    z-index: 1;
+    display: none;
+}
+
+.POPUP_checkAssignmentsPerStudentPerCourse {
+    background-color: yellow;
+    height: 100vh;
+    width:100%;
+    position: absolute;
+    top: 3.2em;
+    left: 52%;
+    z-index: 1;
+    display: none;
+}
+
+.POPUP_addAssignments_QuitSection {
+    background-color: teal;
+    padding: 3px;
+    position: relative;
+    top: 0.4em;
+    left: 0.1em;
+    font-size: 17px;
+    border: violet solid;
+    border-radius: 50%;
+}
+
+.POPUP_seeAssignments_QuitSection {
+    background-color: teal;
+    padding: 3px;
+    position: relative;
+    top: 0.4em;
+    left: 0.1em;
+    font-size: 17px;
+    border: violet solid;
+    border-radius: 50%;
+}
+
+.POPUP_enrollAssignmnets_QuitSection {
+    background-color: teal;
+    padding: 3px;
+    position: relative;
+    top: 0.4em;
+    left: 0.1em;
+    font-size: 17px;
+    border: violet solid;
+    border-radius: 50%;
+}
+
+.POPUP_checkAssignmnetPerCourse_QuitSection {
+    background-color: teal;
+    padding: 3px;
+    position: relative;
+    top: 0.4em;
+    left: 0.1em;
+    font-size: 17px;
+    border: violet solid;
+    border-radius: 50%;
+}
+
+.POPUP_enrollAssignmentsToStudents_QuitSection {
+    background-color: teal;
+    padding: 3px;
+    position: relative;
+    top: 0.4em;
+    left: 0.1em;
+    font-size: 17px;
+    border: violet solid;
+    border-radius: 50%;
+}
+
+.POPUP_POPUP_checkAssignmentsPerStudentPerCourse_QuitSection {
+    background-color: teal;
+    padding: 3px;
+    position: relative;
+    top: 0.4em;
+    left: 0.1em;
+    font-size: 17px;
+    border: violet solid;
+    border-radius: 50%;
+}
+
+/* Assignments Page Section Ends */

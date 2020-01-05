@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" href="/IndividualProject/FrontEndIndividual/CSS for Individual Project.css" />
+
+    <title>PrivateSchoolTrainersPage</title>
+</head>
+<body>
+
+
+    <header>
+        <p>Header, Logo, Search, Login Icon</p>
+    </header>
+
+    <nav>
+        <ul>
+            <a href="http://127.0.0.1:5500/IndividualProject/FrontEndIndividual/Html%20Folder/PrivateSchoolHome.html">
+                <li>Home</li>
+            </a>
+            <a href="http://127.0.0.1:5500/IndividualProject/FrontEndIndividual/Html%20Folder/CoursesPage.html">
+                <li>Courses</li>
+            </a>
+            <a href="http://127.0.0.1:5500/IndividualProject/FrontEndIndividual/Html%20Folder/StudentsPage.html">
+                <li>Students</li>
+            </a>
+            <a href="http://127.0.0.1:5500/IndividualProject/FrontEndIndividual/Html%20Folder/TrainersPage.html">
+                <li>Trainers</li>
+            </a>
+            <a href="http://127.0.0.1:5500/IndividualProject/FrontEndIndividual/Html%20Folder/AssignmentsPage.html">
+                <li>Assignments</li>
+            </a>
+            <a href="#">
+                <li>About</li>
+            </a>
+        </ul>
+    </nav>
+
+    <section class="T_euqualContainerA">
+        <div class="T_firstConstainerA">
+            <p class="T_textSection"><b>Welcome to the Trainers section. Here you will be able to:</b><br> <br> 1) Add Trainers to your Private school. <br><br> 2) See how many trainers are already working in your private school. <br><br> 3) Enroll Trainers to Courses. <br><br> 4) Check each Trainer based on the Course he is teaching. <br><br> 5) Put Marks for Assginments of each Student based on Trainers feedback.</p>
+            </div>
+
+            <div class="T_secondContainerB">
+                <div class="T_InsideDivA">
+                    <p class="addTrainers" id="addTrainers" onclick="AddTrainer()">Add Trainers to Private School</p>
+                </div>
+                <div class="T_InsideDivB">
+                    <p class="seeTrainers" id="seeTrainers" onclick="SeeTrainers()">See Trainers in Private School</p>
+                </div>  
+                <div class="T_InsideDivC">
+                    <p class="enrollTrainers" id="enrollTrainers" onclick="EnrollTrainers()">Enroll Trainers to Courses</p>
+                </div>  
+                <div class="T_InsideDivD">
+                    <p class="checkTrainersPerCourse" id="checkTrainersPerCourse" onclick="CheckTrainersPerCourse()">Check Trainers per Course</p>
+                </div>  
+                <div class="T_InsideDivE">
+                    <p class="putMarks" id="putMarks" onclick="PutMarks()">Put Marks to Assignments</p>
+                </div>  
+            </div>
+    </section>
+
+    <section class="POPUP_addTrainersSection">
+        <div class="POPUP_addTrainers" id="POPUP_addTrainers">
+            <span class="POPUP_addTrainers_QuitSection" id="POPUP_addTrainers_QuitSection" onclick="POPUP_addTrainers_QuitSection()">X</span>
+        </div>
+    </section>
+
+    <section class= "POPUP_seeTrainersSection">
+        <div class="POPUP_seeTrainers" id="POPUP_seeTrainers">
+            <span class="POPUP_seeTrainers_QuitSection" id="POPUP_seeTrainers_QuitSection" onclick="POPUP_seeTrainers_QuitSection()">X</span>
+        </div>
+    </section>
+
+    <section class="POPUP_enrollTrainersSection">
+        <div class="POPUP_enrollTrainers" id="POPUP_enrollTrainers">
+            <span class="POPUP_enrollTrainers_QuitSection" id="POPUP_enrollTrainers_QuitSection" onclick="POPUP_enrollTrainers_QuitSection()">X</span>
+        </div>
+    </section>
+
+    <section class= "POPUP_checkTrainersPerCourseSection">
+        <div class="POPUP_checkTrainersPerCourse" id="POPUP_checkTrainersPerCourse">
+            <span class="POPUP_checkTrainersPerCourse_QuitSection" id="POPUP_checkTrainersPerCourse_QuitSection" onclick="POPUP_checkTrainersPerCourse_QuitSection()">X</span>
+        </div>
+    </section>
+
+    <section class="POPUP_putMarksSection">
+        <div class="POPUP_putMarks" id="POPUP_putMarks">
+            <span class="POPUP_putMarks_QuitSection" id="POPUP_putMarks_QuitSection" onclick="POPUP_putMarks_QuitSection()">X</span>
+        </div>
+    </section>
+
+    <footer>Copyright, Fb, etc</footer>    
+
+</body>
+
+<script src="/IndividualProject/FrontEndIndividual/JSForPrivateSchool.js"></script>
+
+</html>
