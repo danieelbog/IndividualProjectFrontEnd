@@ -9,7 +9,7 @@
 
     <title>PrivateSchoolCoursesPage</title>
 </head>
-<body>
+<body id="courseBody">
 
 
     <header>
@@ -39,11 +39,13 @@
         </ul>
     </nav>
 
+    <!-- Container where it is described what the user can do at the course page -->
     <section class="C_euqualContainerA">
         <div class="C_firstConstainerA">
-            <p class="C_textSection"><b>Welcome to the Courses section. Here you will be able to:</b><br> <br> 1) Add Courses to your Private school. <br><br> 2) See how many Courses are already being tought in your private school.</p>
+            <p class="C_textSection"><b>Welcome to the Courses section. Here you will be able to:</b><br> <br> 1) Add Courses to your Private school. <br><br> 2) Check and Edit the Courses are already being tought in your private school.</p>
             </div>
 
+            <!-- Container with 2 options that are needed for the course page -->
             <div class="C_secondContainerB">
                 <div class="C_InsideDivA">
                     <p class="addCourses" id="addCourses" onclick="addCourses()">Add Courses to Private School</p>
@@ -54,22 +56,66 @@
             </div>
     </section>
 
+    <!-- First popup for the course page -->
     <section class="POPUP_addCoursesSection">
         <div class="POPUP_addCourses" id="POPUP_addCourses">
-            <span class="POPUPaddCourses_QuitSection" id="POPUP_addCourses_QuitSection" onclick="POPUP_addCourses_QuitSection()">X</span>
+            <span class="POPUPaddCourses_QuitSection" id="POPUP_addCourses_QuitSection" onclick="POPUP_addCourses_QuitSection()">
+                <i class="far fa-times-circle" id="quitImage"></i>
+                <input type="submit" class="submitCourse" value="Submit New Course"/>  
+            </span>
+            
+            <!-- Block of code for the filling form at the popup window -->
+            <div class="containerDivForCourseForm">
+                <div class="courseForm" id="courseForm">
+                    <!-- Course Title -->
+                    <input type="text" name="courseTitle" required autocomplete="off"/>
+                    <label for="CourseTitle" class="labelTitle">
+                        <span class="contentName">Course Title</span>
+                    </label>
+                    <!-- Course Stream -->
+                    <input type="text" name="courseStream" required autocomplete="off"/>
+                    <label for="courseStream" class="labelStream">
+                        <span class="contentName">Course Stream</span>
+                    </label>
+                    <!-- Course Type -->
+                    <input type="text" name="courseType" required autocomplete="off"/>
+                    <label for="courseType" class="labelType">
+                        <span class="contentName">Course Stream</span>
+                    </label>
+                    <!-- Course Starting Date -->
+                    <input type="date" name="startingDate" required autocomplete="off"/>
+                    <label for="startingDate" class="labelStartDate">
+                        <span class="contentName">Starting Date</span>
+                    </label>
+                    <!-- Course Ending Date -->
+                    <input type="date" name="endingDate" required autocomplete="off"/>
+                    <label for="endingDate" class="labelEndDate">
+                        <span class="contentName">Ending Date</span>
+                    </label>                                      
+                </div>
+            </div>
+            
+            <!-- Block of code for the Mask Section (black window when the popup is activated) -->
         </div>
+        <div class="maskSection" id="maskSectionA" onclick="POPUP_addCourses_QuitSection()"></div>
     </section>
-
+    <!-- Second popup for the course page -->
     <section class= "POPUP_seeCoursesSection">
         <div class="POPUP_seeCourses" id="POPUP_seeCourses">
             <span class="POPUP_seeCourses_QuitSection" id="POPUP_seeCourses_QuitSection" onclick="POPUP_seeCourses_QuitSection()">X</span>
         </div>
+
+        <!-- Block of code for the Mask Section (black window when the popup is activated) -->
+        <div class="maskSection" id="maskSectionB" onclick="POPUP_seeCourses_QuitSection()"></div>
     </section>
 
+    <!-- Footer Section -->
     <footer>Copyright, Fb, etc</footer>    
 
 </body>
 
 <script src="/IndividualProject/FrontEndIndividual/JSForPrivateSchool.js"></script>
+<script src="https://kit.fontawesome.com/1703bdbf18.js" crossorigin="anonymous"></script>
+
 
 </html>

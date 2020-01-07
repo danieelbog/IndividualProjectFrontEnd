@@ -41,7 +41,7 @@
 
     <section class="S_euqualContainerA">
         <div class="S_firstConstainerA">
-            <p class="S_textSection"><b>Welcome to the Students section. Here you will be able to:</b><br> <br> 1) Add Students to your Private school. <br><br> 2) See how many Students are already studying in your private school. <br><br> 3) Enroll Students to Courses. <br><br> 4) Check each Student based on the Course he is studying. <br><br> 5) See the students that belong to more than one Courses.</p>
+            <p class="S_textSection"><b>Welcome to the Students section. Here you will be able to:</b><br> <br> 1) Add Students to your Private school. <br><br> 2) Check and Edit the Students who already are studying in your private school. <br><br> 3) Enroll Students to Courses. <br><br> 4) Check and Edit each Student based on the Course he is studying. <br><br> 5) Check and Edit the students that belong to more than one Courses.</p>
             </div>
 
             <div class="S_secondContainerB">
@@ -67,30 +67,35 @@
         <div class="POPUP_addStudents" id="POPUP_addStudents">
             <span class="POPUP_addStudents_QuitSection" id="POPUP_addStudents_QuitSection" onclick="POPUP_addStudents_QuitSection()">X</span>
         </div>
+        <div class="maskSection" id="maskSectionA" onclick="POPUP_addStudents_QuitSection()"></div>
     </section>
 
     <section class= "POPUP_seeStudentsSection">
         <div class="POPUP_seeStudents" id="POPUP_seeStudents">
             <span class="POPUP_seeStudents_QuitSection" id="POPUP_seeStudents_QuitSection" onclick="POPUP_seeStudents_QuitSection()">X</span>
         </div>
+        <div class="maskSection" id="maskSectionB" onclick="POPUP_seeStudents_QuitSection()"></div>
     </section>
 
     <section class="POPUP_enrollStudentsSection">
         <div class="POPUP_enrollStudents" id="POPUP_enrollStudents">
             <span class="POPUP_enrollStudents_QuitSection" id="POPUP_enrollStudents_QuitSection" onclick="POPUP_enrollStudents_QuitSection()">X</span>
         </div>
+        <div class="maskSection" id="maskSectionC" onclick="POPUP_enrollStudents_QuitSection()"></div>
     </section>
 
     <section class= "POPUP_checkStudentsPerCourseSection">
         <div class="POPUP_checkStudentsPerCourse" id="POPUP_checkStudentsPerCourse">
             <span class="POPUP_checkStudentsPerCourse_QuitSection" id="POPUP_checkStudentsPerCourse_QuitSection" onclick="POPUP_checkStudentsPerCourse_QuitSection()">X</span>
         </div>
+        <div class="maskSection" id="maskSectionD" onclick="POPUP_checkStudentsPerCourse_QuitSection()"></div>
     </section>
 
     <section class="POPUP_checkStudentsMoreThanOneCoursesSection">
         <div class="POPUP_checkStudentsMoreThanOneCourses" id="POPUP_checkStudentsMoreThanOneCourses">
             <span class="POPUP_checkStudentsMoreThanOneCourses_QuitSection" id="POPUP_checkStudentsMoreThanOneCourses_QuitSection" onclick="POPUP_checkStudentsMoreThanOneCourses_QuitSection()">X</span>
         </div>
+        <div class="maskSection" id="maskSectionE" onclick="POPUP_checkStudentsMoreThanOneCourses_QuitSection()"></div>
     </section>
 
     <footer>Copyright, Fb, etc</footer>    

@@ -41,7 +41,7 @@
 
     <section class="T_euqualContainerA">
         <div class="T_firstConstainerA">
-            <p class="T_textSection"><b>Welcome to the Trainers section. Here you will be able to:</b><br> <br> 1) Add Trainers to your Private school. <br><br> 2) See how many trainers are already working in your private school. <br><br> 3) Enroll Trainers to Courses. <br><br> 4) Check each Trainer based on the Course he is teaching. <br><br> 5) Put Marks for Assginments of each Student based on Trainers feedback.</p>
+            <p class="T_textSection"><b>Welcome to the Trainers section. Here you will be able to:</b><br> <br> 1) Add Trainers to your Private school. <br><br> 2) Check and Edit how many trainers are already working in your private school. <br><br> 3) Enroll Trainers to Courses. <br><br> 4) Check and Edit each Trainer based on the Course he is teaching. <br><br> 5) Put Marks for Assginments of each Student based on Trainers feedback.</p>
             </div>
 
             <div class="T_secondContainerB">
@@ -49,7 +49,7 @@
                     <p class="addTrainers" id="addTrainers" onclick="AddTrainer()">Add Trainers to Private School</p>
                 </div>
                 <div class="T_InsideDivB">
-                    <p class="seeTrainers" id="seeTrainers" onclick="SeeTrainers()">See Trainers in Private School</p>
+                    <p class="seeTrainers" id="seeTrainers" onclick="SeeTrainers()">Check Trainers in Private School</p>
                 </div>  
                 <div class="T_InsideDivC">
                     <p class="enrollTrainers" id="enrollTrainers" onclick="EnrollTrainers()">Enroll Trainers to Courses</p>
@@ -67,30 +67,35 @@
         <div class="POPUP_addTrainers" id="POPUP_addTrainers">
             <span class="POPUP_addTrainers_QuitSection" id="POPUP_addTrainers_QuitSection" onclick="POPUP_addTrainers_QuitSection()">X</span>
         </div>
+        <div class="maskSection" id="maskSectionA" onclick="POPUP_addTrainers_QuitSection()"></div>
     </section>
 
     <section class= "POPUP_seeTrainersSection">
         <div class="POPUP_seeTrainers" id="POPUP_seeTrainers">
             <span class="POPUP_seeTrainers_QuitSection" id="POPUP_seeTrainers_QuitSection" onclick="POPUP_seeTrainers_QuitSection()">X</span>
         </div>
+        <div class="maskSection" id="maskSectionB" onclick="POPUP_seeTrainers_QuitSection()"></div>
     </section>
 
     <section class="POPUP_enrollTrainersSection">
         <div class="POPUP_enrollTrainers" id="POPUP_enrollTrainers">
             <span class="POPUP_enrollTrainers_QuitSection" id="POPUP_enrollTrainers_QuitSection" onclick="POPUP_enrollTrainers_QuitSection()">X</span>
         </div>
+        <div class="maskSection" id="maskSectionC" onclick="POPUP_enrollTrainers_QuitSection()"></div>
     </section>
 
     <section class= "POPUP_checkTrainersPerCourseSection">
         <div class="POPUP_checkTrainersPerCourse" id="POPUP_checkTrainersPerCourse">
             <span class="POPUP_checkTrainersPerCourse_QuitSection" id="POPUP_checkTrainersPerCourse_QuitSection" onclick="POPUP_checkTrainersPerCourse_QuitSection()">X</span>
         </div>
+        <div class="maskSection" id="maskSectionD" onclick="POPUP_checkTrainersPerCourse_QuitSection()"></div>
     </section>
 
     <section class="POPUP_putMarksSection">
         <div class="POPUP_putMarks" id="POPUP_putMarks">
             <span class="POPUP_putMarks_QuitSection" id="POPUP_putMarks_QuitSection" onclick="POPUP_putMarks_QuitSection()">X</span>
         </div>
+        <div class="maskSection" id="maskSectionE" onclick="POPUP_putMarks_QuitSection()"></div>
     </section>
 
     <footer>Copyright, Fb, etc</footer>    
