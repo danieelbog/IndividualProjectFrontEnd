@@ -20,6 +20,7 @@ body {
   left: 5.04em;
   opacity: 0.7;
   display: none;
+  animation: popupMaskAnimation 0.5s;
 }
 
 /* Scroll Bar Animation */
@@ -44,6 +45,7 @@ header {
   background-color: #2f3542;
   overflow: hidden;
   color: gainsboro;
+  animation: slideFromLeft ease-out 0.8s;
 }
 
 nav {
@@ -55,6 +57,7 @@ nav {
   display: flex;
   text-align: center;
   border-right: solid 1px #b4878a;
+  animation: slideFromLeft ease-out 0.8s;
 }
 
 ul {
@@ -81,6 +84,7 @@ li {
   position: relative;
   top: 2vh;
   justify-content: space-evenly;
+  animation: ease-out 1.5s popupAnimation;
 }
 
 .firstConstainerA {
@@ -101,6 +105,7 @@ li {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  
 }
 
 .InsideDivA {
@@ -133,6 +138,7 @@ li {
   position: relative;
   top: 2.6em;
   justify-content: space-evenly;
+  animation: ease-out 1.5s popupAnimation;
 }
 
 .firstConstainerB {
@@ -156,6 +162,7 @@ footer {
   width: 100%;
   position: relatives;
   color: gainsboro;
+  animation: slideFromLeft ease-out 0.8s;
 }
 
 /* Home Page Section Ends */
@@ -168,6 +175,7 @@ footer {
   position: relative;
   top: 25vh;
   justify-content: center;
+  animation: ease-out 1.5s popupAnimation;
 }
 
 .C_firstConstainerA {
@@ -236,20 +244,7 @@ footer {
   right: 0%;
   z-index: 2;
   display: none;
-  animation: popupAnimation 0.7s;
-}
-
-.POPUP_seeCourses {
-  background-color: aqua;
-  height: 100vh;
-  width: 30em;
-  position: absolute;
-  top: 3.2em;
-  right: 0%;
-  z-index: 2;
-  display: none;
-  animation: popupAnimation 0.7s;
-
+  animation: slideFromRight 0.7s;
 }
 
 /* quit section for Add Course */
@@ -273,16 +268,39 @@ footer {
   color: #ff4757;
 }
 
+/* See courses Section */
+.POPUP_seeCourses {
+  background-color: white;
+  height: 100vh;
+  width: 30em;
+  position: absolute;
+  top: 3.2em;
+  right: 0%;
+  z-index: 2;
+  display: none;
+  animation: slideFromRight 0.7s;
+
+}
+
 /* quit section for See Course */
 .POPUP_seeCourses_QuitSection {
-  background-color: teal;
-  padding: 3px;
   position: relative;
-  top: 0.4em;
-  left: 0.1em;
+  top: 0.8em;
+  left: 0.6em;
   font-size: 17px;
-  border: violet solid;
   border-radius: 50%;
+}
+
+.POPUP_seeCourses_QuitSection .fa-times-circle {
+  font-size: 30px;
+  border-radius: 50%;
+  color: #2f3542;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.POPUP_seeCourses_QuitSection .fa-times-circle:hover {
+  color: #ff4757;
 }
 
 /* Data Input tables for Course Page */
@@ -511,6 +529,7 @@ footer {
   position: relative;
   top: 25vh;
   justify-content: center;
+  animation: ease-out 1.5s popupAnimation;
 }
 
 .S_firstConstainerA {
@@ -621,8 +640,9 @@ footer {
   display: flex;
 }
 
+/* Add students to Private School */
 .POPUP_addStudents {
-  background-color: aqua;
+  background-color: white;
   height: 100vh;
   width: 30em;
   position: absolute;
@@ -630,12 +650,13 @@ footer {
   right: 0%;
   z-index: 2;
   display: none;
-  animation: popupAnimation 0.7s;
+  animation: slideFromRight 0.7s;
 
 }
 
+/* Check Student in private School */
 .POPUP_seeStudents {
-  background-color: aqua;
+  background-color: white;
   height: 100vh;
   width: 30em;
   position: absolute;
@@ -643,12 +664,12 @@ footer {
   right: 0%;
   z-index: 2;
   display: none;
-  animation: popupAnimation 0.7s;
-
+  animation: slideFromRight 0.7s;
 }
 
+/* Enroll Students to Courses */
 .POPUP_enrollStudents {
-  background-color: aqua;
+  background-color: white;
   height: 100vh;
   width: 30em;
   position: absolute;
@@ -656,12 +677,128 @@ footer {
   right: 0%;
   z-index: 2;
   display: none;
-  animation: popupAnimation 0.7s;
+  animation: slideFromRight 0.7s;
 
 }
 
+/* Section for Print List of students in Private School */
+.studentsList {
+  top: 3em;
+  position: absolute;
+  display: flexbox;
+  flex-direction: column;
+  background-color: white;
+  height: 70%;
+  width: auto;
+  overflow: scroll;
+  margin: 2em;
+  left: 4.5em;
+  justify-content: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.checkStudent1 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+} 
+
+.checkStudent2 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+
+} 
+
+.checkStudent3 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+
+} 
+
+.checkStudent4 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+
+} 
+
+.checkStudent5 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+} 
+
+.checkStudent6 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+  animation: popupAnimation 0.3s ease-out;
+}
+
+#checkStudent {
+  cursor: pointer;
+}
+
+#checkStudent:hover {
+  -webkit-box-shadow: inset 0px 0px 0px 0px rgba(255,71,87,1);
+  -moz-box-shadow: inset 0px 0px 1px -1px rgba(255,71,87,1);
+  box-shadow: inset 3px 0px 1px -1px rgba(255,71,87,1);
+  opacity: 0.8;
+  border: none;
+}
+
+.listOfStudentsH1 {
+  margin-bottom: 1em;
+  position: relative;
+  top: -1em;
+  color: #2f3542;
+  left: -0.5em;
+  cursor: pointer;
+}
+
+.listOfStudentsH1:hover {
+  color: #ff4757;
+}
+
+
+/* Check Students Per Course */
 .POPUP_checkStudentsPerCourse {
-  background-color: aqua;
+  background-color: white;
   height: 100vh;
   width: 30em;
   position: absolute;
@@ -669,12 +806,12 @@ footer {
   right: 0%;
   z-index: 2;
   display: none;
-  animation: popupAnimation 0.7s;
+  animation: slideFromRight 0.7s;
 
 }
 
 .POPUP_checkStudentsMoreThanOneCourses {
-  background-color: aqua;
+  background-color: white;
   height: 100vh;
   width: 30em;
   position: absolute;
@@ -682,64 +819,216 @@ footer {
   right: 0%;
   z-index: 2;
   display: none;
-  animation: popupAnimation 0.7s;
+  animation: slideFromRight 0.7s;
 
 }
 
+/* quit section for Add Students */
 .POPUP_addStudents_QuitSection {
-  background-color: teal;
-  padding: 3px;
   position: relative;
-  top: 0.4em;
-  left: 0.1em;
+  top: 0.8em;
+  left: 0.6em;
   font-size: 17px;
-  border: violet solid;
   border-radius: 50%;
-
 }
 
+.POPUP_addStudents_QuitSection .fa-times-circle {
+  font-size: 30px;
+  border-radius: 50%;
+  color: #2f3542;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.POPUP_addStudents_QuitSection .fa-times-circle:hover {
+  color: #ff4757;
+}
+
+/* quit section for See Students */
 .POPUP_seeStudents_QuitSection {
-  background-color: teal;
-  padding: 3px;
   position: relative;
-  top: 0.4em;
-  left: 0.1em;
+  top: 0.8em;
+  left: 0.6em;
   font-size: 17px;
-  border: violet solid;
   border-radius: 50%;
 }
 
+.POPUP_seeStudents_QuitSection .fa-times-circle {
+  font-size: 30px;
+  border-radius: 50%;
+  color: #2f3542;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.POPUP_seeStudents_QuitSection .fa-times-circle:hover {
+  color: #ff4757;
+}
+
+/* quit section for Enroll Students */
 .POPUP_enrollStudents_QuitSection {
-  background-color: teal;
-  padding: 3px;
   position: relative;
-  top: 0.4em;
-  left: 0.1em;
+  top: 0.8em;
+  left: 0.6em;
   font-size: 17px;
-  border: violet solid;
   border-radius: 50%;
 }
 
+.POPUP_enrollStudents_QuitSection .fa-times-circle {
+  font-size: 30px;
+  border-radius: 50%;
+  color: #2f3542;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.POPUP_enrollStudents_QuitSection .fa-times-circle:hover {
+  color: #ff4757;
+}
+
+/* quit section for Check Students Per Course Students */
 .POPUP_checkStudentsPerCourse_QuitSection {
-  background-color: teal;
-  padding: 3px;
   position: relative;
-  top: 0.4em;
-  left: 0.1em;
+  top: 0.8em;
+  left: 0.6em;
   font-size: 17px;
-  border: violet solid;
   border-radius: 50%;
 }
 
-.POPUP_checkStudentsMoreThanOneCourses_QuitSection {
-  background-color: teal;
-  padding: 3px;
-  position: relative;
-  top: 0.4em;
-  left: 0.1em;
-  font-size: 17px;
-  border: violet solid;
+.POPUP_checkStudentsPerCourse_QuitSection .fa-times-circle {
+  font-size: 30px;
   border-radius: 50%;
+  color: #2f3542;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.POPUP_checkStudentsPerCourse_QuitSection .fa-times-circle:hover {
+  color: #ff4757;
+}
+
+/* quit section for Check Students More than one Courses */
+.POPUP_checkStudentsMoreThanOneCourses_QuitSection {
+  position: relative;
+  top: 0.8em;
+  left: 0.6em;
+  font-size: 17px;
+  border-radius: 50%;
+}
+
+.POPUP_checkStudentsMoreThanOneCourses_QuitSection .fa-times-circle {
+  font-size: 30px;
+  border-radius: 50%;
+  color: #2f3542;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.POPUP_checkStudentsMoreThanOneCourses_QuitSection .fa-times-circle:hover {
+  color: #ff4757;
+}
+
+/* Student Add Form Section */
+
+.courseForm .label_SFirstName {
+  position: absolute;
+  bottom: 78.5%;
+  left: 0%;
+  width: 111.2%;
+  height: 4em;
+  pointer-events: none;
+  border-bottom: solid black;
+}
+
+.courseForm .label_SLastName {
+  position: absolute;
+  bottom: 48.5%;
+  left: 0%;
+  width: 111.2%;
+  height: 4em;
+  pointer-events: none;
+  border-bottom: solid black;
+}
+
+.courseForm .label_SBirthday {
+  position: absolute;
+  bottom: 18.5%;
+  left: 0%;
+  width: 111.2%;
+  height: 4em;
+  pointer-events: none;
+  border-bottom: solid black;
+}
+
+.courseForm .labelFees {
+  position: absolute;
+  bottom: -10.5%;
+  left: 0%;
+  width: 111.2%;
+  height: 4em;
+  pointer-events: none;
+  border-bottom: solid black;
+}
+
+/* Animation for input Tables, i know its wierd i know this could be done better with JS BUT.....*/
+.courseForm input:focus + .label_SFirstName .contentName,
+.courseForm input:valid + .label_SFirstName .contentName {
+  transform: translateX(0%);
+  font-size: 17px;
+  height: 2.5em;
+  color: #ff4757;
+  overflow: visible;
+  transition: 0.3s;
+}
+
+.courseForm input:focus + .label_SFirstName .contentName::after,
+.courseForm input:valid + .label_SFirstName .contentName::after {
+  transform: translateY(0%);
+}
+
+.courseForm input:focus + .label_SLastName .contentName,
+.courseForm input:valid + .label_SLastName .contentName {
+  transform: translateX(0%);
+  font-size: 17px;
+  height: 2.5em;
+  color: #ff4757;
+  overflow: visible;
+  transition: 0.3s;
+}
+
+.courseForm input:focus + .label_SLastName .contentName::after,
+.courseForm input:valid + .label_SLastName .contentName::after {
+  transform: translateY(0%);
+}
+
+.courseForm input:focus + .label_SBirthday .contentName,
+.courseForm input:valid + .label_SBirthday .contentName {
+  transform: translateX(0%);
+  font-size: 17px;
+  height: 2.5em;
+  color: #ff4757;
+  overflow: visible;
+  transition: 0.3s;
+}
+
+.courseForm input:focus + .label_SBirthday .contentName::after,
+.courseForm input:valid + .label_SBirthday .contentName::after {
+  transform: translateY(0%);
+}
+
+.courseForm input:focus + .labelFees .contentName,
+.courseForm input:valid + .labelFees .contentName {
+  transform: translateX(0%);
+  font-size: 17px;
+  height: 2.5em;
+  color: #ff4757;
+  overflow: visible;
+  transition: 0.3s;
+}
+
+.courseForm input:focus + .labelFees .contentName::after,
+.courseForm input:valid + .labelFees .contentName::after {
+  transform: translateY(0%);
 }
 
 /* Students Page Section Ends */
@@ -752,6 +1041,7 @@ footer {
   position: relative;
   top: 25vh;
   justify-content: center;
+  animation: ease-out 1.5s popupAnimation;
 }
 
 .T_firstConstainerA {
@@ -862,7 +1152,7 @@ footer {
 }
 
 .POPUP_addTrainers {
-  background-color: aqua;
+  background-color: white;
   height: 100vh;
   width: 30em;
   position: absolute;
@@ -870,12 +1160,12 @@ footer {
   right: 0%;
   z-index: 2;
   display: none;
-  animation: popupAnimation 0.7s;
+  animation: slideFromRight 0.7s;
 
 }
 
 .POPUP_seeTrainers {
-  background-color: aqua;
+  background-color: white;
   height: 100vh;
   width: 30em;
   position: absolute;
@@ -883,12 +1173,12 @@ footer {
   right: 0%;
   z-index: 2;
   display: none;
-  animation: popupAnimation 0.7s;
+  animation: slideFromRight 0.7s;
 
 }
 
 .POPUP_enrollTrainers {
-  background-color: aqua;
+  background-color: white;
   height: 100vh;
   width: 30em;
   position: absolute;
@@ -896,12 +1186,12 @@ footer {
   right: 0%;
   z-index: 2;
   display: none;
-  animation: popupAnimation 0.7s;
+  animation: slideFromRight 0.7s;
 
 }
 
 .POPUP_checkTrainersPerCourse {
-  background-color: aqua;
+  background-color: white;
   height: 100vh;
   width: 30em;
   position: absolute;
@@ -909,12 +1199,12 @@ footer {
   right: 0%;
   z-index: 2;
   display: none;
-  animation: popupAnimation 0.7s;
+  animation: slideFromRight 0.7s;
 
 }
 
 .POPUP_putMarks {
-  background-color: aqua;
+  background-color: white;
   height: 100vh;
   width: 30em;
   position: absolute;
@@ -922,64 +1212,193 @@ footer {
   right: 0%;
   z-index: 2;
   display: none;
-  animation: popupAnimation 0.7s;
+  animation: slideFromRight 0.7s;
 
 }
 
+/* quit section for Add Trainers */
 .POPUP_addTrainers_QuitSection {
-  background-color: teal;
-  padding: 3px;
   position: relative;
-  top: 0.4em;
-  left: 0.1em;
+  top: 0.8em;
+  left: 0.6em;
   font-size: 17px;
-  border: violet solid;
   border-radius: 50%;
 }
 
+.POPUP_addTrainers_QuitSection .fa-times-circle {
+  font-size: 30px;
+  border-radius: 50%;
+  color: #2f3542;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.POPUP_addTrainers_QuitSection .fa-times-circle:hover {
+  color: #ff4757;
+}
+
+/* quit section for See Trainers */
 .POPUP_seeTrainers_QuitSection {
-  background-color: teal;
-  padding: 3px;
   position: relative;
-  top: 0.4em;
-  left: 0.1em;
+  top: 0.8em;
+  left: 0.6em;
   font-size: 17px;
-  border: violet solid;
   border-radius: 50%;
 }
 
+.POPUP_seeTrainers_QuitSection .fa-times-circle {
+  font-size: 30px;
+  border-radius: 50%;
+  color: #2f3542;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.POPUP_seeTrainers_QuitSection .fa-times-circle:hover {
+  color: #ff4757;
+}
+
+/* quit section for Enroll Trainers to Courses */
 .POPUP_enrollTrainers_QuitSection {
-  background-color: teal;
-  padding: 3px;
   position: relative;
-  top: 0.4em;
-  left: 0.1em;
+  top: 0.8em;
+  left: 0.6em;
   font-size: 17px;
-  border: violet solid;
   border-radius: 50%;
 }
 
+.POPUP_enrollTrainers_QuitSection .fa-times-circle {
+  font-size: 30px;
+  border-radius: 50%;
+  color: #2f3542;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.POPUP_enrollTrainers_QuitSection .fa-times-circle:hover {
+  color: #ff4757;
+}
+
+/* quit section for Check Trainers per Courses */
 .POPUP_checkTrainersPerCourse_QuitSection {
-  background-color: teal;
-  padding: 3px;
   position: relative;
-  top: 0.4em;
-  left: 0.1em;
+  top: 0.8em;
+  left: 0.6em;
   font-size: 17px;
-  border: violet solid;
   border-radius: 50%;
 }
 
+.POPUP_checkTrainersPerCourse_QuitSection .fa-times-circle {
+  font-size: 30px;
+  border-radius: 50%;
+  color: #2f3542;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.POPUP_checkTrainersPerCourse_QuitSection .fa-times-circle:hover {
+  color: #ff4757;
+}
+
+/* quit section for Put Marks */
 .POPUP_putMarks_QuitSection {
-  background-color: teal;
-  padding: 3px;
   position: relative;
-  top: 0.4em;
-  left: 0.1em;
+  top: 0.8em;
+  left: 0.6em;
   font-size: 17px;
-  border: violet solid;
   border-radius: 50%;
 }
+
+.POPUP_putMarks_QuitSection .fa-times-circle {
+  font-size: 30px;
+  border-radius: 50%;
+  color: #2f3542;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.POPUP_putMarks_QuitSection .fa-times-circle:hover {
+  color: #ff4757;
+}
+
+/* Trainer Add Form Section */
+
+.courseForm .label_TFirstName {
+  position: absolute;
+  bottom: 78.5%;
+  left: 0%;
+  width: 111.2%;
+  height: 4em;
+  pointer-events: none;
+  border-bottom: solid black;
+}
+
+.courseForm .label_TLastName {
+  position: absolute;
+  bottom: 48.5%;
+  left: 0%;
+  width: 111.2%;
+  height: 4em;
+  pointer-events: none;
+  border-bottom: solid black;
+}
+
+.courseForm .labelSubject {
+  position: absolute;
+  bottom: 18.5%;
+  left: 0%;
+  width: 111.2%;
+  height: 4em;
+  pointer-events: none;
+  border-bottom: solid black;
+}
+
+/* Animation for input Tables, i know its wierd i know this could be done better with JS BUT.....*/
+.courseForm input:focus + .label_TFirstName .contentName,
+.courseForm input:valid + .label_TFirstName .contentName {
+  transform: translateX(0%);
+  font-size: 17px;
+  height: 2.5em;
+  color: #ff4757;
+  overflow: visible;
+  transition: 0.3s;
+}
+
+.courseForm input:focus + .label_TFirstName .contentName::after,
+.courseForm input:valid + .label_TFirstName .contentName::after {
+  transform: translateY(0%);
+}
+
+.courseForm input:focus + .label_TLastName .contentName,
+.courseForm input:valid + .label_TLastName .contentName {
+  transform: translateX(0%);
+  font-size: 17px;
+  height: 2.5em;
+  color: #ff4757;
+  overflow: visible;
+  transition: 0.3s;
+}
+
+.courseForm input:focus + .label_TLastName .contentName::after,
+.courseForm input:valid + .label_TLastName .contentName::after {
+  transform: translateY(0%);
+}
+
+.courseForm input:focus + .labelSubject .contentName,
+.courseForm input:valid + .labelSubject .contentName {
+  transform: translateX(0%);
+  font-size: 17px;
+  height: 2.5em;
+  color: #ff4757;
+  overflow: visible;
+  transition: 0.3s;
+}
+
+.courseForm input:focus + .labelSubject .contentName::after,
+.courseForm input:valid + .labelSubject .contentName::after {
+  transform: translateY(0%);
+}
+
 
 /* Trainers Page Section Ends */
 
@@ -991,6 +1410,7 @@ footer {
   position: relative;
   top: 25vh;
   justify-content: center;
+  animation: ease-out 1.5s popupAnimation;
 }
 
 .A_firstConstainerA {
@@ -1118,7 +1538,7 @@ footer {
 }
 
 .POPUP_addAssignments {
-  background-color: aqua;
+  background-color: white;
   height: 100vh;
   width: 30em;
   position: absolute;
@@ -1126,12 +1546,12 @@ footer {
   right: 0%;
   z-index: 2;
   display: none;
-  animation: popupAnimation 0.7s;
+  animation: slideFromRight 0.7s;
 
 }
 
 .POPUP_seeAssignments {
-  background-color: aqua;
+  background-color: white;
   height: 100vh;
   width: 30em;
   position: absolute;
@@ -1139,11 +1559,11 @@ footer {
   right: 0%;
   z-index: 2;
   display: none;
-  animation: popupAnimation 0.7s;
+  animation: slideFromRight 0.7s;
 }
 
 .POPUP_enrollAssignmnets {
-  background-color: aqua;
+  background-color: white;
   height: 100vh;
   width: 30em;
   position: absolute;
@@ -1151,12 +1571,12 @@ footer {
   right: 0%;
   z-index: 2;
   display: none;
-  animation: popupAnimation 0.7s;
+  animation: slideFromRight 0.7s;
 
 }
 
 .POPUP_checkAssignmnetPerCourse {
-  background-color: aqua;
+  background-color: white;
   height: 100vh;
   width: 30em;
   position: absolute;
@@ -1164,12 +1584,12 @@ footer {
   right: 0%;
   z-index: 2;
   display: none;
-  animation: popupAnimation 0.7s;
+  animation: slideFromRight 0.7s;
 
 }
 
 .POPUP_enrollAssignmentsToStudents {
-  background-color: aqua;
+  background-color: white;
   height: 100vh;
   width: 30em;
   position: absolute;
@@ -1177,12 +1597,12 @@ footer {
   right: 0%;
   z-index: 2;
   display: none;
-  animation: popupAnimation 0.7s;
+  animation: slideFromRight 0.7s;
 
 }
 
 .POPUP_checkAssignmentsPerStudentPerCourse {
-  background-color: aqua;
+  background-color: white;
   height: 100vh;
   width: 30em;
   position: absolute;
@@ -1190,86 +1610,246 @@ footer {
   right: 0%;
   z-index: 2;
   display: none;
-  animation: popupAnimation 0.7s;
+  animation: slideFromRight 0.7s;
 }
 
+/* quit section for Add Assignments */
 .POPUP_addAssignments_QuitSection {
-  background-color: teal;
-  padding: 3px;
   position: relative;
-  top: 0.4em;
-  left: 0.1em;
+  top: 0.8em;
+  left: 0.6em;
   font-size: 17px;
-  border: violet solid;
   border-radius: 50%;
 }
 
+.POPUP_addAssignments_QuitSection .fa-times-circle {
+  font-size: 30px;
+  border-radius: 50%;
+  color: #2f3542;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.POPUP_addAssignments_QuitSection .fa-times-circle:hover {
+  color: #ff4757;
+}
+
+/* quit section for See Assignments */
 .POPUP_seeAssignments_QuitSection {
-  background-color: teal;
-  padding: 3px;
   position: relative;
-  top: 0.4em;
-  left: 0.1em;
+  top: 0.8em;
+  left: 0.6em;
   font-size: 17px;
-  border: violet solid;
   border-radius: 50%;
 }
 
+.POPUP_seeAssignments_QuitSection .fa-times-circle {
+  font-size: 30px;
+  border-radius: 50%;
+  color: #2f3542;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.POPUP_seeAssignments_QuitSection .fa-times-circle:hover {
+  color: #ff4757;
+}
+
+/* quit section for Enroll Assignments to Courses*/
 .POPUP_enrollAssignmnets_QuitSection {
-  background-color: teal;
-  padding: 3px;
   position: relative;
-  top: 0.4em;
-  left: 0.1em;
+  top: 0.8em;
+  left: 0.6em;
   font-size: 17px;
-  border: violet solid;
   border-radius: 50%;
 }
 
+.POPUP_enrollAssignmnets_QuitSection .fa-times-circle {
+  font-size: 30px;
+  border-radius: 50%;
+  color: #2f3542;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.POPUP_enrollAssignmnets_QuitSection .fa-times-circle:hover {
+  color: #ff4757;
+}
+
+/* quit section for Check Assignments per Courses*/
 .POPUP_checkAssignmnetPerCourse_QuitSection {
-  background-color: teal;
-  padding: 3px;
   position: relative;
-  top: 0.4em;
-  left: 0.1em;
+  top: 0.8em;
+  left: 0.6em;
   font-size: 17px;
-  border: violet solid;
   border-radius: 50%;
 }
 
+.POPUP_checkAssignmnetPerCourse_QuitSection .fa-times-circle {
+  font-size: 30px;
+  border-radius: 50%;
+  color: #2f3542;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.POPUP_checkAssignmnetPerCourse_QuitSection .fa-times-circle:hover {
+  color: #ff4757;
+}
+
+/* quit section for Enroll Assignments to Students*/
 .POPUP_enrollAssignmentsToStudents_QuitSection {
-  background-color: teal;
-  padding: 3px;
   position: relative;
-  top: 0.4em;
-  left: 0.1em;
+  top: 0.8em;
+  left: 0.6em;
   font-size: 17px;
-  border: violet solid;
   border-radius: 50%;
 }
 
-.POPUP_POPUP_checkAssignmentsPerStudentPerCourse_QuitSection {
-  background-color: teal;
-  padding: 3px;
-  position: relative;
-  top: 0.4em;
-  left: 0.1em;
-  font-size: 17px;
-  border: violet solid;
+.POPUP_enrollAssignmentsToStudents_QuitSection .fa-times-circle {
+  font-size: 30px;
   border-radius: 50%;
+  color: #2f3542;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.POPUP_enrollAssignmentsToStudents_QuitSection .fa-times-circle:hover {
+  color: #ff4757;
+}
+
+/* quit section for Check Assssignment Per Course Per Student*/
+.POPUP_checkAssignmentsPerStudentPerCourse_QuitSection {
+  position: relative;
+  top: 0.8em;
+  left: 0.6em;
+  font-size: 17px;
+  border-radius: 50%;
+}
+
+.POPUP_checkAssignmentsPerStudentPerCourse_QuitSection .fa-times-circle {
+  font-size: 30px;
+  border-radius: 50%;
+  color: #2f3542;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.POPUP_checkAssignmentsPerStudentPerCourse_QuitSection .fa-times-circle:hover {
+  color: #ff4757;
+}
+
+/* Assignment Add Form Section */
+
+.courseForm .labelassignmentTitle {
+  position: absolute;
+  bottom: 78.5%;
+  left: 0%;
+  width: 111.2%;
+  height: 4em;
+  pointer-events: none;
+  border-bottom: solid black;
+}
+
+.courseForm .labelAssignmentDescreption {
+  position: absolute;
+  bottom: 48.5%;
+  left: 0%;
+  width: 111.2%;
+  height: 4em;
+  pointer-events: none;
+  border-bottom: solid black;
+}
+
+.courseForm .labelAssignmentDeadline {
+  position: absolute;
+  bottom: 18.5%;
+  left: 0%;
+  width: 111.2%;
+  height: 4em;
+  pointer-events: none;
+  border-bottom: solid black;
+}
+
+/* Animation for input Tables, i know its wierd i know this could be done better with JS BUT.....*/
+.courseForm input:focus + .labelassignmentTitle .contentName,
+.courseForm input:valid + .labelassignmentTitle .contentName {
+  transform: translateX(0%);
+  font-size: 17px;
+  height: 2.5em;
+  color: #ff4757;
+  overflow: visible;
+  transition: 0.3s;
+}
+
+.courseForm input:focus + .labelassignmentTitle .contentName::after,
+.courseForm input:valid + .labelassignmentTitle .contentName::after {
+  transform: translateY(0%);
+}
+
+.courseForm input:focus + .labelAssignmentDescreption .contentName,
+.courseForm input:valid + .labelAssignmentDescreption .contentName {
+  transform: translateX(0%);
+  font-size: 17px;
+  height: 2.5em;
+  color: #ff4757;
+  overflow: visible;
+  transition: 0.3s;
+}
+
+.courseForm input:focus + .labelAssignmentDescreption .contentName::after,
+.courseForm input:valid + .labelAssignmentDescreption .contentName::after {
+  transform: translateY(0%);
+}
+
+.courseForm input:focus + .labelAssignmentDeadline .contentName,
+.courseForm input:valid + .labelAssignmentDeadline .contentName {
+  transform: translateX(0%);
+  font-size: 17px;
+  height: 2.5em;
+  color: #ff4757;
+  overflow: visible;
+  transition: 0.3s;
+}
+
+.courseForm input:focus + .labelAssignmentDeadline .contentName::after,
+.courseForm input:valid + .labelAssignmentDeadline .contentName::after {
+  transform: translateY(0%);
 }
 
 /* Assignments Page Section Ends */
 
-
 /* Animation Section */
 
 @keyframes popupAnimation{
-    from {opacity: 0;}
+    from {opacity: 0.7;}
     to {opacity:1 ;}
+  }
+
+  @keyframes popupMaskAnimation{
+    from {opacity: 0;}
+    to {opacity:0.7 ;}
   }
 
   @keyframes popoutAnimation{
     from {opacity: 1;}
     to {opacity:0 ;}
+  }
+
+  @keyframes slideFromLeft{
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideFromRight{
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
   }

@@ -65,35 +65,68 @@
 
     <section class="POPUP_addTrainersSection">
         <div class="POPUP_addTrainers" id="POPUP_addTrainers">
-            <span class="POPUP_addTrainers_QuitSection" id="POPUP_addTrainers_QuitSection" onclick="POPUP_addTrainers_QuitSection()">X</span>
+            <span class="POPUP_addTrainers_QuitSection" id="POPUP_addTrainers_QuitSection" onclick="POPUP_addTrainers_QuitSection()">
+                <i class="far fa-times-circle" id="quitImage"></i>
+                <input type="submit" class="submitCourse" value="Submit New Course"/>  
+            </span>
+
+            <!-- Block of code for the filling form at the popup window -->
+            <div class="containerDivForCourseForm">
+                <div class="courseForm" id="courseForm">
+                    <!-- Trainer first name -->
+                    <input type="text" name="T_firstName" required autocomplete="off"/>
+                    <label for="T_firstName" class="label_TFirstName">
+                        <span class="contentName">First Name</span>
+                    </label>
+                    <!-- Trainer Last Name -->
+                    <input type="text" name="T_lastName" required autocomplete="off"/>
+                    <label for="T_lastName" class="label_TLastName">
+                        <span class="contentName">Last Name</span>
+                    </label>                  
+                    <!-- Trainer Subject -->
+                    <input type="text" name="trainerSubject" required autocomplete="off"/>
+                    <label for="trainerSubject" class="labelSubject">
+                        <span class="contentName">Subject</span>
+                    </label>                                                       
+                </div>
+            </div>
+
         </div>
         <div class="maskSection" id="maskSectionA" onclick="POPUP_addTrainers_QuitSection()"></div>
     </section>
 
     <section class= "POPUP_seeTrainersSection">
         <div class="POPUP_seeTrainers" id="POPUP_seeTrainers">
-            <span class="POPUP_seeTrainers_QuitSection" id="POPUP_seeTrainers_QuitSection" onclick="POPUP_seeTrainers_QuitSection()">X</span>
+            <span class="POPUP_seeTrainers_QuitSection" id="POPUP_seeTrainers_QuitSection" onclick="POPUP_seeTrainers_QuitSection()">
+                <i class="far fa-times-circle" id="quitImage"></i>
+            </span>
         </div>
         <div class="maskSection" id="maskSectionB" onclick="POPUP_seeTrainers_QuitSection()"></div>
     </section>
 
     <section class="POPUP_enrollTrainersSection">
         <div class="POPUP_enrollTrainers" id="POPUP_enrollTrainers">
-            <span class="POPUP_enrollTrainers_QuitSection" id="POPUP_enrollTrainers_QuitSection" onclick="POPUP_enrollTrainers_QuitSection()">X</span>
+            <span class="POPUP_enrollTrainers_QuitSection" id="POPUP_enrollTrainers_QuitSection" onclick="POPUP_enrollTrainers_QuitSection()">
+                <i class="far fa-times-circle" id="quitImage"></i>
+            </span>
         </div>
         <div class="maskSection" id="maskSectionC" onclick="POPUP_enrollTrainers_QuitSection()"></div>
     </section>
 
     <section class= "POPUP_checkTrainersPerCourseSection">
         <div class="POPUP_checkTrainersPerCourse" id="POPUP_checkTrainersPerCourse">
-            <span class="POPUP_checkTrainersPerCourse_QuitSection" id="POPUP_checkTrainersPerCourse_QuitSection" onclick="POPUP_checkTrainersPerCourse_QuitSection()">X</span>
+            <span class="POPUP_checkTrainersPerCourse_QuitSection" id="POPUP_checkTrainersPerCourse_QuitSection" onclick="POPUP_checkTrainersPerCourse_QuitSection()">
+                <i class="far fa-times-circle" id="quitImage"></i>
+            </span>
         </div>
         <div class="maskSection" id="maskSectionD" onclick="POPUP_checkTrainersPerCourse_QuitSection()"></div>
     </section>
 
     <section class="POPUP_putMarksSection">
         <div class="POPUP_putMarks" id="POPUP_putMarks">
-            <span class="POPUP_putMarks_QuitSection" id="POPUP_putMarks_QuitSection" onclick="POPUP_putMarks_QuitSection()">X</span>
+            <span class="POPUP_putMarks_QuitSection" id="POPUP_putMarks_QuitSection" onclick="POPUP_putMarks_QuitSection()">
+                <i class="far fa-times-circle" id="quitImage"></i>
+            </span>
         </div>
         <div class="maskSection" id="maskSectionE" onclick="POPUP_putMarks_QuitSection()"></div>
     </section>
@@ -103,5 +136,6 @@
 </body>
 
 <script src="/IndividualProject/FrontEndIndividual/JSForPrivateSchool.js"></script>
+<script src="https://kit.fontawesome.com/1703bdbf18.js" crossorigin="anonymous"></script>
 
 </html>
