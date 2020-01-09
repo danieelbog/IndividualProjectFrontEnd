@@ -282,6 +282,120 @@ footer {
 
 }
 
+/* Section for Print List of Courses in Private School PLUS GENERAL VALUES FOR THE SAME THINGS IN LISTS*/
+.coursesList {
+  top: 3em;
+  position: absolute;
+  display: flexbox;
+  flex-direction: column;
+  background-color: white;
+  height: 70%;
+  width: auto;
+  overflow: scroll;
+  margin: 2em;
+  left: 4.5em;
+  justify-content: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.checkCourse1 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+} 
+
+.checkCourse2 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+
+} 
+
+.checkCourse3 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+
+} 
+
+.checkCourse4 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+
+} 
+
+.checkCourse5 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+} 
+
+.checkCourse6 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+  animation: popupAnimation 0.3s ease-out;
+}
+
+#checkCourse {
+  cursor: pointer;
+}
+
+#checkCourse:hover {
+  -webkit-box-shadow: inset 0px 0px 0px 0px rgba(255,71,87,1);
+  -moz-box-shadow: inset 0px 0px 1px -1px rgba(255,71,87,1);
+  box-shadow: inset 3px 0px 1px -1px rgba(255,71,87,1);
+  opacity: 0.8;
+  border: none;
+}
+
+.CourseListH1 {
+  margin-bottom: 1em;
+  position: relative;
+  top: -1em;
+  color: #2f3542;
+  left: -0.5em;
+  cursor: pointer;
+}
+
+.CourseListH1:hover {
+  color: #ff4757;
+}
+
 /* quit section for See Course */
 .POPUP_seeCourses_QuitSection {
   position: relative;
@@ -667,21 +781,8 @@ footer {
   animation: slideFromRight 0.7s;
 }
 
-/* Enroll Students to Courses */
-.POPUP_enrollStudents {
-  background-color: white;
-  height: 100vh;
-  width: 30em;
-  position: absolute;
-  top: 3.2em;
-  right: 0%;
-  z-index: 2;
-  display: none;
-  animation: slideFromRight 0.7s;
 
-}
-
-/* Section for Print List of students in Private School */
+/* Section for Print List of students in Private School PLUS GENERAL VALUES FOR THE SAME THINGS IN LISTS*/
 .studentsList {
   top: 3em;
   position: absolute;
@@ -795,6 +896,19 @@ footer {
   color: #ff4757;
 }
 
+/* Enroll Students to Courses */
+.POPUP_enrollStudents {
+  background-color: white;
+  height: 100vh;
+  width: 30em;
+  position: absolute;
+  top: 3.2em;
+  right: 0%;
+  z-index: 2;
+  display: none;
+  animation: slideFromRight 0.7s;
+
+}
 
 /* Check Students Per Course */
 .POPUP_checkStudentsPerCourse {
@@ -810,6 +924,96 @@ footer {
 
 }
 
+/* Section for Print List of students per Course */
+.studentsList {
+  top: 3em;
+  position: absolute;
+  display: flexbox;
+  flex-direction: column;
+  background-color: white;
+  height: 70%;
+  width: auto;
+  overflow: scroll;
+  margin: 2em;
+  left: 4.5em;
+  justify-content: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.checkStudentPerCourse1 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+} 
+
+.checkStudentPerCourse2 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+
+} 
+
+.checkStudentPerCourse3 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+
+} 
+
+.checkStudentPerCourse4 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+
+} 
+
+.checkStudentPerCourse5 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+} 
+
+.checkStudentPerCourse6 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+  animation: popupAnimation 0.3s ease-out;
+}
+
+/* Check students enrolled in more than one courses */
 .POPUP_checkStudentsMoreThanOneCourses {
   background-color: white;
   height: 100vh;
@@ -821,6 +1025,95 @@ footer {
   display: none;
   animation: slideFromRight 0.7s;
 
+}
+
+/* Section for Print List of students enrolled in more than one Courses */
+.studentsList {
+  top: 3em;
+  position: absolute;
+  display: flexbox;
+  flex-direction: column;
+  background-color: white;
+  height: 70%;
+  width: auto;
+  overflow: scroll;
+  margin: 2em;
+  left: 4.5em;
+  justify-content: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.checkStudentMoreThanOne1 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+} 
+
+.checkStudentMoreThanOne2 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+
+} 
+
+.checkStudentMoreThanOne3 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+
+} 
+
+.checkStudentMoreThanOne4 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+
+} 
+
+.checkStudentMoreThanOne5 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+} 
+
+.checkStudentMoreThanOne6 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+  animation: popupAnimation 0.3s ease-out;
 }
 
 /* quit section for Add Students */
@@ -1151,6 +1444,7 @@ footer {
   display: flex;
 }
 
+/* Add Trainers Section */
 .POPUP_addTrainers {
   background-color: white;
   height: 100vh;
@@ -1164,6 +1458,7 @@ footer {
 
 }
 
+/* Print Trainers */
 .POPUP_seeTrainers {
   background-color: white;
   height: 100vh;
@@ -1177,6 +1472,121 @@ footer {
 
 }
 
+/* Section for Print List of Courses in Private School PLUS GENERAL VALUES FOR THE SAME THINGS IN LISTS*/
+.trainerList {
+  top: 3em;
+  position: absolute;
+  display: flexbox;
+  flex-direction: column;
+  background-color: white;
+  height: 70%;
+  width: auto;
+  overflow: scroll;
+  margin: 2em;
+  left: 4.5em;
+  justify-content: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.checkTrainer1 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+} 
+
+.checkTrainer2 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+
+} 
+
+.checkTrainer3 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+
+} 
+
+.checkTrainer4 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+
+} 
+
+.checkTrainer5 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+} 
+
+.checkTrainer6 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+  animation: popupAnimation 0.3s ease-out;
+}
+
+#checkTrainer {
+  cursor: pointer;
+}
+
+#checkTrainer:hover {
+  -webkit-box-shadow: inset 0px 0px 0px 0px rgba(255,71,87,1);
+  -moz-box-shadow: inset 0px 0px 1px -1px rgba(255,71,87,1);
+  box-shadow: inset 3px 0px 1px -1px rgba(255,71,87,1);
+  opacity: 0.8;
+  border: none;
+}
+
+.listOfTrainersH1 {
+  margin-bottom: 1em;
+  position: relative;
+  top: -1em;
+  color: #2f3542;
+  left: -0.5em;
+  cursor: pointer;
+}
+
+.listOfTrainersH1:hover {
+  color: #ff4757;
+}
+
+/* Enroll Trainer to Courses */
 .POPUP_enrollTrainers {
   background-color: white;
   height: 100vh;
@@ -1190,6 +1600,7 @@ footer {
 
 }
 
+/* Check Trainers Per Course */
 .POPUP_checkTrainersPerCourse {
   background-color: white;
   height: 100vh;
@@ -1203,6 +1614,96 @@ footer {
 
 }
 
+/* Section for Print List of Trainer per Course PLUS GENERAL VALUES FOR THE SAME THINGS IN LISTS*/
+.trainerList {
+  top: 3em;
+  position: absolute;
+  display: flexbox;
+  flex-direction: column;
+  background-color: white;
+  height: 70%;
+  width: auto;
+  overflow: scroll;
+  margin: 2em;
+  left: 4.5em;
+  justify-content: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.checkTrainerPerCourse1 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+} 
+
+.checkTrainerPerCourse2 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+
+} 
+
+.checkTrainerPerCourse3 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+
+} 
+
+.checkTrainerPerCourse4 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+
+} 
+
+.checkTrainerPerCourse5 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+} 
+
+.checkTrainerPerCourse6 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+  animation: popupAnimation 0.3s ease-out;
+}
+
+/* Put Marks To Assignments */
 .POPUP_putMarks {
   background-color: white;
   height: 100vh;
@@ -1537,6 +2038,7 @@ footer {
   display: flex;
 }
 
+/* Add Assignments */
 .POPUP_addAssignments {
   background-color: white;
   height: 100vh;
@@ -1550,6 +2052,7 @@ footer {
 
 }
 
+/* Check Assignments in private School */
 .POPUP_seeAssignments {
   background-color: white;
   height: 100vh;
@@ -1562,6 +2065,121 @@ footer {
   animation: slideFromRight 0.7s;
 }
 
+/* Section for Print List of Assignments in Private School PLUS GENERAL VALUES FOR THE SAME THINGS IN LISTS*/
+.assignmentsList {
+  top: 3em;
+  position: absolute;
+  display: flexbox;
+  flex-direction: column;
+  background-color: white;
+  height: 70%;
+  width: auto;
+  overflow: scroll;
+  margin: 2em;
+  left: 4.5em;
+  justify-content: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+#checkAssignment1 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+} 
+
+#checkAssignment2 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+
+} 
+
+#checkAssignment3 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+
+} 
+
+#checkAssignment4 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+
+} 
+
+#checkAssignment5 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+} 
+
+#checkAssignment6 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+  animation: popupAnimation 0.3s ease-out;
+}
+
+.checkAssignment {
+  cursor: pointer;
+}
+
+.checkAssignment:hover {
+  -webkit-box-shadow: inset 0px 0px 0px 0px rgba(255,71,87,1);
+  -moz-box-shadow: inset 0px 0px -1px -1px rgba(255,71,87,1);
+  box-shadow: inset 3px 0px 1px -1px rgba(255,71,87,1);
+  opacity: 0.8;
+  border: none !important;
+}
+
+.listOfAssignmentsH1 {
+  margin-bottom: 1em;
+  position: relative;
+  top: -1em;
+  color: #2f3542;
+  left: -0.5em;
+  cursor: pointer;
+}
+
+.listOfAssignmentsH1:hover {
+  color: #ff4757;
+}
+
+/* Enroll Assignments to Courses */
 .POPUP_enrollAssignmnets {
   background-color: white;
   height: 100vh;
@@ -1575,6 +2193,7 @@ footer {
 
 }
 
+/* Check Assignments Per Course Section */
 .POPUP_checkAssignmnetPerCourse {
   background-color: white;
   height: 100vh;
@@ -1588,6 +2207,96 @@ footer {
 
 }
 
+/* Section for Print List of Assignments per Course*/
+.assignmentsList {
+  top: 3em;
+  position: absolute;
+  display: flexbox;
+  flex-direction: column;
+  background-color: white;
+  height: 70%;
+  width: auto;
+  overflow: scroll;
+  margin: 2em;
+  left: 4.5em;
+  justify-content: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+#checkAssignmentPerCourse1 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+} 
+
+#checkAssignmentPerCourse2 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+
+} 
+
+#checkAssignmentPerCourse3 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+
+} 
+
+#checkAssignmentPerCourse4 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+
+} 
+
+#checkAssignmentPerCourse5 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+} 
+
+#checkAssignmentPerCourse6 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+  animation: popupAnimation 0.3s ease-out;
+}
+
+/* Enroll Assignments to Students */
 .POPUP_enrollAssignmentsToStudents {
   background-color: white;
   height: 100vh;
@@ -1601,6 +2310,7 @@ footer {
 
 }
 
+/* Check Assignments Per Student Per Course */
 .POPUP_checkAssignmentsPerStudentPerCourse {
   background-color: white;
   height: 100vh;
@@ -1611,6 +2321,95 @@ footer {
   z-index: 2;
   display: none;
   animation: slideFromRight 0.7s;
+}
+
+/* Section for Print List of Assignments per Course Per Student*/
+.assignmentsList {
+  top: 3em;
+  position: absolute;
+  display: flexbox;
+  flex-direction: column;
+  background-color: white;
+  height: 70%;
+  width: auto;
+  overflow: scroll;
+  margin: 2em;
+  left: 4.5em;
+  justify-content: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+#checkAssignmentPerCoursePerStudent1 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+} 
+
+#checkAssignmentPerCoursePerStudent2 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+
+} 
+
+#checkAssignmentPerCoursePerStudent3 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+
+} 
+
+#checkAssignmentPerCoursePerStudent4 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+
+} 
+
+#checkAssignmentPerCoursePerStudent5 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+} 
+
+#checkAssignmentPerCoursePerStudent6 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+  animation: popupAnimation 0.3s ease-out;
 }
 
 /* quit section for Add Assignments */
