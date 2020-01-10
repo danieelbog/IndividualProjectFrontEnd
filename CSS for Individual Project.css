@@ -39,6 +39,21 @@ body {
   border-radius: 6px;
 }
 
+/* Date time picker modifiers so it suits my changes and animations in the programm */
+::-webkit-datetime-edit {
+  left: 70%;
+  position: absolute;
+}
+
+::-webkit-calendar-picker-indicator {
+  position: relative;
+  left: 44%;
+}
+
+::-webkit-inner-spin-button {
+  display: none;
+}
+
 /* Home Page Starts */
 
 header {
@@ -155,6 +170,8 @@ li {
   padding-right: 2em;
 }
 
+
+/* Footer section starts */
 footer {
   background-color: #2f3542;
   display: flex;
@@ -301,7 +318,7 @@ footer {
   text-align: center;
 }
 
-.checkCourse1 {
+#checkCourse1 {
   background-color: white;
   flex-flow: 8em;
   height: 8em;
@@ -312,19 +329,7 @@ footer {
   border-radius: 18px;
 } 
 
-.checkCourse2 {
-  background-color: white;
-  flex-flow: 8em;
-  height: 8em;
-  width: 20em;
-  position: relative;
-  margin-bottom: 1em;
-  border-left: solid 1px #b7bcc5;
-  border-radius: 18px;
-
-} 
-
-.checkCourse3 {
+#checkCourse2 {
   background-color: white;
   flex-flow: 8em;
   height: 8em;
@@ -336,7 +341,7 @@ footer {
 
 } 
 
-.checkCourse4 {
+#checkCourse3 {
   background-color: white;
   flex-flow: 8em;
   height: 8em;
@@ -348,7 +353,19 @@ footer {
 
 } 
 
-.checkCourse5 {
+#checkCourse4 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+
+} 
+
+#checkCourse5 {
   background-color: white;
   flex-flow: 8em;
   height: 8em;
@@ -359,7 +376,7 @@ footer {
   border-radius: 18px;
 } 
 
-.checkCourse6 {
+#checkCourse6 {
   background-color: white;
   flex-flow: 8em;
   height: 8em;
@@ -371,16 +388,16 @@ footer {
   animation: popupAnimation 0.3s ease-out;
 }
 
-#checkCourse {
+.checkCourse {
   cursor: pointer;
 }
 
-#checkCourse:hover {
+.checkCourse:hover {
   -webkit-box-shadow: inset 0px 0px 0px 0px rgba(255,71,87,1);
   -moz-box-shadow: inset 0px 0px 1px -1px rgba(255,71,87,1);
   box-shadow: inset 3px 0px 1px -1px rgba(255,71,87,1);
   opacity: 0.8;
-  border: none;
+  border: none !important;
 }
 
 .CourseListH1 {
@@ -539,21 +556,6 @@ footer {
   width: 100%;
   transition: all 0.3s ease;
   overflow: hidden;
-}
-
-/* Date time picker modifiers so it suits my changes and animations in the programm */
-::-webkit-datetime-edit {
-  left: 70%;
-  position: absolute;
-}
-
-::-webkit-calendar-picker-indicator {
-  position: relative;
-  left: 44%;
-}
-
-::-webkit-inner-spin-button {
-  display: none;
 }
 
 /* Animation for input Tables, i know its wierd i know this could be done better with JS BUT.....*/
@@ -801,7 +803,7 @@ footer {
   text-align: center;
 }
 
-.checkStudent1 {
+#checkStudent1 {
   background-color: white;
   flex-flow: 8em;
   height: 8em;
@@ -812,19 +814,7 @@ footer {
   border-radius: 18px;
 } 
 
-.checkStudent2 {
-  background-color: white;
-  flex-flow: 8em;
-  height: 8em;
-  width: 20em;
-  position: relative;
-  margin-bottom: 1em;
-  border-left: solid 1px #b7bcc5;
-  border-radius: 18px;
-
-} 
-
-.checkStudent3 {
+#checkStudent2 {
   background-color: white;
   flex-flow: 8em;
   height: 8em;
@@ -836,7 +826,7 @@ footer {
 
 } 
 
-.checkStudent4 {
+#checkStudent3 {
   background-color: white;
   flex-flow: 8em;
   height: 8em;
@@ -848,7 +838,19 @@ footer {
 
 } 
 
-.checkStudent5 {
+#checkStudent4 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+
+} 
+
+#checkStudent5 {
   background-color: white;
   flex-flow: 8em;
   height: 8em;
@@ -859,7 +861,7 @@ footer {
   border-radius: 18px;
 } 
 
-.checkStudent6 {
+#checkStudent6 {
   background-color: white;
   flex-flow: 8em;
   height: 8em;
@@ -871,16 +873,16 @@ footer {
   animation: popupAnimation 0.3s ease-out;
 }
 
-#checkStudent {
+.checkStudent {
   cursor: pointer;
 }
 
-#checkStudent:hover {
+.checkStudent:hover {
   -webkit-box-shadow: inset 0px 0px 0px 0px rgba(255,71,87,1);
   -moz-box-shadow: inset 0px 0px 1px -1px rgba(255,71,87,1);
   box-shadow: inset 3px 0px 1px -1px rgba(255,71,87,1);
   opacity: 0.8;
-  border: none;
+  border: none !important;
 }
 
 .listOfStudentsH1 {
@@ -943,7 +945,7 @@ footer {
   text-align: center;
 }
 
-.checkStudentPerCourse1 {
+#checkStudentPerCourse1 {
   background-color: white;
   flex-flow: 8em;
   height: 8em;
@@ -954,19 +956,7 @@ footer {
   border-radius: 18px;
 } 
 
-.checkStudentPerCourse2 {
-  background-color: white;
-  flex-flow: 8em;
-  height: 8em;
-  width: 20em;
-  position: relative;
-  margin-bottom: 1em;
-  border-left: solid 1px #b7bcc5;
-  border-radius: 18px;
-
-} 
-
-.checkStudentPerCourse3 {
+#checkStudentPerCourse2 {
   background-color: white;
   flex-flow: 8em;
   height: 8em;
@@ -978,7 +968,7 @@ footer {
 
 } 
 
-.checkStudentPerCourse4 {
+#checkStudentPerCourse3 {
   background-color: white;
   flex-flow: 8em;
   height: 8em;
@@ -990,7 +980,19 @@ footer {
 
 } 
 
-.checkStudentPerCourse5 {
+#checkStudentPerCourse4 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+
+} 
+
+#checkStudentPerCourse5 {
   background-color: white;
   flex-flow: 8em;
   height: 8em;
@@ -1001,7 +1003,7 @@ footer {
   border-radius: 18px;
 } 
 
-.checkStudentPerCourse6 {
+#checkStudentPerCourse6 {
   background-color: white;
   flex-flow: 8em;
   height: 8em;
@@ -1046,7 +1048,7 @@ footer {
   text-align: center;
 }
 
-.checkStudentMoreThanOne1 {
+#checkStudentMoreThanOne1 {
   background-color: white;
   flex-flow: 8em;
   height: 8em;
@@ -1057,19 +1059,7 @@ footer {
   /* border-radius: 18px; */
 } 
 
-.checkStudentMoreThanOne2 {
-  background-color: white;
-  flex-flow: 8em;
-  height: 8em;
-  width: 20em;
-  position: relative;
-  margin-bottom: 1em;
-  border-left: solid 1px #b7bcc5;
-  /* border-radius: 18px; */
-
-} 
-
-.checkStudentMoreThanOne3 {
+#checkStudentMoreThanOne2 {
   background-color: white;
   flex-flow: 8em;
   height: 8em;
@@ -1081,7 +1071,19 @@ footer {
 
 } 
 
-.checkStudentMoreThanOne4 {
+#checkStudentMoreThanOne3 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+
+} 
+
+#checkStudentMoreThanOne4 {
   background-color: white;
   flex-flow: 8em;
   height: 8em;
@@ -1093,7 +1095,7 @@ footer {
 
 } 
 
-.checkStudentMoreThanOne5 {
+#checkStudentMoreThanOne5 {
   background-color: white;
   flex-flow: 8em;
   height: 8em;
@@ -1104,7 +1106,7 @@ footer {
   border-radius: 18px;
 } 
 
-.checkStudentMoreThanOne6 {
+#checkStudentMoreThanOne6 {
   background-color: white;
   flex-flow: 8em;
   height: 8em;
@@ -1491,7 +1493,7 @@ footer {
   text-align: center;
 }
 
-.checkTrainer1 {
+#checkTrainer1 {
   background-color: white;
   flex-flow: 8em;
   height: 8em;
@@ -1502,19 +1504,7 @@ footer {
   border-radius: 18px;
 } 
 
-.checkTrainer2 {
-  background-color: white;
-  flex-flow: 8em;
-  height: 8em;
-  width: 20em;
-  position: relative;
-  margin-bottom: 1em;
-  border-left: solid 1px #b7bcc5;
-  border-radius: 18px;
-
-} 
-
-.checkTrainer3 {
+#checkTrainer2 {
   background-color: white;
   flex-flow: 8em;
   height: 8em;
@@ -1526,7 +1516,7 @@ footer {
 
 } 
 
-.checkTrainer4 {
+#checkTrainer3 {
   background-color: white;
   flex-flow: 8em;
   height: 8em;
@@ -1538,7 +1528,19 @@ footer {
 
 } 
 
-.checkTrainer5 {
+#checkTrainer4 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+
+} 
+
+#checkTrainer5 {
   background-color: white;
   flex-flow: 8em;
   height: 8em;
@@ -1549,7 +1551,7 @@ footer {
   border-radius: 18px;
 } 
 
-.checkTrainer6 {
+#checkTrainer6 {
   background-color: white;
   flex-flow: 8em;
   height: 8em;
@@ -1561,16 +1563,16 @@ footer {
   animation: popupAnimation 0.3s ease-out;
 }
 
-#checkTrainer {
+.checkTrainer {
   cursor: pointer;
 }
 
-#checkTrainer:hover {
+.checkTrainer:hover {
   -webkit-box-shadow: inset 0px 0px 0px 0px rgba(255,71,87,1);
   -moz-box-shadow: inset 0px 0px 1px -1px rgba(255,71,87,1);
   box-shadow: inset 3px 0px 1px -1px rgba(255,71,87,1);
   opacity: 0.8;
-  border: none;
+  border: none !important;
 }
 
 .listOfTrainersH1 {
@@ -1633,7 +1635,7 @@ footer {
   text-align: center;
 }
 
-.checkTrainerPerCourse1 {
+#checkTrainerPerCourse1 {
   background-color: white;
   flex-flow: 8em;
   height: 8em;
@@ -1644,19 +1646,7 @@ footer {
   border-radius: 18px;
 } 
 
-.checkTrainerPerCourse2 {
-  background-color: white;
-  flex-flow: 8em;
-  height: 8em;
-  width: 20em;
-  position: relative;
-  margin-bottom: 1em;
-  border-left: solid 1px #b7bcc5;
-  border-radius: 18px;
-
-} 
-
-.checkTrainerPerCourse3 {
+#checkTrainerPerCourse2 {
   background-color: white;
   flex-flow: 8em;
   height: 8em;
@@ -1668,7 +1658,7 @@ footer {
 
 } 
 
-.checkTrainerPerCourse4 {
+#checkTrainerPerCourse3 {
   background-color: white;
   flex-flow: 8em;
   height: 8em;
@@ -1680,7 +1670,19 @@ footer {
 
 } 
 
-.checkTrainerPerCourse5 {
+#checkTrainerPerCourse4 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  border-radius: 18px;
+
+} 
+
+#checkTrainerPerCourse5 {
   background-color: white;
   flex-flow: 8em;
   height: 8em;
@@ -1691,7 +1693,7 @@ footer {
   border-radius: 18px;
 } 
 
-.checkTrainerPerCourse6 {
+#checkTrainerPerCourse6 {
   background-color: white;
   flex-flow: 8em;
   height: 8em;
