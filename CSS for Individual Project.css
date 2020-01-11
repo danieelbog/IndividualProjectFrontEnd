@@ -63,6 +63,66 @@ header {
   animation: slideFromLeft ease-out 0.8s;
 }
 
+.headerContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.wolfLogo {
+  position: relative;
+  top: 5px;
+  left: 6em;
+  filter: invert(100%);
+}
+
+.companyName {
+  position: relative;
+  margin-right: 20em;
+  font-family: fantasy;
+  color: whitesmoke;
+  left: 6.5em;
+  flex: 1;
+}
+
+.searchContainer{
+  display: flex;
+  position: relative;
+  left: -60%;
+}
+
+.textSearch {
+  width: 35em;
+  height: 3em;
+  top: 0.4em;
+  margin: auto;
+  flex: 1;
+  border-radius: 10px;
+  position: absolute;
+  border: none;
+}
+
+#searchIcon {
+  font-size: 33px;
+  position: relative;
+  left: 1425%;
+  width: 1em;
+}
+
+#searchIcon:hover {
+  transform: scale(1);
+}
+
+#userAccount {
+  position: absolute;
+  left: 95%;
+  font-size: 35px;
+  top: 0.2em; 
+  
+}
+
+
 /* Nav Section */
 nav {
   background-color: #ff4757;
@@ -108,7 +168,7 @@ ul i {
 
 a:hover * {
   color: #2f3542;
-  transition: 0.8s;
+  transition: 0.3s;
 }
 
 
@@ -194,11 +254,11 @@ a:hover * {
 /* Footer section starts */
 footer {
   background-color: #2f3542;
-  height: 10em;
+  height: 17em;
   width: 100%;
   position: absolute;
   color: gainsboro;
-  top: 95vh;
+  top: 105.4vh;
   display: flex;
   border-top: #2f333a solid;
 }
@@ -214,6 +274,7 @@ footer {
   color: gainsboro;
   text-align: center;
   margin: auto;
+  top: -2.3em;
 }
 
 div i {
@@ -249,6 +310,35 @@ div i:hover {
   transition: 0.3s;
 }
 
+.learnMore {
+  display: flex;
+  flex-direction: row;
+  height: 16em;
+  width: 55%;
+  position: relative;
+  color: gainsboro;
+  top: 0.7em;
+  left: 1em;
+  font-size: 16px;
+  justify-content: space-around;
+}
+
+.productLI {
+  position: relative;
+  color: gainsboro;
+  left: 0em;
+  top: -1.5em;
+  margin-bottom: -2em;
+  margin-right: 2.5em;
+  list-style: none;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.productLI:hover{
+  color: #ff4757;
+  transition: 0.3s;
+}
 /* Home Page Section Ends */
 
 /* Courses Page Section Start */
@@ -291,6 +381,7 @@ div i:hover {
   border-bottom: solid 0.2px #f3ecec;
   color: #f5f6fa;
   display: flex;
+  cursor: pointer;
 }
 
 .addCourses {
@@ -303,10 +394,21 @@ div i:hover {
   border-bottom: solid 0.2px #f3ecec;
   color: #f5f6fa;
   display: flex;
+  cursor: pointer;
 }
 
 .seeCourses {
   margin: auto;
+}
+
+.C_InsideDivA:hover {
+  opacity: 0.9;
+  transition: 0.3s;
+}
+
+.C_InsideDivB:hover {
+  opacity: 0.9;
+  transition: 0.3s;
 }
 
 /* Popup Section for Courses */
@@ -746,6 +848,7 @@ div i:hover {
   border-bottom: solid 0.2px #f3ecec;
   color: #f5f6fa;
   display: flex;
+  cursor: pointer;
 }
 
 .addStudents {
@@ -758,6 +861,7 @@ div i:hover {
   border-bottom: solid 0.2px #f3ecec;
   color: #f5f6fa;
   display: flex;
+  cursor: pointer;
 }
 
 .seeStudents {
@@ -770,6 +874,7 @@ div i:hover {
   border-bottom: solid 0.2px #f3ecec;
   color: #f5f6fa;
   display: flex;
+  cursor: pointer;
 }
 
 .enrollStudents {
@@ -782,6 +887,7 @@ div i:hover {
   border-bottom: solid 0.2px #f3ecec;
   color: #f5f6fa;
   display: flex;
+  cursor: pointer;
 }
 
 .checkStudentsPerCourse {
@@ -794,11 +900,37 @@ div i:hover {
   border-bottom: solid 0.2px #f3ecec;
   color: #f5f6fa;
   display: flex;
+  cursor: pointer;
 }
 
 .checkStudentsMoreThanOneCourses {
   margin: auto;
   padding: 0em 1em 0 1em;
+}
+
+.S_InsideDivA:hover {
+  opacity: 0.9;
+  transition: 0.3s;
+}
+
+.S_InsideDivB:hover {
+  opacity: 0.9;
+  transition: 0.3s;
+}
+
+.S_InsideDivC:hover {
+  opacity: 0.9;
+  transition: 0.3s;
+}
+
+.S_InsideDivD:hover {
+  opacity: 0.9;
+  transition: 0.3s;
+}
+
+.S_InsideDivE:hover {
+  opacity: 0.9;
+  transition: 0.3s;
 }
 
 /* Popup Section for Students */
@@ -1437,6 +1569,7 @@ div i:hover {
   border-bottom: solid 0.2px #f3ecec;
   color: #f5f6fa;
   display: flex;
+  cursor: pointer;
 }
 
 .addTrainers {
@@ -1449,6 +1582,7 @@ div i:hover {
   border-bottom: solid 0.2px #f3ecec;
   color: #f5f6fa;
   display: flex;
+  cursor: pointer;
 }
 
 .seeTrainers {
@@ -1461,6 +1595,7 @@ div i:hover {
   border-bottom: solid 0.2px #f3ecec;
   color: #f5f6fa;
   display: flex;
+  cursor: pointer;
 }
 
 .enrollTrainers {
@@ -1473,6 +1608,7 @@ div i:hover {
   border-bottom: solid 0.2px #f3ecec;
   color: #f5f6fa;
   display: flex;
+  cursor: pointer;
 }
 
 .checkTrainersPerCourse {
@@ -1485,10 +1621,36 @@ div i:hover {
   border-bottom: solid 0.2px #f3ecec;
   color: #f5f6fa;
   display: flex;
+  cursor: pointer;
 }
 
 .putMarks {
   margin: auto;
+}
+
+.T_InsideDivA:hover {
+  opacity: 0.9;
+  transition: 0.3s;
+}
+
+.T_InsideDivB:hover {
+  opacity: 0.9;
+  transition: 0.3s;
+}
+
+.T_InsideDivC:hover {
+  opacity: 0.9;
+  transition: 0.3s;
+}
+
+.T_InsideDivD:hover {
+  opacity: 0.9;
+  transition: 0.3s;
+}
+
+.T_InsideDivE:hover {
+  opacity: 0.9;
+  transition: 0.3s;
 }
 
 /* Popup Section for Trainers */
@@ -2014,6 +2176,7 @@ div i:hover {
   border-bottom: solid 0.2px #f3ecec;
   color: #f5f6fa;
   display: flex;
+  cursor: pointer;
 }
 
 .addAssignments {
@@ -2026,6 +2189,7 @@ div i:hover {
   border-bottom: solid 0.2px #f3ecec;
   color: #f5f6fa;
   display: flex;
+  cursor: pointer;
 }
 
 .seeAssignments {
@@ -2038,6 +2202,7 @@ div i:hover {
   border-bottom: solid 0.2px #f3ecec;
   color: #f5f6fa;
   display: flex;
+  cursor: pointer;
 }
 
 .enrollAssignmnets {
@@ -2050,6 +2215,8 @@ div i:hover {
   border-bottom: solid 0.2px #f3ecec;
   color: #f5f6fa;
   display: flex;
+  cursor: pointer;
+
 }
 
 .checkAssignmnetPerCourse {
@@ -2062,6 +2229,8 @@ div i:hover {
   border-bottom: solid 0.2px #f3ecec;
   color: #f5f6fa;
   display: flex;
+  cursor: pointer;
+
 }
 
 .enrollAssignmentsToStudents {
@@ -2074,11 +2243,42 @@ div i:hover {
   border-bottom: solid 0.2px #f3ecec;
   color: #f5f6fa;
   display: flex;
+  cursor: pointer;
 }
 
 .checkAssignmentsPerStudentPerCourse {
   margin: auto;
   padding: 1em;
+}
+
+.A_InsideDivA:hover {
+  opacity: 0.9;
+  transition: 0.3s;
+}
+
+.A_InsideDivB:hover {
+  opacity: 0.9;
+  transition: 0.3s;
+}
+
+.A_InsideDivC:hover {
+  opacity: 0.9;
+  transition: 0.3s;
+}
+
+.A_InsideDivD:hover {
+  opacity: 0.9;
+  transition: 0.3s;
+}
+
+.A_InsideDivE:hover {
+  opacity: 0.9;
+  transition: 0.3s;
+}
+
+.A_InsideDivF:hover {
+  opacity: 0.9;
+  transition: 0.3s;
 }
 
 /* Popup Section for Assignments */
