@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" type="text/css" href="CSS for Individual Project.css" />
+    <script src="JQuerry.JS"></script>
 
     <title>PrivateSchoolTrainersPage</title>
 </head>
@@ -82,12 +83,11 @@
         <div class="POPUP_addTrainers" id="POPUP_addTrainers">
             <span class="POPUP_addTrainers_QuitSection" id="POPUP_addTrainers_QuitSection" onclick="POPUP_addTrainers_QuitSection()">
                 <i class="far fa-times-circle" id="quitImage"></i>
-                <input type="submit" class="submitCourse" value="Submit New Course"/>  
             </span>
 
             <!-- Block of code for the filling form at the popup window -->
             <div class="containerDivForCourseForm">
-                <div class="courseForm" id="courseForm">
+                <form class="courseForm" id="courseForm">
                     <!-- Trainer first name -->
                     <input type="text" name="T_firstName" required autocomplete="off"/>
                     <label for="T_firstName" class="label_TFirstName">
@@ -102,8 +102,9 @@
                     <input type="text" name="trainerSubject" required autocomplete="off"/>
                     <label for="trainerSubject" class="labelSubject">
                         <span class="contentName">Subject</span>
-                    </label>                                                       
-                </div>
+                    </label>   
+                    <input type="submit" class="submitCourse" value="Add new Trainer"/>                                                      
+                </form>
             </div>
 
         </div>
@@ -111,6 +112,7 @@
     </section>
 
     <!-- Check Trainers in Private School -->
+    <!-- When we will have DB this section will constist only from the checkTrainer1, all the others will be generated throught hte code (it already can be done if you dont renew tha page or use server) -->
     <section class= "POPUP_seeTrainersSection">
         <div class="POPUP_seeTrainers" id="POPUP_seeTrainers">
             <span class="POPUP_seeTrainers_QuitSection" id="POPUP_seeTrainers_QuitSection" onclick="POPUP_seeTrainers_QuitSection()">

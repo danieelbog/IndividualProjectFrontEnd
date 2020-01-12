@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <link rel="stylesheet" type="text/css"
-        href="CSS for Individual Project.css" />
+    <link rel="stylesheet" type="text/css" href="CSS for Individual Project.css" />
+    <script src="JQuerry.JS"></script>        
 
     <title>PrivateSchoolStudentsPage</title>
 </head>
@@ -105,12 +105,11 @@
             <span class="POPUP_addStudents_QuitSection" id="POPUP_addStudents_QuitSection"
                 onclick="POPUP_addStudents_QuitSection()">
                 <i class="far fa-times-circle" id="quitImage"></i>
-                <input type="submit" class="submitCourse" value="Add New Student" />
             </span>
 
             <!-- Block of code for the filling form at the popup window -->
             <div class="containerDivForCourseForm">
-                <div class="courseForm" id="courseForm">
+                <form class="courseForm" id="courseForm">
                     <!-- Student first name -->
                     <input type="text" name="S_firstName" required autocomplete="off" />
                     <label for="S_firstName" class="label_SFirstName">
@@ -131,13 +130,15 @@
                     <label for="studentFees" class="labelFees">
                         <span class="contentName">Fees</span>
                     </label>
-                </div>
+                    <input type="submit" class="submitCourse" value="Add New Student" />
+                </form>
             </div>
         </div>
         <div class="maskSection" id="maskSectionA" onclick="POPUP_addStudents_QuitSection()"></div>
     </section>
 
     <!-- Section for Checking student in Private School -->
+    <!-- When we will have DB this section will constist only from the CheckCourse1, all the others will be generated throught hte code (it already can be done if you dont renew tha page or use server) -->
     <section class="POPUP_seeStudentsSection">
         <div class="POPUP_seeStudents" id="POPUP_seeStudents">
             <span class="POPUP_seeStudents_QuitSection" id="POPUP_seeStudents_QuitSection"

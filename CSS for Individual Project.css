@@ -95,18 +95,20 @@ header {
 .textSearch {
   width: 35em;
   height: 3em;
-  top: 0.4em;
+  top: 0.25em;
   margin: auto;
   flex: 1;
   border-radius: 10px;
   position: absolute;
   border: none;
+  outline: none;
+  font-size: 14px;
 }
 
 #searchIcon {
   font-size: 33px;
   position: relative;
-  left: 1425%;
+  left: 1500%;
   width: 1em;
 }
 
@@ -152,18 +154,19 @@ li {
   margin: 3em auto;
   font-size: small;
   flex-direction: column;
+  top: 2em;
 }
 
 ul i {
   position: relative;
-  top: 2.1em;
+  top: 0.2em;
   left: -4.6em;
   width: 2em;
   height: 2em;
   margin-bottom: 1em;
   color: white;
   font-size: 1.3em;
-  padding: 1.5em 1em 0.2em 0em;
+  padding: 1em 1em 0.2em 0em;
 }
 
 a:hover * {
@@ -495,7 +498,11 @@ div i:hover {
   position: relative;
   margin-bottom: 1em;
   border-left: solid 1px #b7bcc5;
-  border-radius: 18px;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
 } 
 
 #checkCourse2 {
@@ -506,7 +513,11 @@ div i:hover {
   position: relative;
   margin-bottom: 1em;
   border-left: solid 1px #b7bcc5;
-  border-radius: 18px;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
 
 } 
 
@@ -518,7 +529,11 @@ div i:hover {
   position: relative;
   margin-bottom: 1em;
   border-left: solid 1px #b7bcc5;
-  border-radius: 18px;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
 
 } 
 
@@ -530,7 +545,11 @@ div i:hover {
   position: relative;
   margin-bottom: 1em;
   border-left: solid 1px #b7bcc5;
-  border-radius: 18px;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
 
 } 
 
@@ -542,7 +561,11 @@ div i:hover {
   position: relative;
   margin-bottom: 1em;
   border-left: solid 1px #b7bcc5;
-  border-radius: 18px;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
 } 
 
 #checkCourse6 {
@@ -553,8 +576,11 @@ div i:hover {
   position: relative;
   margin-bottom: 1em;
   border-left: solid 1px #b7bcc5;
-  border-radius: 18px;
-  animation: popupAnimation 0.3s ease-out;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
 }
 
 .checkCourse {
@@ -682,20 +708,19 @@ div i:hover {
 }
 
 .submitCourse {
-  background-color: transparent;
   color: #2f3542;
-  top: 80vh;
-  left: 10em;
-  width: 10em;
-  height: 2em;
-  position: absolute;
-  border-bottom: solid #2f3542;
+  width: 15em !important;
+  top: 5em;
+  left: 0.4em;
+  position: relative;
+  border-bottom: none;
   border-right: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 17px;
   font-family: Georgia, "Times New Roman", Times, serif;
   transition: all 0.5s ease;
+  padding: 0em !important;
 }
 
 .submitCourse:hover {
@@ -726,6 +751,17 @@ div i:hover {
   transition: all 0.3s ease;
   overflow: hidden;
 }
+
+/* Courses Object and Data Printed */
+
+.CoursesData {
+  width: 15em;
+  margin: auto;
+  position: relative;
+  left: -1.6em;
+  top: -0.1em;  
+}
+
 
 /* Animation for input Tables, i know its wierd i know this could be done better with JS BUT.....*/
 

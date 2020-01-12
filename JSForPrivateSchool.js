@@ -23,6 +23,82 @@ function POPUP_seeCourses_QuitSection() {
   document.getElementById("maskSectionB").style.display = "none";
 }
 
+// Block of code that will be creating new Divs when there is new input keeping stable my desing
+function CreateCourse() {
+
+  var title = document.getElementById("ipnutTitle").value;
+  var stream = document.getElementById("inputStream").value;
+  var type = document.getElementById("inputType").value;
+  var startDate = document.getElementById("inputStartDate").value;
+  var endDate = document.getElementById("inputEndDate").value;
+
+  var courseCreated = {
+    C_Title: title,
+    C_Stream: stream,
+    C_Type: type,
+    C_StartDate: startDate,
+    C_EndDate: endDate
+  };
+
+  var CheckCourseDiv = document.createElement("DIV");
+  CheckCourseDiv.id = "checkCourse1";
+  CheckCourseDiv.className = "checkCourse";
+  
+  var courseTtitleP = document.createElement("P");
+  var courseStreamP = document.createElement("P");
+  var courseTypeP = document.createElement("P");
+  var courseStartDateP = document.createElement("P");
+  var courseEndDateP = document.createElement("P");
+
+  courseTtitleP.className = "CoursesData";
+  courseStreamP.className = "CoursesData";
+  courseTypeP.className = "CoursesData";
+  courseStartDateP.className = "CoursesData";
+  courseEndDateP.className = "CoursesData";
+
+  var CheckCoursesDataTable1 = document.createTextNode("Course title: " + courseCreated.C_Title);
+  var CheckCoursesDataTable2 = document.createTextNode("Stream: " + courseCreated.C_Stream);
+  var CheckCoursesDataTable3 = document.createTextNode("Type: " + courseCreated.C_Type);
+  var CheckCoursesDataTable4 = document.createTextNode("Starting Date: " + courseCreated.C_StartDate);
+  var CheckCoursesDataTable5 = document.createTextNode("Ending Date: " + courseCreated.C_EndDate);
+
+  courseTtitleP.appendChild(CheckCoursesDataTable1);
+  courseStreamP.appendChild(CheckCoursesDataTable2);
+  courseTypeP.appendChild(CheckCoursesDataTable3);
+  courseStartDateP.appendChild(CheckCoursesDataTable4);
+  courseEndDateP.appendChild(CheckCoursesDataTable5);
+
+  CheckCourseDiv.appendChild(courseTtitleP);
+  CheckCourseDiv.appendChild(courseStreamP);
+  CheckCourseDiv.appendChild(courseTypeP);
+  CheckCourseDiv.appendChild(courseStartDateP);
+  CheckCourseDiv.appendChild(courseEndDateP);
+  
+  document.getElementById("coursesList").appendChild(CheckCourseDiv);
+}
+
+// Course Object and Displaying in the see Courses Section Block of Code jsut for Showcase
+// Please Use the Above Method to create new instances and see how it works (it works amazingly well);
+var course = {
+  C_Title: "BC9",
+  C_Stream: "C#",
+  C_Type: "Part-Time",
+  C_StartDate: "7/9/2019",
+  C_EndDate: "26/4/2020"
+};
+
+var title = document.getElementById("C_TitleID");
+var stream = document.getElementById("C_StreamID");
+var type = document.getElementById("C_TypeID");
+var startDate = document.getElementById("C_StartDateID");
+var endDate = document.getElementById("C_EndDateID");
+
+title.innerHTML = "Course title: " + course.C_Title;
+stream.innerHTML = "Stream: " + course.C_Stream;
+type.innerHTML = "Type: " + course.C_Type;
+startDate.innerHTML = "Starting Date: " + course.C_StartDate;
+endDate.innerHTML = "Ending Date: " + course.C_EndDate;
+
 /* Courses Page Section Ends */
 
 /* Students Page Section Start */
@@ -49,7 +125,9 @@ function CheckStudentsPerCourse() {
 }
 
 function CheckStudentsMoreThanOneCourses() {
-  document.getElementById("POPUP_checkStudentsMoreThanOneCourses").style.display = "block";
+  document.getElementById(
+    "POPUP_checkStudentsMoreThanOneCourses"
+  ).style.display = "block";
   document.getElementById("maskSectionE").style.display = "block";
 }
 
@@ -69,12 +147,15 @@ function POPUP_enrollStudents_QuitSection() {
 }
 
 function POPUP_checkStudentsPerCourse_QuitSection() {
-  document.getElementById("POPUP_checkStudentsPerCourse").style.display = "none";
+  document.getElementById("POPUP_checkStudentsPerCourse").style.display =
+    "none";
   document.getElementById("maskSectionD").style.display = "none";
 }
 
 function POPUP_checkStudentsMoreThanOneCourses_QuitSection() {
-  document.getElementById("POPUP_checkStudentsMoreThanOneCourses").style.display = "none";
+  document.getElementById(
+    "POPUP_checkStudentsMoreThanOneCourses"
+  ).style.display = "none";
   document.getElementById("maskSectionE").style.display = "none";
 }
 
@@ -98,7 +179,8 @@ function EnrollTrainers() {
 }
 
 function CheckTrainersPerCourse() {
-  document.getElementById("POPUP_checkTrainersPerCourse").style.display = "block";
+  document.getElementById("POPUP_checkTrainersPerCourse").style.display =
+    "block";
   document.getElementById("maskSectionD").style.display = "block";
 }
 
@@ -159,13 +241,15 @@ function CheckAssignmnetPerCourse() {
 }
 
 function EnrollAssignmentsToStudents() {
-  document.getElementById("POPUP_enrollAssignmentsToStudents").style.display = "block";
+  document.getElementById("POPUP_enrollAssignmentsToStudents").style.display =
+    "block";
   document.getElementById("maskSectionE").style.display = "block";
 }
 
 function CheckAssignmentsPerStudentPerCourse() {
   document.getElementById(
-    "POPUP_checkAssignmentsPerStudentPerCourse").style.display = "block";
+    "POPUP_checkAssignmentsPerStudentPerCourse"
+  ).style.display = "block";
   document.getElementById("maskSectionF").style.display = "block";
 }
 
@@ -191,12 +275,15 @@ function POPUP_checkAssignmnetPerCourse_QuitSection() {
 }
 
 function POPUP_enrollAssignmentsToStudents_QuitSection() {
-  document.getElementById("POPUP_enrollAssignmentsToStudents").style.display = "none";
+  document.getElementById("POPUP_enrollAssignmentsToStudents").style.display =
+    "none";
   document.getElementById("maskSectionE").style.display = "none";
 }
 
 function POPUP_checkAssignmentsPerStudentPerCourse_QuitSection() {
-  document.getElementById("POPUP_checkAssignmentsPerStudentPerCourse").style.display = "none";
+  document.getElementById(
+    "POPUP_checkAssignmentsPerStudentPerCourse"
+  ).style.display = "none";
   document.getElementById("maskSectionF").style.display = "none";
 }
 

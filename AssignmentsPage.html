@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" type="text/css" href="CSS for Individual Project.css" />
+    <script src="JQuerry.JS"></script>
 
     <title>PrivateSchoolAssignmnetsPage</title>
 </head>
@@ -84,12 +85,11 @@
         <div class="POPUP_addAssignments" id="POPUP_addAssignments">
             <span class="POPUP_addAssignments_QuitSection" id="POPUP_addAssignments_QuitSection" onclick="POPUP_addAssignments_QuitSection()">
                 <i class="far fa-times-circle" id="quitImage"></i>
-                <input type="submit" class="submitCourse" value="Submit New Course"/>  
             </span>
 
             <!-- Block of code for the filling form at the popup window -->
             <div class="containerDivForCourseForm">
-                <div class="courseForm" id="courseForm">
+                <form class="courseForm" id="courseForm">
                     <!-- Assignment Title -->
                     <input type="text" name="assignmentTitle" required autocomplete="off"/>
                     <label for="assignmentTitle" class="labelassignmentTitle">
@@ -104,8 +104,9 @@
                     <input type="date" name="assignmentDeadline" required autocomplete="off" maxlength="140"/>
                     <label for="assignmentDeadline" class="labelAssignmentDeadline">
                         <span class="contentName">Deadline</span>
-                    </label>                                                       
-                </div>
+                    </label>  
+                    <input type="submit" class="submitCourse" value="Submit New Assignment"/>                                                       
+                </form>
             </div>
 
 
@@ -114,6 +115,7 @@
     </section>
 
     <!-- Check Assignments in Private School Section -->
+    <!-- When we will have DB this section will constist only from the checkAssignment1, all the others will be generated throught hte code (it already can be done if you dont renew tha page or use server) -->
     <section class= "POPUP_seeAssignmentsSection">
         <div class="POPUP_seeAssignments" id="POPUP_seeAssignments">
             <span class="POPUP_seeAssignments_QuitSection" id="POPUP_seeAssignments_QuitSection" onclick="POPUP_seeAssignments_QuitSection()">
