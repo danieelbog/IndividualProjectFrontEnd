@@ -1,4 +1,5 @@
 /* Home Page and general values Starts */
+
 /* Home Page Section Ends */
 
 /* Courses Page Section Start */
@@ -106,13 +107,13 @@ function CheckCoursesData() {
     C_StartDate: "7/9/2019",
     C_EndDate: "26/4/2020"
   };
-  
+
   var title = document.getElementById("C_TitleID");
   var stream = document.getElementById("C_StreamID");
   var type = document.getElementById("C_TypeID");
   var startDate = document.getElementById("C_StartDateID");
   var endDate = document.getElementById("C_EndDateID");
-  
+
   title.innerHTML = "Course title: " + course.C_Title;
   stream.innerHTML = "Stream: " + course.C_Stream;
   type.innerHTML = "Type: " + course.C_Type;
@@ -152,6 +153,107 @@ function dropCS(ev) {
   ev.preventDefault();
   var data = ev.dataTransfer.getData("div");
   ev.target.appendChild(document.getElementById(data));
+}
+
+// Drop down for dragable divs
+function OpencheckCourseDragableSpace(num) {
+  if (num == 1) {
+    var checkCourseDragableSpace1 = document.getElementById(
+      "checkCourseDragableSpace1"
+    );
+    var saveTheEnrollID1 = document.getElementById("SaveTheEnrollID1");
+    var clearTheEnrollID1 = document.getElementById("ClearTheEnrollID1");
+
+    if (checkCourseDragableSpace1.style.display === "block") {
+      checkCourseDragableSpace1.style.display = "none";
+      saveTheEnrollID1.style.display = "none";
+      clearTheEnrollID1.style.display = "none";
+    } else {
+      checkCourseDragableSpace1.style.display = "block";
+      saveTheEnrollID1.style.display = "block";
+      clearTheEnrollID1.style.display = "block";
+    }
+  } else if (num == 2) {
+    var checkCourseDragableSpace2 = document.getElementById(
+      "checkCourseDragableSpace2"
+    );
+    var saveTheEnrollID2 = document.getElementById("SaveTheEnrollID2");
+    var clearTheEnrollID2 = document.getElementById("ClearTheEnrollID2");
+
+    if (checkCourseDragableSpace2.style.display === "block") {
+      checkCourseDragableSpace2.style.display = "none";
+      saveTheEnrollID2.style.display = "none";
+      clearTheEnrollID2.style.display = "none";
+    } else {
+      checkCourseDragableSpace2.style.display = "block";
+      saveTheEnrollID2.style.display = "block";
+      clearTheEnrollID2.style.display = "block";
+    }
+  } else if (num == 3) {
+    var checkCourseDragableSpace3 = document.getElementById(
+      "checkCourseDragableSpace3"
+    );
+    var saveTheEnrollID3 = document.getElementById("SaveTheEnrollID3");
+    var clearTheEnrollID3 = document.getElementById("ClearTheEnrollID3");
+
+    if (checkCourseDragableSpace3.style.display === "block") {
+      checkCourseDragableSpace3.style.display = "none";
+      saveTheEnrollID3.style.display = "none";
+      clearTheEnrollID3.style.display = "none";
+    } else {
+      checkCourseDragableSpace3.style.display = "block";
+      saveTheEnrollID3.style.display = "block";
+      clearTheEnrollID3.style.display = "block";
+    }
+  } else if (num == 4) {
+    var checkCourseDragableSpace4 = document.getElementById(
+      "checkCourseDragableSpace4"
+    );
+    var saveTheEnrollID4 = document.getElementById("SaveTheEnrollID4");
+    var clearTheEnrollID4 = document.getElementById("ClearTheEnrollID4");
+
+    if (checkCourseDragableSpace4.style.display === "block") {
+      checkCourseDragableSpace4.style.display = "none";
+      saveTheEnrollID4.style.display = "none";
+      clearTheEnrollID4.style.display = "none";
+    } else {
+      checkCourseDragableSpace4.style.display = "block";
+      saveTheEnrollID4.style.display = "block";
+      clearTheEnrollID4.style.display = "block";
+    }
+  } else if (num == 5) {
+    var checkCourseDragableSpace5 = document.getElementById(
+      "checkCourseDragableSpace5"
+    );
+    var saveTheEnrollID5 = document.getElementById("SaveTheEnrollID5");
+    var clearTheEnrollID5 = document.getElementById("ClearTheEnrollID5");
+
+    if (checkCourseDragableSpace5.style.display === "block") {
+      checkCourseDragableSpace5.style.display = "none";
+      saveTheEnrollID5.style.display = "none";
+      clearTheEnrollID5.style.display = "none";
+    } else {
+      checkCourseDragableSpace5.style.display = "block";
+      saveTheEnrollID5.style.display = "block";
+      clearTheEnrollID5.style.display = "block";
+    }
+  } else if (num == 6) {
+    var checkCourseDragableSpace6 = document.getElementById(
+      "checkCourseDragableSpace6"
+    );
+    var saveTheEnrollID6 = document.getElementById("SaveTheEnrollID6");
+    var clearTheEnrollID6 = document.getElementById("ClearTheEnrollID6");
+
+    if (checkCourseDragableSpace6.style.display === "block") {
+      checkCourseDragableSpace6.style.display = "none";
+      saveTheEnrollID6.style.display = "none";
+      clearTheEnrollID6.style.display = "none";
+    } else {
+      checkCourseDragableSpace6.style.display = "block";
+      saveTheEnrollID6.style.display = "block";
+      clearTheEnrollID6.style.display = "block";
+    }
+  }
 }
 
 // Check Students Per COurse Section
@@ -268,19 +370,18 @@ function CheckStudentData() {
     S_BirthDay: "26/4/1995",
     S_Fees: "1980 euros"
   };
-  
+
   var sfn = document.getElementById("S_FirstNameID");
   var sln = document.getElementById("S_LastNameID");
   var sdob = document.getElementById("S_DateOfBirthID");
   var sf = document.getElementById("S_Fees");
-  
+
   sfn.innerHTML = "First Name: " + student.S_FirstName;
   sln.innerHTML = "Last Name: " + student.S_LastName;
   sdob.innerHTML = "Date of Birth: " + student.S_BirthDay;
   sf.innerHTML = "Fees: " + student.S_Fees;
 }
 
-  
 /* Students Page Section Ends */
 
 /* Trainers Page Section Start */
@@ -393,21 +494,20 @@ function CreateTrainer() {
 
 // Course Object and Displaying in the see Courses Section Block of Code jsut for Showcase
 // Please Use the Above Method to create new instances and see how it works (it works amazingly well);
-function CheckTrainersData(){
+function CheckTrainersData() {
   var trainer = {
     T_FirstName: "Periklis",
     T_LastName: "Aidinopoulos",
     T_Subject: "C#"
   };
-  
+
   var tfn = document.getElementById("T_FirstNameID");
   var tln = document.getElementById("T_LastNameID");
   var tsub = document.getElementById("T_SubjectID");
-  
+
   tfn.innerHTML = "First Name: " + trainer.T_FirstName;
   tln.innerHTML = "Last Name: " + trainer.T_LastName;
   tsub.innerHTML = "Subject: " + trainer.T_Subject;
-  
 }
 
 /* Trainers Page Section Ends */
@@ -493,7 +593,7 @@ function CreateAssignment() {
   var assignmentCreated = {
     A_Title: a_Title,
     A_Descreption: a_Descreption,
-    A_Deadline: a_Deadline,
+    A_Deadline: a_Deadline
   };
 
   // Creating the Div that will have the instance info and giving it corresponed Class and ID
@@ -512,10 +612,16 @@ function CreateAssignment() {
   a_DeadlineP.className = "AssignmentData";
 
   // Creating Text nodes so they can be added to the paragraphs xreated erlier
-  var CheckAssignmentDataTable1 = document.createTextNode("Title: " + assignmentCreated.A_Title);
-  var CheckAssignmentDataTable2 = document.createTextNode("Descreption: " + assignmentCreated.A_Descreption);
-  var CheckAssignmentDataTable3 = document.createTextNode("Deadline: " + assignmentCreated.A_SubDateTime);
-  
+  var CheckAssignmentDataTable1 = document.createTextNode(
+    "Title: " + assignmentCreated.A_Title
+  );
+  var CheckAssignmentDataTable2 = document.createTextNode(
+    "Descreption: " + assignmentCreated.A_Descreption
+  );
+  var CheckAssignmentDataTable3 = document.createTextNode(
+    "Deadline: " + assignmentCreated.A_SubDateTime
+  );
+
   // Adding the text created variables tto the Paragraphs inside the div of the instance
   a_TitleP.appendChild(CheckAssignmentDataTable1);
   a_DescreptionP.appendChild(CheckAssignmentDataTable2);
@@ -536,14 +642,15 @@ function CreateAssignment() {
 function CheckAssignmentsData() {
   var assignment = {
     A_Title: "Create Private School Back End",
-    A_Descreption: "You must create private school back end with the following functionalities:.....",
-    A_SubDateTime: "17/1/2020",
+    A_Descreption:
+      "You must create private school back end with the following functionalities:.....",
+    A_SubDateTime: "17/1/2020"
   };
-  
+
   var at = document.getElementById("A_TitleID");
   var adesc = document.getElementById("A_DescreptionID");
   var asubd = document.getElementById("A_SubDateID");
-  
+
   at.innerHTML = "Title: " + assignment.A_Title;
   adesc.innerHTML = "Descreption: " + assignment.A_Descreption;
   asubd.innerHTML = "Deadline: " + assignment.A_SubDateTime;

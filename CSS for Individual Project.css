@@ -7,6 +7,55 @@ body {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
+/* Save and Clear for Forms Buttons */
+
+.SaveTheEnroll {
+  color: #2f3542;
+  width: 5em !important;
+  top: -0.5em;
+  left: 4em;
+  position: relative;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 17px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  transition: all 0.5s ease;
+  padding: 0em !important;
+  outline: none;
+  display: none;
+  background-color: white;
+}
+
+.ClearTheEnroll {
+  color: #2f3542;
+  width: 5em !important;
+  top: -1.67em;
+  left: 10em;
+  position: relative;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 17px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  transition: all 0.5s ease;
+  padding: 0em !important;
+  outline: none;
+  display: none;
+  background-color: white;
+
+  }
+
+.SaveTheEnroll:hover {
+  background-color: #ff4757;
+  color: white;
+}
+
+.ClearTheEnroll:hover {
+  background-color: #ff4757;
+  color: white;
+}
+
 /* Mask Section */
 
 .maskSection {
@@ -1397,6 +1446,7 @@ div i:hover {
   text-align: start;
   overflow-y: scroll;
   overflow-x: hidden;
+  display: none;
 }
 #checkCourseDragableSpace2 {
   background-color: white;
@@ -1414,6 +1464,8 @@ div i:hover {
   text-align: start;
   overflow-y: scroll;
   overflow-x: hidden;
+  display: none;
+
 }
 #checkCourseDragableSpace3 {
   background-color: white;
@@ -1431,6 +1483,8 @@ div i:hover {
   text-align: start;
   overflow-y: scroll;
   overflow-x: hidden;
+  display: none;
+
 }
 #checkCourseDragableSpace4 {
   background-color: white;
@@ -1448,6 +1502,8 @@ div i:hover {
   text-align: start;
   overflow-y: scroll;
   overflow-x: hidden;
+  display: none;
+
 }
 #checkCourseDragableSpace5 {
   background-color: white;
@@ -1465,6 +1521,8 @@ div i:hover {
   text-align: start;
   overflow-y: scroll;
   overflow-x: hidden;
+  display: none;
+
 }
 #checkCourseDragableSpace6 {
   background-color: white;
@@ -1482,6 +1540,8 @@ div i:hover {
   text-align: start;
   overflow-y: scroll;
   overflow-x: hidden;
+  display: none;
+
 }
 
 .listOfDragableStudentsH1 {
