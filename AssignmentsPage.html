@@ -10,7 +10,7 @@
 
     <title>PrivateSchoolAssignmnetsPage</title>
 </head>
-<body>
+<body  onload="CheckAssignmentsData()">
 
 
     <header>
@@ -60,23 +60,23 @@
             </div>
 
             <div class="A_secondContainerB">
-                <div class="A_InsideDivA">
-                    <p class="addAssignments" id="addAssignments" onclick="AddAssignments()">Add Assignments to Private School</p>
+                <div class="A_InsideDivA" onclick="AddAssignments()">
+                    <p class="addAssignments" id="addAssignments" >Add Assignments to Private School</p>
                 </div>
-                <div class="A_InsideDivB">
-                    <p class="seeAssignments" id="seeAssignments" onclick="SeeAssignments()">Check Assignmnets in Private School</p>
+                <div class="A_InsideDivB" onclick="SeeAssignments()">
+                    <p class="seeAssignments" id="seeAssignments">Check Assignmnets in Private School</p>
                 </div>  
-                <div class="A_InsideDivC">
-                    <p class="enrollAssignmnets" id="enrollAssignmnets" onclick="EnrollAssignmnets()">Enroll Assignments to Courses</p>
+                <div class="A_InsideDivC" onclick="EnrollAssignmnets()">
+                    <p class="enrollAssignmnets" id="enrollAssignmnets">Enroll Assignments to Courses</p>
                 </div>  
-                <div class="A_InsideDivD">
-                    <p class="checkAssignmnetPerCourse" id="checkAssignmnetPerCourse" onclick="CheckAssignmnetPerCourse()">Check Assignment per Course</p>
+                <div class="A_InsideDivD" onclick="CheckAssignmnetPerCourse()">
+                    <p class="checkAssignmnetPerCourse" id="checkAssignmnetPerCourse">Check Assignment per Course</p>
                 </div>  
-                <div class="A_InsideDivE">
-                    <p class="enrollAssignmentsToStudents" id="enrollAssignmentsToStudents" onclick="EnrollAssignmentsToStudents()">Enroll Assignments to Students</p>
+                <div class="A_InsideDivE" onclick="EnrollAssignmentsToStudents()">
+                    <p class="enrollAssignmentsToStudents" id="enrollAssignmentsToStudents">Enroll Assignments to Students</p>
                 </div>  
-                <div class="A_InsideDivF">
-                    <p class="checkAssignmentsPerStudentPerCourse" id="checkAssignmentsPerStudentPerCourse" onclick="CheckAssignmentsPerStudentPerCourse()">Check Assignments per Student per Course</p>
+                <div class="A_InsideDivF" onclick="CheckAssignmentsPerStudentPerCourse()">
+                    <p class="checkAssignmentsPerStudentPerCourse" id="checkAssignmentsPerStudentPerCourse">Check Assignments per Student per Course</p>
                 </div>  
             </div>
     </section>
@@ -91,21 +91,21 @@
             <div class="containerDivForCourseForm">
                 <form class="courseForm" id="courseForm">
                     <!-- Assignment Title -->
-                    <input type="text" name="assignmentTitle" required autocomplete="off"/>
+                    <input type="text" name="assignmentTitle" required autocomplete="off" id="inputATitle"/>
                     <label for="assignmentTitle" class="labelassignmentTitle">
                         <span class="contentName">Assignment Title</span>
                     </label>
                     <!-- Assignment Descreption -->
-                    <input type="text" name="assignmentDescreption" required autocomplete="off"/>
+                    <input type="text" name="assignmentDescreption" required autocomplete="off" id="inputADescreption"/>
                     <label for="assignmentDescreption" class="labelAssignmentDescreption">
                         <span class="contentName">Descreption</span>
                     </label>                    
                     <!-- Assignment Deadline -->
-                    <input type="date" name="assignmentDeadline" required autocomplete="off" maxlength="140"/>
+                    <input type="date" name="assignmentDeadline" required autocomplete="off" maxlength="140" id="inputADeadline"/>
                     <label for="assignmentDeadline" class="labelAssignmentDeadline">
                         <span class="contentName">Deadline</span>
                     </label>  
-                    <input type="submit" class="submitCourse" value="Submit New Assignment"/>                                                       
+                    <input type="submit" class="submitCourse" value="Submit New Assignment" onclick="CreateAssignment()"/>                                                       
                 </form>
             </div>
 
@@ -125,12 +125,36 @@
             <!-- Assignments In school Forms -->
             <div class="assignmentsList" id="assignmentsList">
                 <h1 class="listOfAssignmentsH1">List of Assignments</h1>
-                <div id="checkAssignment1" class="checkAssignment"></div>
-                <div id="checkAssignment2" class="checkAssignment"></div>
-                <div id="checkAssignment3" class="checkAssignment"></div>
-                <div id="checkAssignment4" class="checkAssignment"></div>
-                <div id="checkAssignment5" class="checkAssignment"></div>
-                <div id="checkAssignment6" class="checkAssignment"></div>
+                <div id="checkAssignment1" class="checkAssignment">
+                    <p id="A_TitleID" class="AssignmentData">Title:</p>
+                    <p id="A_DescreptionID" class="AssignmentData">Descreption:</p>
+                    <p id="A_SubDateID" class="AssignmentData" >Deadline:</p>
+                </div>
+                <div id="checkAssignment2" class="checkAssignment">
+                    <p id="A_TitleID" class="AssignmentData">Title:</p>
+                    <p id="A_DescreptionID" class="AssignmentData">Descreption:</p>
+                    <p id="A_SubDateID" class="AssignmentData" >Deadline:</p>
+                </div>
+                <div id="checkAssignment3" class="checkAssignment">
+                    <p id="A_TitleID" class="AssignmentData">Title:</p>
+                    <p id="A_DescreptionID" class="AssignmentData">Descreption:</p>
+                    <p id="A_SubDateID" class="AssignmentData" >Deadline:</p>
+                </div>
+                <div id="checkAssignment4" class="checkAssignment">
+                    <p id="A_TitleID" class="AssignmentData">Title:</p>
+                    <p id="A_DescreptionID" class="AssignmentData">Descreption:</p>
+                    <p id="A_SubDateID" class="AssignmentData" >Deadline:</p>
+                </div>
+                <div id="checkAssignment5" class="checkAssignment">
+                    <p id="A_TitleID" class="AssignmentData">Title:</p>
+                    <p id="A_DescreptionID" class="AssignmentData">Descreption:</p>
+                    <p id="A_SubDateID" class="AssignmentData" >Deadline:</p>
+                </div>
+                <div id="checkAssignment6" class="checkAssignment">
+                    <p id="A_TitleID" class="AssignmentData">Title:</p>
+                    <p id="A_DescreptionID" class="AssignmentData">Descreption:</p>
+                    <p id="A_SubDateID" class="AssignmentData" >Deadline:</p>
+                </div>
             </div>
 
         </div>

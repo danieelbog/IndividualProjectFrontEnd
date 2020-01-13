@@ -10,7 +10,7 @@
 
     <title>PrivateSchoolTrainersPage</title>
 </head>
-<body>
+<body  onload="CheckTrainersData()">
 
 
     <header>
@@ -60,20 +60,20 @@
             </div>
 
             <div class="T_secondContainerB">
-                <div class="T_InsideDivA">
-                    <p class="addTrainers" id="addTrainers" onclick="AddTrainer()">Add Trainers to Private School</p>
+                <div class="T_InsideDivA" onclick="AddTrainer()">
+                    <p class="addTrainers" id="addTrainers">Add Trainers to Private School</p>
                 </div>
-                <div class="T_InsideDivB">
-                    <p class="seeTrainers" id="seeTrainers" onclick="SeeTrainers()">Check Trainers in Private School</p>
+                <div class="T_InsideDivB"  onclick="SeeTrainers()">
+                    <p class="seeTrainers" id="seeTrainers">Check Trainers in Private School</p>
                 </div>  
-                <div class="T_InsideDivC">
-                    <p class="enrollTrainers" id="enrollTrainers" onclick="EnrollTrainers()">Enroll Trainers to Courses</p>
+                <div class="T_InsideDivC" onclick="EnrollTrainers()">
+                    <p class="enrollTrainers" id="enrollTrainers">Enroll Trainers to Courses</p>
                 </div>  
-                <div class="T_InsideDivD">
-                    <p class="checkTrainersPerCourse" id="checkTrainersPerCourse" onclick="CheckTrainersPerCourse()">Check Trainers per Course</p>
+                <div class="T_InsideDivD" onclick="CheckTrainersPerCourse()">
+                    <p class="checkTrainersPerCourse" id="checkTrainersPerCourse">Check Trainers per Course</p>
                 </div>  
-                <div class="T_InsideDivE">
-                    <p class="putMarks" id="putMarks" onclick="PutMarks()">Put Marks to Assignments</p>
+                <div class="T_InsideDivE" onclick="PutMarks()">
+                    <p class="putMarks" id="putMarks">Put Marks to Assignments</p>
                 </div>  
             </div>
     </section>
@@ -89,21 +89,21 @@
             <div class="containerDivForCourseForm">
                 <form class="courseForm" id="courseForm">
                     <!-- Trainer first name -->
-                    <input type="text" name="T_firstName" required autocomplete="off"/>
+                    <input type="text" name="T_firstName" required autocomplete="off" id="inputTFirstName"/>
                     <label for="T_firstName" class="label_TFirstName">
                         <span class="contentName">First Name</span>
                     </label>
                     <!-- Trainer Last Name -->
-                    <input type="text" name="T_lastName" required autocomplete="off"/>
+                    <input type="text" name="T_lastName" required autocomplete="off" id="inputTLastName"/>
                     <label for="T_lastName" class="label_TLastName">
                         <span class="contentName">Last Name</span>
                     </label>                  
                     <!-- Trainer Subject -->
-                    <input type="text" name="trainerSubject" required autocomplete="off"/>
+                    <input type="text" name="trainerSubject" required autocomplete="off" id="inputTSubject"/>
                     <label for="trainerSubject" class="labelSubject">
                         <span class="contentName">Subject</span>
                     </label>   
-                    <input type="submit" class="submitCourse" value="Add new Trainer"/>                                                      
+                    <input type="submit" class="submitCourse" value="Add new Trainer" onclick="CreateTrainer()"/>                                                      
                 </form>
             </div>
 
@@ -122,12 +122,36 @@
             <!-- Trainers In school Forms -->
             <div class="trainerList" id="trainerList">
                 <h1 class="listOfTrainersH1">List of Trainer</h1>
-                <div id="checkTrainer1" class="checkTrainer"></div>
-                <div id="checkTrainer2" class="checkTrainer"></div>
-                <div id="checkTrainer3" class="checkTrainer"></div>
-                <div id="checkTrainer4" class="checkTrainer"></div>
-                <div id="checkTrainer5" class="checkTrainer"></div>
-                <div id="checkTrainer6" class="checkTrainer"></div>
+                <div id="checkTrainer1" class="checkTrainer">
+                    <p id="T_FirstNameID" class="TrainersData">First Name:</p>
+                    <p id="T_LastNameID" class="TrainersData">Last Name:</p>
+                    <p id="T_SubjectID" class="TrainersData" >Subject:</p>
+                </div>
+                <div id="checkTrainer2" class="checkTrainer">
+                    <p id="T_FirstNameID" class="TrainersData">First Name:</p>
+                    <p id="T_LastNameID" class="TrainersData">Last Name:</p>
+                    <p id="T_SubjectID" class="TrainersData" >Subject:</p>
+                </div>
+                <div id="checkTrainer3" class="checkTrainer">
+                    <p id="T_FirstNameID" class="TrainersData">First Name:</p>
+                    <p id="T_LastNameID" class="TrainersData">Last Name:</p>
+                    <p id="T_SubjectID" class="TrainersData" >Subject:</p>
+                </div>
+                <div id="checkTrainer4" class="checkTrainer">
+                    <p id="T_FirstNameID" class="TrainersData">First Name:</p>
+                    <p id="T_LastNameID" class="TrainersData">Last Name:</p>
+                    <p id="T_SubjectID" class="TrainersData" >Subject:</p>
+                </div>
+                <div id="checkTrainer5" class="checkTrainer">
+                    <p id="T_FirstNameID" class="TrainersData">First Name:</p>
+                    <p id="T_LastNameID" class="TrainersData">Last Name:</p>
+                    <p id="T_SubjectID" class="TrainersData" >Subject:</p>
+                </div>
+                <div id="checkTrainer6" class="checkTrainer">
+                    <p id="T_FirstNameID" class="TrainersData">First Name:</p>
+                    <p id="T_LastNameID" class="TrainersData">Last Name:</p>
+                    <p id="T_SubjectID" class="TrainersData" >Subject:</p>
+                </div>
             </div>
 
         </div>

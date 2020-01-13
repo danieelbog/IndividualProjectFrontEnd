@@ -10,7 +10,7 @@
 
     <title>PrivateSchoolCoursesPage</title>
 </head>
-<body id="courseBody">
+<body id="courseBody" onload="CheckCoursesData()">
     
         <header>
             <div class = "headerContainer">
@@ -61,11 +61,11 @@
 
             <!-- Container with 2 options that are needed for the course page -->
             <div class="C_secondContainerB">
-                <div class="C_InsideDivA">
-                    <p class="addCourses" id="addCourses" onclick="addCourses()">Add Courses to Private School</p>
+                <div class="C_InsideDivA" onclick="addCourses()">
+                    <p class="addCourses" id="addCourses">Add Courses to Private School</p>
                 </div>
-                <div class="C_InsideDivB">
-                    <p class="seeCourses" id="seeCourses" onclick="seeCourses()">See Courses in Private School</p>
+                <div class="C_InsideDivB"  onclick="seeCourses()">
+                    <p class="seeCourses" id="seeCourses">See Courses in Private School</p>
                 </div>  
             </div>
     </section>
