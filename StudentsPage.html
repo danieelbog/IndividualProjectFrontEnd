@@ -62,8 +62,9 @@
                 1) Add Students to your Private school. <br /><br />
                 2) Check the Students who already are studying in your
                 private school. <br /><br />
-                3) Enroll Students to Courses. Click on Enroll Students To Courses. 
-                A new window will appear. Click on the Course Form you want to enroll the Student. Drag the Student to the Course you clicked previously. 
+                3) Enroll Students to Courses. Click on Enroll Students To Courses.
+                A new window will appear. Click on the Course Form you want to enroll the Student. Drag the Student to
+                the Course you clicked previously.
                 To delete a Student. Drag the Student from the Course List to the Student List. <br /><br />
                 4) Check each Student based on the Course he is studying.
                 <br /><br />
@@ -94,7 +95,7 @@
             </div>
             <div class="S_InsideDivE" onclick="CheckStudentsMoreThanOneCourses()">
                 <p class="checkStudentsMoreThanOneCourses" id="checkStudentsMoreThanOneCourses">
-                    Check student studying more than one courses
+                    Check students in more than one courses
                 </p>
             </div>
         </div>
@@ -370,16 +371,75 @@
             </span>
 
             <!-- Students In school per Course -->
-            <div class="studentsList" id="studentsList">
-                <h1 id="listOfStudentsH1">List of Students Per Course</h1>
-                <div id="checkStudentPerCourse1" class="checkStudent"></div>
-                <div id="checkStudentPerCourse2" class="checkStudent"></div>
-                <div id="checkStudentPerCourse3" class="checkStudent"></div>
-                <div id="checkStudentPerCourse4" class="checkStudent"></div>
-                <div id="checkStudentPerCourse5" class="checkStudent"></div>
-                <div id="checkStudentPerCourse6" class="checkStudent"></div>
-            </div>
+            <div class="studentsPerCourseList" id="studentsPerCourseList">
+                <h1 class="ListofStudentsPerCourseListH1">List of Students per Course</h1>
+                <div class="datacontainerStudentPerCourse">
+                    <div id="checkStudentsPerCourse1" class="checkStudentsPerCourse"
+                        onclick="OpencheckStudentsPerCourse(1)">
+                        <p id="C_TitleID17" class="CoursesData">Course Title:</p>
+                        <p id="C_StreamID17" class="CoursesData">Course Stream:</p>
+                        <p id="C_TypeID17" class="CoursesData">Course Type:</p>
+                        <p id="C_StartDateID17" class="CoursesData">Course Start Date:</p>
+                        <p id="C_EndDateID17" class="CoursesData">Course End Date:</p>
+                    </div>
+                    <div id="checkStudentsPerCourseSpace1" class="checkStudentsPerCourseSpace">
+                        <div id="checkStudentPerCourse1" class="checkStudentPerCourse">
+                            <p id="S_FirstNameID17" class="StudentsData">First Name:</p>
+                            <p id="S_LastNameID17" class="StudentsData">Last Name:</p>
+                            <p id="S_DateOfBirthID17" class="StudentsData">Date of Birth:</p>
+                            <p id="S_FeesID17" class="StudentsData">Fees:</p>
+                        </div>
 
+                        <div id="checkStudentPerCourse2" class="checkStudentPerCourse">
+                            <p id="S_FirstNameID18" class="StudentsData">First Name:</p>
+                            <p id="S_LastNameID18" class="StudentsData">Last Name:</p>
+                            <p id="S_DateOfBirthID18" class="StudentsData">Date of Birth:</p>
+                            <p id="S_FeesID18" class="StudentsData">Fees:</p>
+                        </div>
+
+                        <div id="checkStudentPerCourse3" class="checkStudentPerCourse">
+                            <p id="S_FirstNameID19" class="StudentsData">First Name:</p>
+                            <p id="S_LastNameID19" class="StudentsData">Last Name:</p>
+                            <p id="S_DateOfBirthID19" class="StudentsData">Date of Birth:</p>
+                            <p id="S_FeesID19" class="StudentsData">Fees:</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="datacontainerStudentPerCourse">
+                    <div id="checkStudentsPerCourse2" class="checkStudentsPerCourse"
+                        onclick="OpencheckStudentsPerCourse(2)">
+                        <p id="C_TitleID8" class="CoursesData">Course Title:</p>
+                        <p id="C_StreamID8" class="CoursesData">Course Stream:</p>
+                        <p id="C_TypeID8" class="CoursesData">Course Type:</p>
+                        <p id="C_StartDateID8" class="CoursesData">Course Start Date:</p>
+                        <p id="C_EndDateID8" class="CoursesData">Course End Date:</p>
+                    </div>
+                    <div id="checkStudentsPerCourseSpace2" class="checkStudentsPerCourseSpace">
+                        <div id="checkStudentPerCourse4" class="checkStudentPerCourse">
+                            <p id="S_FirstNameID10" class="StudentsData">First Name:</p>
+                            <p id="S_LastNameID10" class="StudentsData">Last Name:</p>
+                            <p id="S_DateOfBirthID10" class="StudentsData">Date of Birth:</p>
+                            <p id="S_FeesID10" class="StudentsData">Fees:</p>
+                        </div>
+
+                        <div id="checkStudentPerCourse5" class="checkStudentPerCourse">
+                            <p id="S_FirstNameID111" class="StudentsData">First Name:</p>
+                            <p id="S_LastNameID111" class="StudentsData">Last Name:</p>
+                            <p id="S_DateOfBirthID111" class="StudentsData">Date of Birth:</p>
+                            <p id="S_FeesID111" class="StudentsData">Fees:</p>
+                        </div>
+
+                        <div id="checkStudentPerCourse6" class="checkStudentPerCourse">
+                            <p id="S_FirstNameID112" class="StudentsData">First Name:</p>
+                            <p id="S_LastNameID112" class="StudentsData">Last Name:</p>
+                            <p id="S_DateOfBirthID112" class="StudentsData">Date of Birth:</p>
+                            <p id="S_FeesID112" class="StudentsData">Fees:</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
         <div class="maskSection" id="maskSectionD" onclick="POPUP_checkStudentsPerCourse_QuitSection()"></div>
     </section>

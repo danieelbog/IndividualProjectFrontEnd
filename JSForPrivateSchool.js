@@ -1,41 +1,11 @@
 /* Home Page and general values Starts */
 
+// A function to save an create new divs when something is enrolled somewhere (not needed in this version)
 function saveContent(num) {
-  // if (num === 1) {
-  //   var y = document.getElementById("checkStudentDragableSpace");
-  //   for (
-  //     var i = 0;
-  //     i < document.getElementsByClassName("checkStudentDragable").length;
-  //     i++
-  //   ) {
-  //     var x = document.getElementsByClassName("checkStudentDragable")[i];
-  //     y.appendChild(x);
-  //   }
-  // }
-  // else if (num === 2){
-  //   var y = document.getElementById("checkTrainerDragableSpace");
-  //   for (
-  //     var i = 0;
-  //     i < document.getElementsByClassName("checkTrainerDragable").length;
-  //     i++
-  //   ) {
-  //     var x = document.getElementsByClassName("checkTrainerDragable")[i];
-  //     y.appendChild(x);
-  //   }
-  // }
-  // else if (num ===3){
-  //   var y = document.getElementById("checkAssignmentDragableSpace");
-  //   for (
-  //     var i = 0;
-  //     i < document.getElementsByClassName("checkAssignmentDragable").length;
-  //     i++
-  //   ) {
-  //     var x = document.getElementsByClassName("checkAssignmentDragable")[i];
-  //     y.appendChild(x);
-  //   }
-  // }
+  
 }
 
+// This function will clear the dropable space based uppon the html page it was called (it will clear everything form evrywhere)
 function clearContent(num) {
   if (num === 1) {
     var y = document.getElementById("checkStudentDragableSpace");
@@ -73,51 +43,58 @@ function clearContent(num) {
   }
 }
 
-// general onload function
-
+// general onload function to print the data needed at the html pages
 function onloadDisplayData(num) {
+  // Num 1 is Student
   if (num === 1) {
     CheckStudentData();
     CheckStudentDataForEnroll();
     CheckCoursesDataInStudent();
+    CheckStudentPerCourseData();
+    StudentPerCourseDataCourse();
   }
+  // Num 2 is Trainer
   else if (num === 2) {
     CheckTrainersData();
     checkTrainersDataToEnroll();
     CheckCoursesDataInTrainer();
     
   }
+  // Num 3 is Assignment
   else if (num === 3) {
     CheckAssignmentsData();
     CheckCoursesDataInAssignment();
     CheckAssignmentsDataToEnroll();
   }
-  // else {
-  //   CheckStudentData();
-  //   CheckAssignmentsData();
-  //   CheckCoursesData();
-  // }
+  // Num 4 or Else is Courses
+  else {
+    CheckCoursesData();
+  }
 }
 
 /* Home Page Section Ends */
 
 /* Courses Page Section Start */
 
+// Slide page to add Courses
 function addCourses() {
   document.getElementById("POPUP_addCourses").style.display = "block";
   document.getElementById("maskSectionA").style.display = "block";
 }
 
+// Slide page to check Courses
 function seeCourses() {
   document.getElementById("POPUP_seeCourses").style.display = "block";
   document.getElementById("maskSectionB").style.display = "block";
 }
 
+// Slide page to quit add Courses
 function POPUP_addCourses_QuitSection() {
   document.getElementById("POPUP_addCourses").style.display = "none";
   document.getElementById("maskSectionA").style.display = "none";
 }
 
+// Slide page to quit check Courses
 function POPUP_seeCourses_QuitSection() {
   document.getElementById("POPUP_seeCourses").style.display = "none";
   document.getElementById("maskSectionB").style.display = "none";
@@ -213,7 +190,6 @@ function CreateCourse() {
 
 // Course Object and Displaying in the see Courses Section Block of Code jsut for Showcase
 // Please Use the Above Method to create new instances and see how it works (it works amazingly well);
-
 function CheckCoursesData() {
   var course = {
     C_Title: "BC9",
@@ -236,6 +212,7 @@ function CheckCoursesData() {
   endDate.innerHTML = "Ending Date: " + course.C_EndDate;
 }
 
+// An object to print courses at the Student Page
 function CheckCoursesDataInStudent() {
   var course = {
     C_Title: "BC9",
@@ -258,6 +235,7 @@ function CheckCoursesDataInStudent() {
   endDate1.innerHTML = "Ending Date: " + course.C_EndDate;
 }
 
+// A function to prin Course object at the Trainer page
 function CheckCoursesDataInTrainer() {
   var course = {
     C_Title: "BC9",
@@ -280,6 +258,30 @@ function CheckCoursesDataInTrainer() {
   endDate2.innerHTML = "Ending Date: " + course.C_EndDate;
 }
 
+// function to see courses in Student per Course section
+function StudentPerCourseDataCourse() {
+  var course = {
+    C_Title: "BC9",
+    C_Stream: "C#",
+    C_Type: "Part-Time",
+    C_StartDate: "7/9/2019",
+    C_EndDate: "26/4/2020"
+  };
+
+  var title2 = document.getElementById("C_TitleID17");
+  var stream2 = document.getElementById("C_StreamID17");
+  var type2 = document.getElementById("C_TypeID17");
+  var startDate2 = document.getElementById("C_StartDateID17");
+  var endDate2 = document.getElementById("C_EndDateID17");
+
+  title2.innerHTML = "Course title: " + course.C_Title;
+  stream2.innerHTML = "Stream: " + course.C_Stream;
+  type2.innerHTML = "Type: " + course.C_Type;
+  startDate2.innerHTML = "Starting Date: " + course.C_StartDate;
+  endDate2.innerHTML = "Ending Date: " + course.C_EndDate;
+}
+
+// A function to print Course in Assignment page
 function CheckCoursesDataInAssignment() {
   var course = {
     C_Title: "BC9",
@@ -306,16 +308,19 @@ function CheckCoursesDataInAssignment() {
 
 /* Students Page Section Start */
 
+// Slide page for Add Student
 function AddStudents() {
   document.getElementById("POPUP_addStudents").style.display = "block";
   document.getElementById("maskSectionA").style.display = "block";
 }
 
+// Slide page for Check Student
 function SeeStudents() {
   document.getElementById("POPUP_seeStudents").style.display = "block";
   document.getElementById("maskSectionB").style.display = "block";
 }
 
+// Slide page for Enroll Student
 function EnrollStudents() {
   document.getElementById("POPUP_enrollStudents").style.display = "block";
   document.getElementById("maskSectionC").style.display = "block";
@@ -338,6 +343,7 @@ function dropCS(ev) {
 
 // Drop down for dragable divs
 function OpencheckCourseDragableSpace(num) {
+  // Numbers are for dropable divs, its just for show how it will be working with more entities later
   if (num == 1) {
     var checkCourseDragableSpace1 = document.getElementById(
       "checkCourseDragableSpace1"
@@ -444,6 +450,31 @@ function CheckStudentsPerCourse() {
   document.getElementById("maskSectionD").style.display = "block";
 }
 
+// Function to drop down the space with the students enrolled in the courses
+function OpencheckStudentsPerCourse(num) {
+
+  var checkStudentsPerCourseSpace1 = document.getElementById("checkStudentsPerCourseSpace1");
+  var checkStudentsPerCourseSpace2 = document.getElementById("checkStudentsPerCourseSpace2");
+
+  if (num == 1) {
+    if (checkStudentsPerCourseSpace1.style.display == "block") {
+      checkStudentsPerCourseSpace1.style.display = "none";
+    }
+    else {
+      checkStudentsPerCourseSpace1.style.display = "block";
+    }
+  }
+  else if (num == 2) {
+    if (checkStudentsPerCourseSpace2.style.display == "block") {
+      checkStudentsPerCourseSpace2.style.display = "none";
+    }
+    else {
+      checkStudentsPerCourseSpace2.style.display = "block";
+    }
+  }
+}
+
+// Check Students in more than once Courses
 function CheckStudentsMoreThanOneCourses() {
   document.getElementById(
     "POPUP_checkStudentsMoreThanOneCourses"
@@ -451,27 +482,32 @@ function CheckStudentsMoreThanOneCourses() {
   document.getElementById("maskSectionE").style.display = "block";
 }
 
+// Add students to Courses Quit Section
 function POPUP_addStudents_QuitSection() {
   document.getElementById("POPUP_addStudents").style.display = "none";
   document.getElementById("maskSectionA").style.display = "none";
 }
 
+// Add students to Courses Quit Section
 function POPUP_seeStudents_QuitSection() {
   document.getElementById("POPUP_seeStudents").style.display = "none";
   document.getElementById("maskSectionB").style.display = "none";
 }
 
+// Enroll Students to Courses Quit Section
 function POPUP_enrollStudents_QuitSection() {
   document.getElementById("POPUP_enrollStudents").style.display = "none";
   document.getElementById("maskSectionC").style.display = "none";
 }
 
+// Check student per course Quit Section
 function POPUP_checkStudentsPerCourse_QuitSection() {
   document.getElementById("POPUP_checkStudentsPerCourse").style.display =
     "none";
   document.getElementById("maskSectionD").style.display = "none";
 }
 
+// Check students in ore than one courses Quit Section
 function POPUP_checkStudentsMoreThanOneCourses_QuitSection() {
   document.getElementById(
     "POPUP_checkStudentsMoreThanOneCourses"
@@ -563,6 +599,7 @@ function CheckStudentData() {
   sf.innerHTML = "Fees: " + student.S_Fees;
 }
 
+// Function to print students for enrollement
 function CheckStudentDataForEnroll() {
   var student = {
     S_FirstName: "Daniel",
@@ -582,27 +619,47 @@ function CheckStudentDataForEnroll() {
   sf1.innerHTML = "Fees: " + student.S_Fees;
 }
 
+// Function to display Students in Students Per Course Section
+function CheckStudentPerCourseData() {
+  var student = {
+    S_FirstName: "Daniel",
+    S_LastName: "Bogdan",
+    S_BirthDay: "26/4/1995",
+    S_Fees: "1980 euros"
+  };
+
+  var sfn1 = document.getElementById("S_FirstNameID17");
+  var sln1 = document.getElementById("S_LastNameID17");
+  var sdob1 = document.getElementById("S_DateOfBirthID17");
+  var sf1 = document.getElementById("S_FeesID17");
+
+  sfn1.innerHTML = "First Name: " + student.S_FirstName;
+  sln1.innerHTML = "Last Name: " + student.S_LastName;
+  sdob1.innerHTML = "Date of Birth: " + student.S_BirthDay;
+  sf1.innerHTML = "Fees: " + student.S_Fees;
+}
+
 /* Students Page Section Ends */
 
 /* Trainers Page Section Start */
 
+// Slide for Add Trainer
 function AddTrainer() {
   document.getElementById("POPUP_addTrainers").style.display = "block";
   document.getElementById("maskSectionA").style.display = "block";
 }
 
+// Slide for Check Trainer
 function SeeTrainers() {
   document.getElementById("POPUP_seeTrainers").style.display = "block";
   document.getElementById("maskSectionB").style.display = "block";
 }
 
+// Slide for Enroll Trainer
 function EnrollTrainers() {
   document.getElementById("POPUP_enrollTrainers").style.display = "block";
   document.getElementById("maskSectionC").style.display = "block";
 }
-
-// Drop down for dragable divs
-
 
 // Dragable Content for Students Block of Code
 function allowDropCT(ev) {
@@ -621,6 +678,7 @@ function dropCT(ev) {
 
 // Drop down for dragable divs
 function OpencheckCourseDragableSpaceCT(num) {
+  // Numbers are for showcase purposes, for each div, later on this will be fully automatic
   if (num == 7) {
     var checkDragableSpace1 = document.getElementById(
       "checkCourseDragableSpace1CT"
@@ -720,38 +778,45 @@ function OpencheckCourseDragableSpaceCT(num) {
   }
 }
 
+// Slide for check trainers per course
 function CheckTrainersPerCourse() {
   document.getElementById("POPUP_checkTrainersPerCourse").style.display =
     "block";
   document.getElementById("maskSectionD").style.display = "block";
 }
 
+// Slide for marks
 function PutMarks() {
   document.getElementById("POPUP_putMarks").style.display = "block";
   document.getElementById("maskSectionE").style.display = "block";
 }
 
+// Add trainers quit section
 function POPUP_addTrainers_QuitSection() {
   document.getElementById("POPUP_addTrainers").style.display = "none";
   document.getElementById("maskSectionA").style.display = "none";
 }
 
+// See trainers quit section
 function POPUP_seeTrainers_QuitSection() {
   document.getElementById("POPUP_seeTrainers").style.display = "none";
   document.getElementById("maskSectionB").style.display = "none";
 }
 
+// Enroll Trainer to Courses quit section
 function POPUP_enrollTrainers_QuitSection() {
   document.getElementById("POPUP_enrollTrainers").style.display = "none";
   document.getElementById("maskSectionC").style.display = "none";
 }
 
+// Check Trainers per Course Quit Section
 function POPUP_checkTrainersPerCourse_QuitSection() {
   document.getElementById("POPUP_checkTrainersPerCourse").style.display =
     "none";
   document.getElementById("maskSectionD").style.display = "none";
 }
 
+// Put Marks Quit Section
 function POPUP_putMarks_QuitSection() {
   document.getElementById("POPUP_putMarks").style.display = "none";
   document.getElementById("maskSectionE").style.display = "none";
@@ -829,6 +894,7 @@ function CheckTrainersData() {
   tsub.innerHTML = "Subject: " + trainer.T_Subject;
 }
 
+// Function to print entity at the enrollement section
 function checkTrainersDataToEnroll() {
   var trainer = {
     T_FirstName: "Periklis",
@@ -849,16 +915,19 @@ function checkTrainersDataToEnroll() {
 
 /* Assignments Page Section Starts */
 
+// Slide for Adding Assignments
 function AddAssignments() {
   document.getElementById("POPUP_addAssignments").style.display = "block";
   document.getElementById("maskSectionA").style.display = "block";
 }
 
+// Slide for Checking Assignments
 function SeeAssignments() {
   document.getElementById("POPUP_seeAssignments").style.display = "block";
   document.getElementById("maskSectionB").style.display = "block";
 }
 
+// Slide for Enrolling Assignments to Courses
 function EnrollAssignmnets() {
   document.getElementById("POPUP_enrollAssignmnets").style.display = "block";
   document.getElementById("maskSectionC").style.display = "block";
@@ -1107,6 +1176,7 @@ function CheckAssignmentsData() {
   asubd.innerHTML = "Deadline: " + assignment.A_SubDateTime;
 }
 
+// Function to prin Assignment entity in the enrollement section
 function CheckAssignmentsDataToEnroll() {
   var assignment = {
     A_Title: "Create Private School Back End",

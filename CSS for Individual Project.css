@@ -1463,6 +1463,10 @@ div i:hover {
   overflow-y: scroll;
   overflow-x: hidden;
   display: none;
+  padding-left: 1em;
+  padding-top: 1em;
+  animation: slideFromRight 0.7s;
+
 }
 #checkCourseDragableSpace2 {
   background-color: white;
@@ -1481,6 +1485,10 @@ div i:hover {
   overflow-y: scroll;
   overflow-x: hidden;
   display: none;
+  padding-left: 1em;
+  padding-top: 1em;
+  animation: slideFromRight 0.7s;
+
 
 }
 #checkCourseDragableSpace3 {
@@ -1500,6 +1508,10 @@ div i:hover {
   overflow-y: scroll;
   overflow-x: hidden;
   display: none;
+  padding-left: 1em;
+  padding-top: 1em;
+  animation: slideFromRight 0.7s;
+
 
 }
 #checkCourseDragableSpace4 {
@@ -1519,6 +1531,10 @@ div i:hover {
   overflow-y: scroll;
   overflow-x: hidden;
   display: none;
+  padding-left: 1em;
+  padding-top: 1em;
+  animation: slideFromRight 0.7s;
+
 
 }
 #checkCourseDragableSpace5 {
@@ -1538,6 +1554,10 @@ div i:hover {
   overflow-y: scroll;
   overflow-x: hidden;
   display: none;
+  padding-left: 1em;
+  padding-top: 1em;
+  animation: slideFromRight 0.7s;
+
 
 }
 #checkCourseDragableSpace6 {
@@ -1557,6 +1577,9 @@ div i:hover {
   overflow-y: scroll;
   overflow-x: hidden;
   display: none;
+  padding-left: 1em;
+  padding-top: 1em;
+  animation: slideFromRight 0.7s;
 
 }
 
@@ -1621,6 +1644,132 @@ div i:hover {
   z-index: 2;
   display: none;
   animation: slideFromRight 0.7s;
+}
+
+/* // Sectionn for drop down data for Students per Course */
+
+.studentsPerCourseList {
+  top: 3em;
+  position: absolute;
+  display: flexbox;
+  flex-direction: column;
+  background-color: white;
+  height: 70%;
+  width: auto;
+  overflow: scroll;
+  margin: 2em;
+  left: 4.5em;
+  justify-content: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+#checkStudentsPerCourse1 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkStudentsPerCourse2 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkStudentsPerCourseSpace1 {
+  background-color: white;
+  flex-flow: 8em;
+  left: 1em;
+  height: 100%;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-bottom: solid 1px #b7bcc5;
+  border-left: solid 1px #b7bcc5;
+  padding: 1em;
+  /* border-radius: 18px; */
+  display: none;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+  animation: slideFromRight 0.7s;
+}
+
+#checkStudentsPerCourseSpace2 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 100%;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-bottom: solid 1px #b7bcc5;
+  border-left: solid 1px #b7bcc5;
+  padding: 1em;
+  /* border-radius: 18px; */
+  display: none;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+  left: 1em;
+  animation: slideFromRight 0.7s;
+}
+
+.ListofStudentsPerCourseListH1 {
+  margin-bottom: 1em;
+  position: relative;
+  top: -1em;
+  color: #2f3542;
+  cursor: pointer;
+  left: -1em;
+  font-size: 26px;
+}
+
+.ListofStudentsPerCourseListH1:hover {
+  color: #ff4757;
+}
+
+.checkStudentsPerCourse {
+  cursor: pointer;
+}
+
+.checkStudentsPerCourse:hover {
+  -webkit-box-shadow: inset 0px 0px 0px 0px rgba(255, 71, 87, 1);
+  -moz-box-shadow: inset 0px 0px 1px -1px rgba(255, 71, 87, 1);
+  box-shadow: inset 3px 0px 1px -1px rgba(255, 71, 87, 1);
+  opacity: 0.8;
+  border: none !important;
+}
+
+.checkStudentPerCourse {
+  cursor: pointer;
+}
+
+.checkStudentPerCourse:hover {
+  -webkit-box-shadow: inset 0px 0px 0px 0px rgba(255, 71, 87, 1);
+  -moz-box-shadow: inset 0px 0px 1px -1px rgba(255, 71, 87, 1);
+  box-shadow: inset 3px 0px 1px -1px rgba(255, 71, 87, 1);
+  opacity: 0.8;
+  border: none !important;
 }
 
 /* Section for Print List of students per Course */
@@ -2646,6 +2795,10 @@ div i:hover {
   overflow-y: scroll;
   overflow-x: hidden;
   display: none;
+  padding-left: 1em;
+  padding-top: 1em;
+  animation: slideFromRight 0.7s;
+
 }
 #checkCourseDragableSpace2CT {
   background-color: white;
@@ -2664,6 +2817,10 @@ div i:hover {
   overflow-y: scroll;
   overflow-x: hidden;
   display: none;
+  padding-left: 1em;
+  padding-top: 1em;
+  animation: slideFromRight 0.7s;
+
 
 }
 #checkCourseDragableSpace3CT {
@@ -2683,6 +2840,10 @@ div i:hover {
   overflow-y: scroll;
   overflow-x: hidden;
   display: none;
+  padding-left: 1em;
+  padding-top: 1em;
+  animation: slideFromRight 0.7s;
+
 
 }
 #checkCourseDragableSpace4CT {
@@ -2702,6 +2863,10 @@ div i:hover {
   overflow-y: scroll;
   overflow-x: hidden;
   display: none;
+  padding-left: 1em;
+  padding-top: 1em;
+  animation: slideFromRight 0.7s;
+
 
 }
 #checkCourseDragableSpace5CT {
@@ -2721,6 +2886,10 @@ div i:hover {
   overflow-y: scroll;
   overflow-x: hidden;
   display: none;
+  padding-left: 1em;
+  padding-top: 1em;
+  animation: slideFromRight 0.7s;
+
 
 }
 #checkCourseDragableSpace6CT {
@@ -2740,6 +2909,10 @@ div i:hover {
   overflow-y: scroll;
   overflow-x: hidden;
   display: none;
+  padding-left: 1em;
+  padding-top: 1em;
+  animation: slideFromRight 0.7s;
+
 
 }
 
@@ -3718,6 +3891,10 @@ div i:hover {
   overflow-y: scroll;
   overflow-x: hidden;
   display: none;
+  padding-left: 1em;
+  padding-top: 1em;
+  animation: slideFromRight 0.7s;
+
 }
 #checkCourseDragableSpace2CA {
   background-color: white;
@@ -3736,6 +3913,10 @@ div i:hover {
   overflow-y: scroll;
   overflow-x: hidden;
   display: none;
+  padding-left: 1em;
+  padding-top: 1em;
+  animation: slideFromRight 0.7s;
+
 
 }
 #checkCourseDragableSpace3CA {
@@ -3755,6 +3936,10 @@ div i:hover {
   overflow-y: scroll;
   overflow-x: hidden;
   display: none;
+  padding-left: 1em;
+  padding-top: 1em;
+  animation: slideFromRight 0.7s;
+
 
 }
 #checkCourseDragableSpace4CA {
@@ -3774,6 +3959,10 @@ div i:hover {
   overflow-y: scroll;
   overflow-x: hidden;
   display: none;
+  padding-left: 1em;
+  padding-top: 1em;
+  animation: slideFromRight 0.7s;
+
 
 }
 #checkCourseDragableSpace5CA {
@@ -3793,6 +3982,10 @@ div i:hover {
   overflow-y: scroll;
   overflow-x: hidden;
   display: none;
+  padding-left: 1em;
+  padding-top: 1em;
+  animation: slideFromRight 0.7s;
+
 
 }
 #checkCourseDragableSpace6CA {
@@ -3812,6 +4005,10 @@ div i:hover {
   overflow-y: scroll;
   overflow-x: hidden;
   display: none;
+  padding-left: 1em;
+  padding-top: 1em;
+  animation: slideFromRight 0.7s;
+
 
 }
 
