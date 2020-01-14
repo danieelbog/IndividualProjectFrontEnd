@@ -1,5 +1,104 @@
 /* Home Page and general values Starts */
 
+function saveContent(num) {
+  // if (num === 1) {
+  //   var y = document.getElementById("checkStudentDragableSpace");
+  //   for (
+  //     var i = 0;
+  //     i < document.getElementsByClassName("checkStudentDragable").length;
+  //     i++
+  //   ) {
+  //     var x = document.getElementsByClassName("checkStudentDragable")[i];
+  //     y.appendChild(x);
+  //   }
+  // }
+  // else if (num === 2){
+  //   var y = document.getElementById("checkTrainerDragableSpace");
+  //   for (
+  //     var i = 0;
+  //     i < document.getElementsByClassName("checkTrainerDragable").length;
+  //     i++
+  //   ) {
+  //     var x = document.getElementsByClassName("checkTrainerDragable")[i];
+  //     y.appendChild(x);
+  //   }
+  // }
+  // else if (num ===3){
+  //   var y = document.getElementById("checkAssignmentDragableSpace");
+  //   for (
+  //     var i = 0;
+  //     i < document.getElementsByClassName("checkAssignmentDragable").length;
+  //     i++
+  //   ) {
+  //     var x = document.getElementsByClassName("checkAssignmentDragable")[i];
+  //     y.appendChild(x);
+  //   }
+  // }
+}
+
+function clearContent(num) {
+  if (num === 1) {
+    var y = document.getElementById("checkStudentDragableSpace");
+
+    for (
+      var i = 0;
+      i < document.getElementsByClassName("checkStudentDragable").length;
+      i++
+    ) {
+      var x = document.getElementsByClassName("checkStudentDragable")[i];
+      y.appendChild(x);
+    }
+  } else if (num === 2) {
+    var y = document.getElementById("checkTrainersDragableSpace");
+
+    for (
+      var i = 0;
+      i < document.getElementsByClassName("checkTrainerDragable").length;
+      i++
+    ) {
+      var x = document.getElementsByClassName("checkTrainerDragable")[i];
+      y.appendChild(x);
+    }
+  } else if (num === 3) {
+    var y = document.getElementById("checkAssignmentDragableSpace1");
+
+    for (
+      var i = 0;
+      i < document.getElementsByClassName("checkAssignmentDragable").length;
+      i++
+    ) {
+      var x = document.getElementsByClassName("checkAssignmentDragable")[i];
+      y.appendChild(x);
+    }
+  }
+}
+
+// general onload function
+
+function onloadDisplayData(num) {
+  if (num === 1) {
+    CheckStudentData();
+    CheckStudentDataForEnroll();
+    CheckCoursesDataInStudent();
+  }
+  else if (num === 2) {
+    CheckTrainersData();
+    checkTrainersDataToEnroll();
+    CheckCoursesDataInTrainer();
+    
+  }
+  else if (num === 3) {
+    CheckAssignmentsData();
+    CheckCoursesDataInAssignment();
+    CheckAssignmentsDataToEnroll();
+  }
+  // else {
+  //   CheckStudentData();
+  //   CheckAssignmentsData();
+  //   CheckCoursesData();
+  // }
+}
+
 /* Home Page Section Ends */
 
 /* Courses Page Section Start */
@@ -46,6 +145,15 @@ function CreateCourse() {
   var CheckCourseDiv = document.createElement("DIV");
   CheckCourseDiv.id = "checkCourse1";
   CheckCourseDiv.className = "checkCourse";
+
+  // Creating the div at studentHtml so we can use the add student to course function
+  var DataContainerCourseDiv = document.createElement("DIV");
+  DataContainerCourseDiv.className = "datacontainerstudent";
+
+  // Creating the div at studentHtml so we can use the add student to course function
+  var CheckCourseDragableDiv = document.createElement("DIV");
+  CheckCourseDragableDiv.id = "checkCourseDragable1";
+  CheckCourseDragableDiv.className = "checkCourseDragable";
 
   // Creating the paragraphs that will have the indo written isnide the div of the instance
   var courseTtitleP = document.createElement("P");
@@ -94,6 +202,13 @@ function CreateCourse() {
 
   // Adding the div to the COntainer with all the other instance divs
   document.getElementById("coursesList").appendChild(CheckCourseDiv);
+  // Add courses to Student Html so we can add students to courses
+  DataContainerCourseDiv.appendChild(CheckCourseDragableDiv);
+  document
+    .getElementById("coursesListToDrug")
+    .appendChild(DataContainerCourseDiv);
+  // Add courses to Trainer Html so we can add Trainers to Courses
+  // Add courses to Assignments Html so we can add Assignments to Courses
 }
 
 // Course Object and Displaying in the see Courses Section Block of Code jsut for Showcase
@@ -119,6 +234,72 @@ function CheckCoursesData() {
   type.innerHTML = "Type: " + course.C_Type;
   startDate.innerHTML = "Starting Date: " + course.C_StartDate;
   endDate.innerHTML = "Ending Date: " + course.C_EndDate;
+}
+
+function CheckCoursesDataInStudent() {
+  var course = {
+    C_Title: "BC9",
+    C_Stream: "C#",
+    C_Type: "Part-Time",
+    C_StartDate: "7/9/2019",
+    C_EndDate: "26/4/2020"
+  };
+
+  var title1 = document.getElementById("C_TitleID11");
+  var stream1 = document.getElementById("C_StreamID11");
+  var type1 = document.getElementById("C_TypeID11");
+  var startDate1 = document.getElementById("C_StartDateID11");
+  var endDate1 = document.getElementById("C_EndDateID11");
+
+  title1.innerHTML = "Course title: " + course.C_Title;
+  stream1.innerHTML = "Stream: " + course.C_Stream;
+  type1.innerHTML = "Type: " + course.C_Type;
+  startDate1.innerHTML = "Starting Date: " + course.C_StartDate;
+  endDate1.innerHTML = "Ending Date: " + course.C_EndDate;
+}
+
+function CheckCoursesDataInTrainer() {
+  var course = {
+    C_Title: "BC9",
+    C_Stream: "C#",
+    C_Type: "Part-Time",
+    C_StartDate: "7/9/2019",
+    C_EndDate: "26/4/2020"
+  };
+
+  var title2 = document.getElementById("C_TitleID21");
+  var stream2 = document.getElementById("C_StreamID21");
+  var type2 = document.getElementById("C_TypeID21");
+  var startDate2 = document.getElementById("C_StartDateID21");
+  var endDate2 = document.getElementById("C_EndDateID21");
+
+  title2.innerHTML = "Course title: " + course.C_Title;
+  stream2.innerHTML = "Stream: " + course.C_Stream;
+  type2.innerHTML = "Type: " + course.C_Type;
+  startDate2.innerHTML = "Starting Date: " + course.C_StartDate;
+  endDate2.innerHTML = "Ending Date: " + course.C_EndDate;
+}
+
+function CheckCoursesDataInAssignment() {
+  var course = {
+    C_Title: "BC9",
+    C_Stream: "C#",
+    C_Type: "Part-Time",
+    C_StartDate: "7/9/2019",
+    C_EndDate: "26/4/2020"
+  };
+
+  var title3 = document.getElementById("C_TitleID31");
+  var stream3 = document.getElementById("C_StreamID31");
+  var type3 = document.getElementById("C_TypeID31");
+  var startDate3 = document.getElementById("C_StartDateID31");
+  var endDate3 = document.getElementById("C_EndDateID31");
+
+  title3.innerHTML = "Course title: " + course.C_Title;
+  stream3.innerHTML = "Stream: " + course.C_Stream;
+  type3.innerHTML = "Type: " + course.C_Type;
+  startDate3.innerHTML = "Starting Date: " + course.C_StartDate;
+  endDate3.innerHTML = "Ending Date: " + course.C_EndDate;
 }
 
 /* Courses Page Section Ends */
@@ -253,7 +434,7 @@ function OpencheckCourseDragableSpace(num) {
       saveTheEnrollID6.style.display = "block";
       clearTheEnrollID6.style.display = "block";
     }
-  }
+  }  
 }
 
 // Check Students Per COurse Section
@@ -374,12 +555,31 @@ function CheckStudentData() {
   var sfn = document.getElementById("S_FirstNameID");
   var sln = document.getElementById("S_LastNameID");
   var sdob = document.getElementById("S_DateOfBirthID");
-  var sf = document.getElementById("S_Fees");
+  var sf = document.getElementById("S_FeesID");
 
   sfn.innerHTML = "First Name: " + student.S_FirstName;
   sln.innerHTML = "Last Name: " + student.S_LastName;
   sdob.innerHTML = "Date of Birth: " + student.S_BirthDay;
   sf.innerHTML = "Fees: " + student.S_Fees;
+}
+
+function CheckStudentDataForEnroll() {
+  var student = {
+    S_FirstName: "Daniel",
+    S_LastName: "Bogdan",
+    S_BirthDay: "26/4/1995",
+    S_Fees: "1980 euros"
+  };
+
+  var sfn1 = document.getElementById("S_FirstNameID11");
+  var sln1 = document.getElementById("S_LastNameID11");
+  var sdob1 = document.getElementById("S_DateOfBirthID11");
+  var sf1 = document.getElementById("S_FeesID11");
+
+  sfn1.innerHTML = "First Name: " + student.S_FirstName;
+  sln1.innerHTML = "Last Name: " + student.S_LastName;
+  sdob1.innerHTML = "Date of Birth: " + student.S_BirthDay;
+  sf1.innerHTML = "Fees: " + student.S_Fees;
 }
 
 /* Students Page Section Ends */
@@ -399,6 +599,125 @@ function SeeTrainers() {
 function EnrollTrainers() {
   document.getElementById("POPUP_enrollTrainers").style.display = "block";
   document.getElementById("maskSectionC").style.display = "block";
+}
+
+// Drop down for dragable divs
+
+
+// Dragable Content for Students Block of Code
+function allowDropCT(ev) {
+  ev.preventDefault();
+}
+
+function dragCT(ev) {
+  ev.dataTransfer.setData("div", ev.target.id);
+}
+
+function dropCT(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("div");
+  ev.target.appendChild(document.getElementById(data));
+}
+
+// Drop down for dragable divs
+function OpencheckCourseDragableSpaceCT(num) {
+  if (num == 7) {
+    var checkDragableSpace1 = document.getElementById(
+      "checkCourseDragableSpace1CT"
+    );
+    var saveTheEnrollID1 = document.getElementById("SaveTheEnrollID1CT");
+    var clearTheEnrollID1 = document.getElementById("ClearTheEnrollID1CT");
+
+    if (checkDragableSpace1.style.display === "block") {
+      checkDragableSpace1.style.display = "none";
+      saveTheEnrollID1.style.display = "none";
+      clearTheEnrollID1.style.display = "none";
+    } else {
+      checkDragableSpace1.style.display = "block";
+      saveTheEnrollID1.style.display = "block";
+      clearTheEnrollID1.style.display = "block";
+    }
+  } else if (num == 8) {
+    var checkDragableSpace2 = document.getElementById(
+      "checkCourseDragableSpace2CT"
+    );
+    var saveTheEnrollID2 = document.getElementById("SaveTheEnrollID2CT");
+    var clearTheEnrollID2 = document.getElementById("ClearTheEnrollID2CT");
+
+    if (checkDragableSpace2.style.display === "block") {
+      checkDragableSpace2.style.display = "none";
+      saveTheEnrollID2.style.display = "none";
+      clearTheEnrollID2.style.display = "none";
+    } else {
+      checkDragableSpace2.style.display = "block";
+      saveTheEnrollID2.style.display = "block";
+      clearTheEnrollID2.style.display = "block";
+    }
+  } else if (num == 9) {
+    var checkDragableSpace3 = document.getElementById(
+      "checkCourseDragableSpace3CT"
+    );
+    var saveTheEnrollID3 = document.getElementById("SaveTheEnrollID3CT");
+    var clearTheEnrollID3 = document.getElementById("ClearTheEnrollID3CT");
+
+    if (checkDragableSpace3.style.display === "block") {
+      checkDragableSpace3.style.display = "none";
+      saveTheEnrollID3.style.display = "none";
+      clearTheEnrollID3.style.display = "none";
+    } else {
+      checkDragableSpace3.style.display = "block";
+      saveTheEnrollID3.style.display = "block";
+      clearTheEnrollID3.style.display = "block";
+    }
+  } else if (num == 10) {
+    var checkDragableSpace4 = document.getElementById(
+      "checkCourseDragableSpace4CT"
+    );
+    var saveTheEnrollID4 = document.getElementById("SaveTheEnrollID4CT");
+    var clearTheEnrollID4 = document.getElementById("ClearTheEnrollID4CT");
+
+    if (checkDragableSpace4.style.display === "block") {
+      checkDragableSpace4.style.display = "none";
+      saveTheEnrollID4.style.display = "none";
+      clearTheEnrollID4.style.display = "none";
+    } else {
+      checkDragableSpace4.style.display = "block";
+      saveTheEnrollID4.style.display = "block";
+      clearTheEnrollID4.style.display = "block";
+    }
+  } else if (num == 11) {
+    var checkDragableSpace5 = document.getElementById(
+      "checkCourseDragableSpace5CT"
+    );
+    var saveTheEnrollID5 = document.getElementById("SaveTheEnrollID5CT");
+    var clearTheEnrollID5 = document.getElementById("ClearTheEnrollID5CT");
+
+    if (checkDragableSpace5.style.display === "block") {
+      checkDragableSpace5.style.display = "none";
+      saveTheEnrollID5.style.display = "none";
+      clearTheEnrollID5.style.display = "none";
+    } else {
+      checkDragableSpace5.style.display = "block";
+      saveTheEnrollID5.style.display = "block";
+      clearTheEnrollID5.style.display = "block";
+    }
+  } else if (num == 12) {
+    var checkDragableSpace6 = document.getElementById(
+      "checkCourseDragableSpace6CT"
+    );
+    var saveTheEnrollID6 = document.getElementById("SaveTheEnrollID6CT");
+    var clearTheEnrollID6 = document.getElementById("ClearTheEnrollID6CT");
+
+    if (checkDragableSpace6.style.display === "block") {
+      checkDragableSpace6.style.display = "none";
+      saveTheEnrollID6.style.display = "none";
+      clearTheEnrollID6.style.display = "none";
+    } else {
+      checkDragableSpace6.style.display = "block";
+      saveTheEnrollID6.style.display = "block";
+      clearTheEnrollID6.style.display = "block";
+    }
+  }
 }
 
 function CheckTrainersPerCourse() {
@@ -510,6 +829,22 @@ function CheckTrainersData() {
   tsub.innerHTML = "Subject: " + trainer.T_Subject;
 }
 
+function checkTrainersDataToEnroll() {
+  var trainer = {
+    T_FirstName: "Periklis",
+    T_LastName: "Aidinopoulos",
+    T_Subject: "C#"
+  };
+
+  var tfn1 = document.getElementById("T_FirstNameID11");
+  var tln1 = document.getElementById("T_LastNameID11");
+  var tsub1 = document.getElementById("T_SubjectID11");
+
+  tfn1.innerHTML = "First Name: " + trainer.T_FirstName;
+  tln1.innerHTML = "Last Name: " + trainer.T_LastName;
+  tsub1.innerHTML = "Subject: " + trainer.T_Subject;
+}
+
 /* Trainers Page Section Ends */
 
 /* Assignments Page Section Starts */
@@ -527,6 +862,122 @@ function SeeAssignments() {
 function EnrollAssignmnets() {
   document.getElementById("POPUP_enrollAssignmnets").style.display = "block";
   document.getElementById("maskSectionC").style.display = "block";
+}
+
+// Dragable Content for Students Block of Code
+function allowDropCA(ev) {
+  ev.preventDefault();
+}
+
+function dragCA(ev) {
+  ev.dataTransfer.setData("div", ev.target.id);
+}
+
+function dropCA(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("div");
+  ev.target.appendChild(document.getElementById(data));
+}
+
+// Drop down for dragable divs
+function OpencheckCourseDragableSpaceCA(num) {
+  if (num == 13) {
+    var checkCourseDragableSpace1CA = document.getElementById(
+      "checkCourseDragableSpace1CA"
+    );
+    var saveTheEnrollID1 = document.getElementById("SaveTheEnrollID1CA");
+    var clearTheEnrollID1 = document.getElementById("ClearTheEnrollID1CA");
+
+    if (checkCourseDragableSpace1CA.style.display === "block") {
+      checkCourseDragableSpace1CA.style.display = "none";
+      saveTheEnrollID1.style.display = "none";
+      clearTheEnrollID1.style.display = "none";
+    } else {
+      checkCourseDragableSpace1CA.style.display = "block";
+      saveTheEnrollID1.style.display = "block";
+      clearTheEnrollID1.style.display = "block";
+    }
+  } else if (num == 14) {
+    var checkCourseDragableSpace2CA = document.getElementById(
+      "checkCourseDragableSpace2CA"
+    );
+    var saveTheEnrollID2 = document.getElementById("SaveTheEnrollID2CA");
+    var clearTheEnrollID2 = document.getElementById("ClearTheEnrollID2CA");
+
+    if (checkCourseDragableSpace2CA.style.display === "block") {
+      checkCourseDragableSpace2CA.style.display = "none";
+      saveTheEnrollID2.style.display = "none";
+      clearTheEnrollID2.style.display = "none";
+    } else {
+      checkCourseDragableSpace2CA.style.display = "block";
+      saveTheEnrollID2.style.display = "block";
+      clearTheEnrollID2.style.display = "block";
+    }
+  } else if (num == 15) {
+    var checkCourseDragableSpace3CA = document.getElementById(
+      "checkCourseDragableSpace3CA"
+    );
+    var saveTheEnrollID3 = document.getElementById("SaveTheEnrollID3CA");
+    var clearTheEnrollID3 = document.getElementById("ClearTheEnrollID3CA");
+
+    if (checkCourseDragableSpace3CA.style.display === "block") {
+      checkCourseDragableSpace3CA.style.display = "none";
+      saveTheEnrollID3.style.display = "none";
+      clearTheEnrollID3.style.display = "none";
+    } else {
+      checkCourseDragableSpace3CA.style.display = "block";
+      saveTheEnrollID3.style.display = "block";
+      clearTheEnrollID3.style.display = "block";
+    }
+  } else if (num == 16) {
+    var checkCourseDragableSpace4CA = document.getElementById(
+      "checkCourseDragableSpace4CA"
+    );
+    var saveTheEnrollID4 = document.getElementById("SaveTheEnrollID4CA");
+    var clearTheEnrollID4 = document.getElementById("ClearTheEnrollID4CA");
+
+    if (checkCourseDragableSpace4CA.style.display === "block") {
+      checkCourseDragableSpace4CA.style.display = "none";
+      saveTheEnrollID4.style.display = "none";
+      clearTheEnrollID4.style.display = "none";
+    } else {
+      checkCourseDragableSpace4CA.style.display = "block";
+      saveTheEnrollID4.style.display = "block";
+      clearTheEnrollID4.style.display = "block";
+    }
+  } else if (num == 17) {
+    var checkCourseDragableSpace5CA = document.getElementById(
+      "checkCourseDragableSpace5CA"
+    );
+    var saveTheEnrollID5 = document.getElementById("SaveTheEnrollID5CA");
+    var clearTheEnrollID5 = document.getElementById("ClearTheEnrollID5CA");
+
+    if (checkCourseDragableSpace5CA.style.display === "block") {
+      checkCourseDragableSpace5CA.style.display = "none";
+      saveTheEnrollID5.style.display = "none";
+      clearTheEnrollID5.style.display = "none";
+    } else {
+      checkCourseDragableSpace5CA.style.display = "block";
+      saveTheEnrollID5.style.display = "block";
+      clearTheEnrollID5.style.display = "block";
+    }
+  } else if (num == 18) {
+    var checkCourseDragableSpace6CA = document.getElementById(
+      "checkCourseDragableSpace6CA"
+    );
+    var saveTheEnrollID6 = document.getElementById("SaveTheEnrollID6CA");
+    var clearTheEnrollID6 = document.getElementById("ClearTheEnrollID6CA");
+
+    if (checkCourseDragableSpace6CA.style.display === "block") {
+      checkCourseDragableSpace6CA.style.display = "none";
+      saveTheEnrollID6.style.display = "none";
+      clearTheEnrollID6.style.display = "none";
+    } else {
+      checkCourseDragableSpace6CA.style.display = "block";
+      saveTheEnrollID6.style.display = "block";
+      clearTheEnrollID6.style.display = "block";
+    }
+  }
 }
 
 function CheckAssignmnetPerCourse() {
@@ -654,6 +1105,23 @@ function CheckAssignmentsData() {
   at.innerHTML = "Title: " + assignment.A_Title;
   adesc.innerHTML = "Descreption: " + assignment.A_Descreption;
   asubd.innerHTML = "Deadline: " + assignment.A_SubDateTime;
+}
+
+function CheckAssignmentsDataToEnroll() {
+  var assignment = {
+    A_Title: "Create Private School Back End",
+    A_Descreption:
+      "You must create private school back end with the following functionalities:.....",
+    A_SubDateTime: "17/1/2020"
+  };
+
+  var at1 = document.getElementById("A_TitleID11");
+  var adesc1 = document.getElementById("A_DescreptionID11");
+  var asubd1 = document.getElementById("A_SubDateID11");
+
+  at1.innerHTML = "Title: " + assignment.A_Title;
+  adesc1.innerHTML = "Descreption: " + assignment.A_Descreption;
+  asubd1.innerHTML = "Deadline: " + assignment.A_SubDateTime;
 }
 
 /* Assignments Page Section Ends */

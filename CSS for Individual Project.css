@@ -1340,6 +1340,22 @@ div i:hover {
   text-align: start;
 }
 
+#checkStudentDragableSpace {
+  background-color: white;
+  flex-flow: 8em;
+  height: 100%;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-bottom: solid 1px #b7bcc5;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
 #checkCourseDragable1 {
   background-color: white;
   flex-flow: 8em;
@@ -1569,18 +1585,6 @@ div i:hover {
   color: #ff4757;
 }
 
-/* Check Students Per Course */
-.POPUP_checkStudentsPerCourse {
-  background-color: white;
-  height: 100vh;
-  width: 30em;
-  position: absolute;
-  top: 3.2em;
-  right: 0%;
-  z-index: 2;
-  display: none;
-  animation: slideFromRight 0.7s;
-}
 
 .checkStudentDragable {
   cursor: pointer;
@@ -1604,6 +1608,19 @@ div i:hover {
   box-shadow: inset 3px 0px 1px -1px rgba(255, 71, 87, 1);
   opacity: 0.8;
   border: none !important;
+}
+
+/* Check Students Per Course */
+.POPUP_checkStudentsPerCourse {
+  background-color: white;
+  height: 100vh;
+  width: 30em;
+  position: absolute;
+  top: 3.2em;
+  right: 0%;
+  z-index: 2;
+  display: none;
+  animation: slideFromRight 0.7s;
 }
 
 /* Section for Print List of students per Course */
@@ -2378,6 +2395,404 @@ div i:hover {
   animation: slideFromRight 0.7s;
 }
 
+/* Dragable content for Trainer styles  */
+
+.trainersListToDrug {
+  top: 3em;
+  position: absolute;
+  display: flexbox;
+  flex-direction: column;
+  background-color: white;
+  height: 70%;
+  width: auto;
+  overflow: scroll;
+  margin: 2em;
+  left: 4.5em;
+  justify-content: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.coursesListToDrugCT {
+  top: 3em;
+  position: absolute;
+  display: flexbox;
+  flex-direction: column;
+  background-color: white;
+  height: 70%;
+  width: auto;
+  overflow: scroll;
+  margin: 2em;
+  left: 30em;
+  justify-content: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+#checkTrainerDrugable1 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkTrainerDrugable2 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkTrainerDrugable3 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkTrainerDrugable4 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkTrainerDrugable5 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkTrainerDrugable6 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkTrainersDragableSpace {
+  background-color: white;
+  flex-flow: 8em;
+  height: 100%;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-bottom: solid 1px #b7bcc5;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkCourseDragable1CT {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkCourseDragable2CT {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkCourseDragable3CT {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkCourseDragable4CT {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkCourseDragable5CT {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkCourseDragable6CT {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkCourseDragableSpace1CT {
+  background-color: white;
+  flex-flow: 8em;
+  height: 20em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-bottom: solid 1px #b7bcc5;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: none;
+}
+#checkCourseDragableSpace2CT {
+  background-color: white;
+  flex-flow: 8em;
+  height: 20em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-bottom: solid 1px #b7bcc5;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: none;
+
+}
+#checkCourseDragableSpace3CT {
+  background-color: white;
+  flex-flow: 8em;
+  height: 20em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-bottom: solid 1px #b7bcc5;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: none;
+
+}
+#checkCourseDragableSpace4CT {
+  background-color: white;
+  flex-flow: 8em;
+  height: 20em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-bottom: solid 1px #b7bcc5;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: none;
+
+}
+#checkCourseDragableSpace5CT {
+  background-color: white;
+  flex-flow: 8em;
+  height: 20em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-bottom: solid 1px #b7bcc5;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: none;
+
+}
+#checkCourseDragableSpace6CT {
+  background-color: white;
+  flex-flow: 8em;
+  height: 20em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-bottom: solid 1px #b7bcc5;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: none;
+
+}
+
+.listOfDragableTrainersH1 {
+  margin-bottom: 1em;
+  position: relative;
+  top: -1em;
+  color: #2f3542;
+  cursor: pointer;
+}
+
+.CourseOfDragableListH1CT {
+  margin-bottom: 1em;
+  position: relative;
+  top: -1em;
+  left: -2em;
+  color: #2f3542;
+  cursor: pointer;
+}
+
+.listOfDragableTrainersH1:hover {
+  color: #ff4757;
+}
+
+.CourseOfDragableListH1CT:hover {
+  color: #ff4757;
+}
+
+
+.checkTrainerDragable {
+  cursor: pointer;
+}
+
+.checkTrainerDragable:hover {
+  -webkit-box-shadow: inset 0px 0px 0px 0px rgba(255, 71, 87, 1);
+  -moz-box-shadow: inset 0px 0px 1px -1px rgba(255, 71, 87, 1);
+  box-shadow: inset 3px 0px 1px -1px rgba(255, 71, 87, 1);
+  opacity: 0.8;
+  border: none !important;
+}
+
+.checkCourseDragableCT {
+  cursor: pointer;
+}
+
+.checkCourseDragableCT:hover {
+  -webkit-box-shadow: inset 0px 0px 0px 0px rgba(255, 71, 87, 1);
+  -moz-box-shadow: inset 0px 0px 1px -1px rgba(255, 71, 87, 1);
+  box-shadow: inset 3px 0px 1px -1px rgba(255, 71, 87, 1);
+  opacity: 0.8;
+  border: none !important;
+}
+
 /* Check Trainers Per Course */
 .POPUP_checkTrainersPerCourse {
   background-color: white;
@@ -3051,6 +3466,555 @@ div i:hover {
   animation: slideFromRight 0.7s;
 }
 
+
+/* Dragable content for Trainer styles  */
+
+.assignmentsListToDrug {
+  top: 3em;
+  position: absolute;
+  display: flexbox;
+  flex-direction: column;
+  background-color: white;
+  height: 70%;
+  width: auto;
+  overflow: scroll;
+  margin: 2em;
+  left: 4.5em;
+  justify-content: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.coursesListToDrugCA {
+  top: 3em;
+  position: absolute;
+  display: flexbox;
+  flex-direction: column;
+  background-color: white;
+  height: 70%;
+  width: auto;
+  overflow: scroll;
+  margin: 2em;
+  left: 30em;
+  justify-content: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+#checkAssignmentDrugable1 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkAssignmentDrugable2 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkAssignmentDrugable3 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkAssignmentDrugable4 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkAssignmentDrugable5 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkAssignmentDrugable6 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkAssignmentDragableSpace1 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 100%;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-bottom: solid 1px #b7bcc5;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkCourseDragable1CA {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkCourseDragable2CA {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkCourseDragable3CA {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkCourseDragable4CA {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkCourseDragable5CA {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkCourseDragable6CA {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkCourseDragableSpace1CA {
+  background-color: white;
+  flex-flow: 8em;
+  height: 20em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-bottom: solid 1px #b7bcc5;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: none;
+}
+#checkCourseDragableSpace2CA {
+  background-color: white;
+  flex-flow: 8em;
+  height: 20em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-bottom: solid 1px #b7bcc5;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: none;
+
+}
+#checkCourseDragableSpace3CA {
+  background-color: white;
+  flex-flow: 8em;
+  height: 20em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-bottom: solid 1px #b7bcc5;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: none;
+
+}
+#checkCourseDragableSpace4CA {
+  background-color: white;
+  flex-flow: 8em;
+  height: 20em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-bottom: solid 1px #b7bcc5;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: none;
+
+}
+#checkCourseDragableSpace5CA {
+  background-color: white;
+  flex-flow: 8em;
+  height: 20em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-bottom: solid 1px #b7bcc5;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: none;
+
+}
+#checkCourseDragableSpace6CA {
+  background-color: white;
+  flex-flow: 8em;
+  height: 20em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-bottom: solid 1px #b7bcc5;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: none;
+
+}
+
+.listOfDragableAssignmentsH1 {
+  margin-bottom: 1em;
+  position: relative;
+  top: -1em;
+  color: #2f3542;
+  cursor: pointer;
+}
+
+.CourseOfDragableListH1CA {
+  margin-bottom: 1em;
+  position: relative;
+  top: -1em;
+  left: -2em;
+  color: #2f3542;
+  cursor: pointer;
+}
+
+.listOfDragableAssignmentsH1:hover {
+  color: #ff4757;
+}
+
+.CourseOfDragableListH1CA:hover {
+  color: #ff4757;
+}
+
+
+.checkAssignmentDragable {
+  cursor: pointer;
+}
+
+.checkAssignmentDragable:hover {
+  -webkit-box-shadow: inset 0px 0px 0px 0px rgba(255, 71, 87, 1);
+  -moz-box-shadow: inset 0px 0px 1px -1px rgba(255, 71, 87, 1);
+  box-shadow: inset 3px 0px 1px -1px rgba(255, 71, 87, 1);
+  opacity: 0.8;
+  border: none !important;
+}
+
+.checkCourseDragableCA {
+  cursor: pointer;
+}
+
+.checkCourseDragableCA:hover {
+  -webkit-box-shadow: inset 0px 0px 0px 0px rgba(255, 71, 87, 1);
+  -moz-box-shadow: inset 0px 0px 1px -1px rgba(255, 71, 87, 1);
+  box-shadow: inset 3px 0px 1px -1px rgba(255, 71, 87, 1);
+  opacity: 0.8;
+  border: none !important;
+}
+
+/* Dragable content for Students styles  */
+
+.assignmentsListToDrug {
+  top: 3em;
+  position: absolute;
+  display: flexbox;
+  flex-direction: column;
+  background-color: white;
+  height: 70%;
+  width: auto;
+  overflow: scroll;
+  margin: 2em;
+  left: 4.5em;
+  justify-content: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+#checkAssignmentDrugable1 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkAssignmentDrugable2 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkAssignmentDrugable3 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkAssignmentDrugable4 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkAssignmentDrugable5 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkAssignmentDrugable6 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkAssignmentsDragableSpace {
+  background-color: white;
+  flex-flow: 8em;
+  height: 100%;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-bottom: solid 1px #b7bcc5;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+.listOfDragableAssignmentsH1 {
+  margin-bottom: 1em;
+  position: relative;
+  top: -1em;
+  color: #2f3542;
+  cursor: pointer;
+}
+
+.listOfDragableAssignmentsH1:hover {
+  color: #ff4757;
+}
+
+.checkAssignmentDragable {
+  cursor: pointer;
+}
+
+.checkAssignmentDragable:hover {
+  -webkit-box-shadow: inset 0px 0px 0px 0px rgba(255, 71, 87, 1);
+  -moz-box-shadow: inset 0px 0px 1px -1px rgba(255, 71, 87, 1);
+  box-shadow: inset 3px 0px 1px -1px rgba(255, 71, 87, 1);
+  opacity: 0.8;
+  border: none !important;
+}
+
 /* Check Assignments Per Course Section */
 .POPUP_checkAssignmnetPerCourse {
   background-color: white;
@@ -3177,7 +4141,7 @@ div i:hover {
 .POPUP_enrollAssignmentsToStudents {
   background-color: white;
   height: 100vh;
-  width: 30em;
+  width: 54em;
   position: absolute;
   top: 3.2em;
   right: 0%;

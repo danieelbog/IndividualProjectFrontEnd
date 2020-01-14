@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,17 +11,18 @@
 
     <title>PrivateSchoolTrainersPage</title>
 </head>
-<body  onload="CheckTrainersData()">
+
+<body onload="onloadDisplayData(2)">
 
 
     <header>
-        <div class = "headerContainer">
+        <div class="headerContainer">
             <img src="pngguru.com (1).png" alt="wolf" width="45px" height="45px" class="wolfLogo">
             <p class="companyName">Dark Side CRM</p>
             <div class="searchContainer">
                 <input class="textSearch" placeholder="For Student: @FullName or @TaxNumber">
                 <i class="fas fa-search" id="searchIcon"></i>
-            </div>            
+            </div>
             <i class="fas fa-user-circle" id="userAccount"></i>
         </div>
     </header>
@@ -56,32 +58,39 @@
 
     <section class="T_euqualContainerA">
         <div class="T_firstConstainerA">
-            <p class="T_textSection"><b>Welcome to the Trainers section. Here you will be able to:</b><br> <br> 1) Add Trainers to your Private school. <br><br> 2) Check and Edit how many trainers are already working in your private school. <br><br> 3) Enroll Trainers to Courses. <br><br> 4) Check and Edit each Trainer based on the Course he is teaching. <br><br> 5) Put Marks for Assginments of each Student based on Trainers feedback.</p>
-            </div>
+            <p class="T_textSection"><b>Welcome to the Trainers section. Here you will be able to:</b><br> <br> 1) Add
+                Trainers to your Private school. <br><br> 2) Check how many trainers are already working in
+                your private school. <br><br> 3) Enroll Trainers to Courses. Click on Enroll Trainers To Courses. 
+                A new window will appear. Click on the Course Form you want to enroll the Trainer. Drag the Trainer to the Course you clicked previously. 
+                To delete a Trainer. Drag the Trainer from the Course List to the Trainer List. <br><br> 4) Check each Trainer
+                based on the Course he is teaching. <br><br> 5) Put Marks for Assginments of each Student based on
+                Trainers feedback.</p>
+        </div>
 
-            <div class="T_secondContainerB">
-                <div class="T_InsideDivA" onclick="AddTrainer()">
-                    <p class="addTrainers" id="addTrainers">Add Trainers to Private School</p>
-                </div>
-                <div class="T_InsideDivB"  onclick="SeeTrainers()">
-                    <p class="seeTrainers" id="seeTrainers">Check Trainers in Private School</p>
-                </div>  
-                <div class="T_InsideDivC" onclick="EnrollTrainers()">
-                    <p class="enrollTrainers" id="enrollTrainers">Enroll Trainers to Courses</p>
-                </div>  
-                <div class="T_InsideDivD" onclick="CheckTrainersPerCourse()">
-                    <p class="checkTrainersPerCourse" id="checkTrainersPerCourse">Check Trainers per Course</p>
-                </div>  
-                <div class="T_InsideDivE" onclick="PutMarks()">
-                    <p class="putMarks" id="putMarks">Put Marks to Assignments</p>
-                </div>  
+        <div class="T_secondContainerB">
+            <div class="T_InsideDivA" onclick="AddTrainer()">
+                <p class="addTrainers" id="addTrainers">Add Trainers to Private School</p>
             </div>
+            <div class="T_InsideDivB" onclick="SeeTrainers()">
+                <p class="seeTrainers" id="seeTrainers">Check Trainers in Private School</p>
+            </div>
+            <div class="T_InsideDivC" onclick="EnrollTrainers()">
+                <p class="enrollTrainers" id="enrollTrainers">Enroll Trainers to Courses</p>
+            </div>
+            <div class="T_InsideDivD" onclick="CheckTrainersPerCourse()">
+                <p class="checkTrainersPerCourse" id="checkTrainersPerCourse">Check Trainers per Course</p>
+            </div>
+            <div class="T_InsideDivE" onclick="PutMarks()">
+                <p class="putMarks" id="putMarks">Put Marks to Assignments</p>
+            </div>
+        </div>
     </section>
 
     <!-- Add Trainers to Private School -->
     <section class="POPUP_addTrainersSection">
         <div class="POPUP_addTrainers" id="POPUP_addTrainers">
-            <span class="POPUP_addTrainers_QuitSection" id="POPUP_addTrainers_QuitSection" onclick="POPUP_addTrainers_QuitSection()">
+            <span class="POPUP_addTrainers_QuitSection" id="POPUP_addTrainers_QuitSection"
+                onclick="POPUP_addTrainers_QuitSection()">
                 <i class="far fa-times-circle" id="quitImage"></i>
             </span>
 
@@ -89,21 +98,21 @@
             <div class="containerDivForCourseForm">
                 <form class="courseForm" id="courseForm">
                     <!-- Trainer first name -->
-                    <input type="text" name="T_firstName" required autocomplete="off" id="inputTFirstName"/>
+                    <input type="text" name="T_firstName" required autocomplete="off" id="inputTFirstName" />
                     <label for="T_firstName" class="label_TFirstName">
                         <span class="contentName">First Name</span>
                     </label>
                     <!-- Trainer Last Name -->
-                    <input type="text" name="T_lastName" required autocomplete="off" id="inputTLastName"/>
+                    <input type="text" name="T_lastName" required autocomplete="off" id="inputTLastName" />
                     <label for="T_lastName" class="label_TLastName">
                         <span class="contentName">Last Name</span>
-                    </label>                  
+                    </label>
                     <!-- Trainer Subject -->
-                    <input type="text" name="trainerSubject" required autocomplete="off" id="inputTSubject"/>
+                    <input type="text" name="trainerSubject" required autocomplete="off" id="inputTSubject" />
                     <label for="trainerSubject" class="labelSubject">
                         <span class="contentName">Subject</span>
-                    </label>   
-                    <input type="submit" class="submitCourse" value="Add new Trainer" onclick="CreateTrainer()"/>                                                      
+                    </label>
+                    <input type="submit" class="submitCourse" value="Add new Trainer" onclick="CreateTrainer()" />
                 </form>
             </div>
 
@@ -113,9 +122,10 @@
 
     <!-- Check Trainers in Private School -->
     <!-- When we will have DB this section will constist only from the checkTrainer1, all the others will be generated throught hte code (it already can be done if you dont renew tha page or use server) -->
-    <section class= "POPUP_seeTrainersSection">
+    <section class="POPUP_seeTrainersSection">
         <div class="POPUP_seeTrainers" id="POPUP_seeTrainers">
-            <span class="POPUP_seeTrainers_QuitSection" id="POPUP_seeTrainers_QuitSection" onclick="POPUP_seeTrainers_QuitSection()">
+            <span class="POPUP_seeTrainers_QuitSection" id="POPUP_seeTrainers_QuitSection"
+                onclick="POPUP_seeTrainers_QuitSection()">
                 <i class="far fa-times-circle" id="quitImage"></i>
             </span>
 
@@ -125,32 +135,32 @@
                 <div id="checkTrainer1" class="checkTrainer">
                     <p id="T_FirstNameID" class="TrainersData">First Name:</p>
                     <p id="T_LastNameID" class="TrainersData">Last Name:</p>
-                    <p id="T_SubjectID" class="TrainersData" >Subject:</p>
+                    <p id="T_SubjectID" class="TrainersData">Subject:</p>
                 </div>
                 <div id="checkTrainer2" class="checkTrainer">
                     <p id="T_FirstNameID" class="TrainersData">First Name:</p>
                     <p id="T_LastNameID" class="TrainersData">Last Name:</p>
-                    <p id="T_SubjectID" class="TrainersData" >Subject:</p>
+                    <p id="T_SubjectID" class="TrainersData">Subject:</p>
                 </div>
                 <div id="checkTrainer3" class="checkTrainer">
                     <p id="T_FirstNameID" class="TrainersData">First Name:</p>
                     <p id="T_LastNameID" class="TrainersData">Last Name:</p>
-                    <p id="T_SubjectID" class="TrainersData" >Subject:</p>
+                    <p id="T_SubjectID" class="TrainersData">Subject:</p>
                 </div>
                 <div id="checkTrainer4" class="checkTrainer">
                     <p id="T_FirstNameID" class="TrainersData">First Name:</p>
                     <p id="T_LastNameID" class="TrainersData">Last Name:</p>
-                    <p id="T_SubjectID" class="TrainersData" >Subject:</p>
+                    <p id="T_SubjectID" class="TrainersData">Subject:</p>
                 </div>
                 <div id="checkTrainer5" class="checkTrainer">
                     <p id="T_FirstNameID" class="TrainersData">First Name:</p>
                     <p id="T_LastNameID" class="TrainersData">Last Name:</p>
-                    <p id="T_SubjectID" class="TrainersData" >Subject:</p>
+                    <p id="T_SubjectID" class="TrainersData">Subject:</p>
                 </div>
                 <div id="checkTrainer6" class="checkTrainer">
                     <p id="T_FirstNameID" class="TrainersData">First Name:</p>
                     <p id="T_LastNameID" class="TrainersData">Last Name:</p>
-                    <p id="T_SubjectID" class="TrainersData" >Subject:</p>
+                    <p id="T_SubjectID" class="TrainersData">Subject:</p>
                 </div>
             </div>
 
@@ -160,18 +170,165 @@
 
     <!-- Enroll Trainers To Courses -->
     <section class="POPUP_enrollTrainersSection">
+        <div class="maskSection" id="maskSectionC" onclick="POPUP_enrollTrainers_QuitSection()"></div>
         <div class="POPUP_enrollTrainers" id="POPUP_enrollTrainers">
-            <span class="POPUP_enrollTrainers_QuitSection" id="POPUP_enrollTrainers_QuitSection" onclick="POPUP_enrollTrainers_QuitSection()">
+            <span class="POPUP_enrollTrainers_QuitSection" id="POPUP_enrollTrainers_QuitSection"
+                onclick="POPUP_enrollTrainers_QuitSection()">
                 <i class="far fa-times-circle" id="quitImage"></i>
             </span>
+
+            <!-- Trainers In school Forms -->
+            <div class="trainersListToDrug" id="trainersListToDrug">
+                <h1 class="listOfDragableTrainersH1">List of Trainer</h1>
+                <div id="checkTrainersDragableSpace" class="checkDragableSpace" ondrop="dropCT(event)"
+                    ondragover="allowDropCT(event)">
+                    <div id="checkTrainerDrugable1" class="checkTrainerDragable" draggable="true"
+                        ondragover="allowDropCT(event)" ondragstart="dragCT(event)">
+                        <p id="T_FirstNameID11" class="TrainersData">First Name:</p>
+                        <p id="T_LastNameID11" class="TrainersData">Last Name:</p>
+                        <p id="T_SubjectID11" class="TrainersData">Subject:</p>
+                    </div>
+                    <div id="checkTrainerDrugable2" class="checkTrainerDragable" draggable="true"
+                        ondragover="allowDropCT(event)" ondragstart="dragCT(event)">
+                        <p id="T_FirstNameID12" class="TrainersData">First Name:</p>
+                        <p id="T_LastNameID12" class="TrainersData">Last Name:</p>
+                        <p id="T_SubjectID12" class="TrainersData">Subject:</p>
+                    </div>
+                    <div id="checkTrainerDrugable3" class="checkTrainerDragable" draggable="true"
+                        ondragover="allowDropCT(event)" ondragstart="dragCT(event)">
+                        <p id="T_FirstNameID13" class="TrainersData">First Name:</p>
+                        <p id="T_LastNameID13" class="TrainersData">Last Name:</p>
+                        <p id="T_SubjectID13" class="TrainersData">Subject:</p>
+                    </div>
+                    <div id="checkTrainerDrugable4" class="checkTrainerDragable" draggable="true"
+                        ondragover="allowDropCT(event)" ondragstart="dragCT(event)">
+                        <p id="T_FirstNameID14" class="TrainersData">First Name:</p>
+                        <p id="T_LastNameID14" class="TrainersData">Last Name:</p>
+                        <p id="T_SubjectID14" class="TrainersData">Subject:</p>
+                    </div>
+                    <div id="checkTrainerDrugable5" class="checkTrainerDragable" draggable="true"
+                        ondragover="allowDropCT(event)" ondragstart="dragCT(event)">
+                        <p id="T_FirstNameID15" class="TrainersData">First Name:</p>
+                        <p id="T_LastNameID15" class="TrainersData">Last Name:</p>
+                        <p id="T_SubjectID15" class="TrainersData">Subject:</p>
+                    </div>
+                    <div id="checkTrainerDrugable6" class="checkTrainerDragable" draggable="true"
+                        ondragover="allowDropCT(event)" ondragstart="dragCT(event)">
+                        <p id="T_FirstNameID16" class="TrainersData">First Name:</p>
+                        <p id="T_LastNameID16" class="TrainersData">Last Name:</p>
+                        <p id="T_SubjectID16" class="TrainersData">Subject:</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Courses in Private School Forms -->
+            <!-- When we will have DB this section will constist only from the CheckCourse1, all the others will be generated throught hte code (it already can be done if you dont renew tha page or use server) -->
+            <form class="coursesListToDrugCT" id="coursesListToDrugCT">
+                <h1 class="CourseOfDragableListH1CT">List of Courses</h1>
+                <div class="datacontainerTrainer">
+                    <div id="checkCourseDragable1CT" class="checkCourseDragableCT"
+                        onclick="OpencheckCourseDragableSpaceCT(7)">
+                        <p id="C_TitleID21" class="CoursesData">Course Title:</p>
+                        <p id="C_StreamID21" class="CoursesData">Course Stream:</p>
+                        <p id="C_TypeID21" class="CoursesData">Course Type:</p>
+                        <p id="C_StartDateID21" class="CoursesData">Course Start Date:</p>
+                        <p id="C_EndDateID21" class="CoursesData">Course End Date:</p>
+                    </div>
+                    <div id="checkCourseDragableSpace1CT" class="checkCourseDragableSpaceCT" ondrop="dropCT(event)"
+                        ondragover="allowDropCT(event)"> </div>
+                </div>
+                <input type="submit" value="Save" class="SaveTheEnroll" id="SaveTheEnrollID1CT" onclick="saveContent(2)">
+                <input type="reset" value="Clear" class="ClearTheEnroll" id="ClearTheEnrollID1CT"
+                    onclick="clearContent(2)">
+
+                <div class="datacontainerTrainer">
+                    <div id="checkCourseDragable2CT" class="checkCourseDragableCT"
+                        onclick="OpencheckCourseDragableSpaceCT(8)">
+                        <p id="C_TitleID22" class="CoursesData">Course Title:</p>
+                        <p id="C_StreamID22" class="CoursesData">Course Stream:</p>
+                        <p id="C_TypeID22" class="CoursesData">Course Type:</p>
+                        <p id="C_StartDateID22" class="CoursesData">Course Start Date:</p>
+                        <p id="C_EndDateID22" class="CoursesData">Course End Date:</p>
+                    </div>
+                    <div id="checkCourseDragableSpace2CT" class="checkCourseDragableSpaceCT" ondrop="dropCT(event)"
+                        ondragover="allowDropCT(event)"> </div>
+                </div>
+                <input type="submit" value="Save" class="SaveTheEnroll" id="SaveTheEnrollID2CT" onclick="saveContent(2)">
+                <input type="reset" value="Clear" class="ClearTheEnroll" id="ClearTheEnrollID2CT"
+                    onclick="clearContent(2)">
+
+                <div class="datacontainerTrainer">
+                    <div id="checkCourseDragable3CT" class="checkCourseDragableCT"
+                        onclick="OpencheckCourseDragableSpaceCT(9)">
+                        <p id="C_TitleID23" class="CoursesData">Course Title:</p>
+                        <p id="C_StreamID23" class="CoursesData">Course Stream:</p>
+                        <p id="C_TypeID23" class="CoursesData">Course Type:</p>
+                        <p id="C_StartDateID23" class="CoursesData">Course Start Date:</p>
+                        <p id="C_EndDateID23" class="CoursesData">Course End Date:</p>
+                    </div>
+                    <div id="checkCourseDragableSpace3CT" class="checkCourseDragableSpaceCT" ondrop="dropCT(event)"
+                        ondragover="allowDropCT(event)"> </div>
+                </div>
+                <input type="submit" value="Save" class="SaveTheEnroll" id="SaveTheEnrollID3CT" onclick="saveContent(2)">
+                <input type="reset" value="Clear" class="ClearTheEnroll" id="ClearTheEnrollID3CT"
+                    onclick="clearContent(2)">
+
+                <div class="datacontainerTrainer">
+                    <div id="checkCourseDragable4CT" class="checkCourseDragableCT"
+                        onclick="OpencheckCourseDragableSpaceCT(10)">
+                        <p id="C_TitleID24" class="CoursesData">Course Title:</p>
+                        <p id="C_StreamID24" class="CoursesData">Course Stream:</p>
+                        <p id="C_TypeID24" class="CoursesData">Course Type:</p>
+                        <p id="C_StartDateID24" class="CoursesData">Course Start Date:</p>
+                        <p id="C_EndDateID24" class="CoursesData">Course End Date:</p>
+                    </div>
+                    <div id="checkCourseDragableSpace4CT" class="checkCourseDragableSpaceCT" ondrop="dropCT(event)"
+                        ondragover="allowDropCT(event)"> </div>
+                </div>
+                <input type="submit" value="Save" class="SaveTheEnroll" id="SaveTheEnrollID4CT" onclick="saveContent(2)">
+                <input type="reset" value="Clear" class="ClearTheEnroll" id="ClearTheEnrollID4CT"
+                    onclick="clearContent(2)">
+
+                <div class="datacontainerTrainer">
+                    <div id="checkCourseDragable5CT" class="checkCourseDragableCT"
+                        onclick="OpencheckCourseDragableSpaceCT(11)">
+                        <p id="C_TitleID25" class="CoursesData">Course Title:</p>
+                        <p id="C_StreamID25" class="CoursesData">Course Stream:</p>
+                        <p id="C_TypeID25" class="CoursesData">Course Type:</p>
+                        <p id="C_StartDateID25" class="CoursesData">Course Start Date:</p>
+                        <p id="C_EndDateID25" class="CoursesData">Course End Date:</p>
+                    </div>
+                    <div id="checkCourseDragableSpace5CT" class="checkCourseDragableSpaceCT" ondrop="dropCT(event)"
+                        ondragover="allowDropCT(event)"> </div>
+                </div>
+                <input type="submit" value="Save" class="SaveTheEnroll" id="SaveTheEnrollID5CT" onclick="saveContent(2)">
+                <input type="reset" value="Clear" class="ClearTheEnroll" id="ClearTheEnrollID5CT"
+                    onclick="clearContent(2)">
+
+                <div class="datacontainerTrainer">
+                    <div id="checkCourseDragable6CT" class="checkCourseDragableCT"
+                        onclick="OpencheckCourseDragableSpaceCT(12)">
+                        <p id="C_TitleID26" class="CoursesData">Course Title:</p>
+                        <p id="C_StreamID26" class="CoursesData">Course Stream:</p>
+                        <p id="C_TypeID26" class="CoursesData">Course Type:</p>
+                        <p id="C_StartDateID26" class="CoursesData">Course Start Date:</p>
+                        <p id="C_EndDateID26" class="CoursesData">Course End Date:</p>
+                    </div>
+                    <div id="checkCourseDragableSpace6CT" class="checkCourseDragableSpaceCT" ondrop="dropCT(event)"
+                        ondragover="allowDropCT(event)"> </div>
+                </div>
+                <input type="submit" value="Save" class="SaveTheEnroll" id="SaveTheEnrollID6CT" onclick="saveContent(2)">
+                <input type="reset" value="Clear" class="ClearTheEnroll" id="ClearTheEnrollID6CT"
+                    onclick="clearContent(2)">
+            </form>
         </div>
-        <div class="maskSection" id="maskSectionC" onclick="POPUP_enrollTrainers_QuitSection()"></div>
     </section>
 
     <!-- Check Trainers per Courses -->
-    <section class= "POPUP_checkTrainersPerCourseSection">
+    <section class="POPUP_checkTrainersPerCourseSection">
         <div class="POPUP_checkTrainersPerCourse" id="POPUP_checkTrainersPerCourse">
-            <span class="POPUP_checkTrainersPerCourse_QuitSection" id="POPUP_checkTrainersPerCourse_QuitSection" onclick="POPUP_checkTrainersPerCourse_QuitSection()">
+            <span class="POPUP_checkTrainersPerCourse_QuitSection" id="POPUP_checkTrainersPerCourse_QuitSection"
+                onclick="POPUP_checkTrainersPerCourse_QuitSection()">
                 <i class="far fa-times-circle" id="quitImage"></i>
             </span>
 
@@ -193,69 +350,70 @@
     <!-- Put Marks for Assignments -->
     <section class="POPUP_putMarksSection">
         <div class="POPUP_putMarks" id="POPUP_putMarks">
-            <span class="POPUP_putMarks_QuitSection" id="POPUP_putMarks_QuitSection" onclick="POPUP_putMarks_QuitSection()">
+            <span class="POPUP_putMarks_QuitSection" id="POPUP_putMarks_QuitSection"
+                onclick="POPUP_putMarks_QuitSection()">
                 <i class="far fa-times-circle" id="quitImage"></i>
             </span>
         </div>
         <div class="maskSection" id="maskSectionE" onclick="POPUP_putMarks_QuitSection()"></div>
     </section>
 
-<!-- Footer Section -->
-<footer>
+    <!-- Footer Section -->
+    <footer>
 
-    <!-- Prodict Company Learn More Section with drop down menu, it does not have content but its a nice practice -->
-    <div class="learnMore">
-        <div class="menu1" id="Product">PRODUCT
-            <li class="productLI">Bussiness</li>
-            <li class="productLI">Compare</li>
-            <li class="productLI">Features</li>
-            <li class="productLI">Pricing</li>
-            <li class="productLI">Mobile</li>
-            <li class="productLI">Download</li>
+        <!-- Prodict Company Learn More Section with drop down menu, it does not have content but its a nice practice -->
+        <div class="learnMore">
+            <div class="menu1" id="Product">PRODUCT
+                <li class="productLI">Bussiness</li>
+                <li class="productLI">Compare</li>
+                <li class="productLI">Features</li>
+                <li class="productLI">Pricing</li>
+                <li class="productLI">Mobile</li>
+                <li class="productLI">Download</li>
+            </div>
+            <div class="menu1" id="Company">COMPANY
+                <li class="productLI">About Us</li>
+                <li class="productLI">Blog</li>
+                <li class="productLI">News</li>
+                <li class="productLI">Press Released</li>
+                <li class="productLI">Jobs</li>
+                <li class="productLI">Contuct Us</li>
+            </div>
+            <div class="menu1" id="LearnMore">LEARN MORE
+                <li class="productLI">Support</li>
+                <li class="productLI">Developers</li>
+                <li class="productLI">Referal Program</li>
+                <li class="productLI">Afiliate Program</li>
+                <li class="productLI">Reseller Program</li>
+                <li class="productLI">FAQ</li>
+            </div>
+            <div class="menu1" id="privacyUse">PRIVACY
+                <li class="productLI">GDPR</li>
+                <li class="productLI">Idnividual</li>
+                <li class="productLI">Security</li>
+                <li class="productLI">Company</li>
+            </div>
         </div>
-        <div class="menu1" id="Company">COMPANY
-            <li class="productLI">About Us</li>
-            <li class="productLI">Blog</li>
-            <li class="productLI">News</li>
-            <li class="productLI">Press Released</li>
-            <li class="productLI">Jobs</li>
-            <li class="productLI">Contuct Us</li>
-        </div>
-        <div class="menu1" id="LearnMore">LEARN MORE
-            <li class="productLI">Support</li>
-            <li class="productLI">Developers</li>
-            <li class="productLI">Referal Program</li>
-            <li class="productLI">Afiliate Program</li>
-            <li class="productLI">Reseller Program</li>
-            <li class="productLI">FAQ</li>
-        </div>
-        <div class="menu1" id="privacyUse">PRIVACY
-            <li class="productLI">GDPR</li>
-            <li class="productLI">Idnividual</li>
-            <li class="productLI">Security</li>
-            <li class="productLI">Company</li>
-        </div>
-    </div>
 
-    <i class="fas fa-copyright" id="copyRigth">Dark@Side 2019</i>
-    <div class="footerContainer">
-        <div class="facebook">
-            <i class="fab fa-facebook-square" id="facebookImg"></i>
+        <i class="fas fa-copyright" id="copyRigth">Dark@Side 2019</i>
+        <div class="footerContainer">
+            <div class="facebook">
+                <i class="fab fa-facebook-square" id="facebookImg"></i>
+            </div>
+            <div class="twitter">
+                <i class="fab fa-twitter-square" id="twitterImg"></i>
+            </div>
+            <div class="youtube">
+                <i class="fab fa-youtube-square" id="youtubeImg"></i>
+            </div>
+            <div class="linkedin">
+                <i class="fab fa-linkedin" id="linkedinImg"></i>
+            </div>
+            <div class="instagram">
+                <i class="fab fa-instagram" id="instagramImg"></i>
+            </div>
         </div>
-        <div class="twitter">
-            <i class="fab fa-twitter-square" id="twitterImg"></i>
-        </div>
-        <div class="youtube">
-            <i class="fab fa-youtube-square" id="youtubeImg"></i>
-        </div>
-        <div class="linkedin">
-            <i class="fab fa-linkedin" id="linkedinImg"></i>
-        </div>
-        <div class="instagram">
-            <i class="fab fa-instagram" id="instagramImg"></i>
-        </div>
-    </div>        
-</footer>   
+    </footer>
 </body>
 
 <script src="JSForPrivateSchool.js"></script>

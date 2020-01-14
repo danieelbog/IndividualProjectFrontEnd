@@ -7,20 +7,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     <link rel="stylesheet" type="text/css" href="CSS for Individual Project.css" />
-    <script src="JQuerry.JS"></script>        
+    <script src="JQuerry.JS"></script>
 
     <title>PrivateSchoolStudentsPage</title>
 </head>
 
-<body  onload="CheckStudentData()">
+<body onload="onloadDisplayData(1)">
     <header>
-        <div class = "headerContainer">
+        <div class="headerContainer">
             <img src="pngguru.com (1).png" alt="wolf" width="45px" height="45px" class="wolfLogo">
             <p class="companyName">Dark Side CRM</p>
             <div class="searchContainer">
                 <input class="textSearch" placeholder="For Student: @FullName or @TaxNumber">
                 <i class="fas fa-search" id="searchIcon"></i>
-            </div>            
+            </div>
             <i class="fas fa-user-circle" id="userAccount"></i>
         </div>
     </header>
@@ -60,12 +60,14 @@
                 <b>Welcome to the Students section. Here you will be able to:</b><br />
                 <br />
                 1) Add Students to your Private school. <br /><br />
-                2) Check and Edit the Students who already are studying in your
+                2) Check the Students who already are studying in your
                 private school. <br /><br />
-                3) Enroll Students to Courses. <br /><br />
-                4) Check and Edit each Student based on the Course he is studying.
+                3) Enroll Students to Courses. Click on Enroll Students To Courses. 
+                A new window will appear. Click on the Course Form you want to enroll the Student. Drag the Student to the Course you clicked previously. 
+                To delete a Student. Drag the Student from the Course List to the Student List. <br /><br />
+                4) Check each Student based on the Course he is studying.
                 <br /><br />
-                5) Check and Edit the students that belong to more than one Courses.
+                5) Check the students that belong to more than one Courses.
             </p>
         </div>
 
@@ -115,21 +117,21 @@
                         <span class="contentName">First Name</span>
                     </label>
                     <!-- Student Last Name -->
-                    <input type="text" name="S_lastName" required autocomplete="off" id="inputSLastName"/>
+                    <input type="text" name="S_lastName" required autocomplete="off" id="inputSLastName" />
                     <label for="S_lastName" class="label_SLastName">
                         <span class="contentName">Last Name</span>
                     </label>
                     <!-- Student Date of Birth -->
-                    <input type="date" name="S_dateOfBirth" required autocomplete="off" id="inputSBirthday"/>
+                    <input type="date" name="S_dateOfBirth" required autocomplete="off" id="inputSBirthday" />
                     <label for="S_dateOfBirth" class="label_SBirthday">
                         <span class="contentName">Date of Birth</span>
                     </label>
                     <!-- Student Fees -->
-                    <input type="text" name="studentFees" required autocomplete="off" id="inputSFees"/>
+                    <input type="text" name="studentFees" required autocomplete="off" id="inputSFees" />
                     <label for="studentFees" class="labelFees">
                         <span class="contentName">Fees</span>
                     </label>
-                    <input type="submit" class="submitCourse" value="Add New Student" onclick="CreateStudent()"/>
+                    <input type="submit" class="submitCourse" value="Add New Student" onclick="CreateStudent()" />
                 </form>
             </div>
         </div>
@@ -151,38 +153,38 @@
                 <div id="checkStudent1" class="checkStudent">
                     <p id="S_FirstNameID" class="StudentsData">First Name:</p>
                     <p id="S_LastNameID" class="StudentsData">Last Name:</p>
-                    <p id="S_DateOfBirthID" class="StudentsData" >Date of Birth:</p>
-                    <p id="S_Fees" class="StudentsData">Fees:</p>
+                    <p id="S_DateOfBirthID" class="StudentsData">Date of Birth:</p>
+                    <p id="S_FeesID" class="StudentsData">Fees:</p>
                 </div>
                 <div id="checkStudent2" class="checkStudent">
                     <p id="S_FirstNameID" class="StudentsData">First Name:</p>
                     <p id="S_LastNameID" class="StudentsData">Last Name:</p>
-                    <p id="S_DateOfBirthID" class="StudentsData" >Date of Birth:</p>
-                    <p id="S_Fees" class="StudentsData">Fees:</p>
+                    <p id="S_DateOfBirthID" class="StudentsData">Date of Birth:</p>
+                    <p id="S_FeesID" class="StudentsData">Fees:</p>
                 </div>
                 <div id="checkStudent3" class="checkStudent">
                     <p id="S_FirstNameID" class="StudentsData">First Name:</p>
                     <p id="S_LastNameID" class="StudentsData">Last Name:</p>
-                    <p id="S_DateOfBirthID" class="StudentsData" >Date of Birth:</p>
-                    <p id="S_Fees" class="StudentsData">Fees:</p>
+                    <p id="S_DateOfBirthID" class="StudentsData">Date of Birth:</p>
+                    <p id="S_FeesID" class="StudentsData">Fees:</p>
                 </div>
                 <div id="checkStudent4" class="checkStudent">
                     <p id="S_FirstNameID" class="StudentsData">First Name:</p>
                     <p id="S_LastNameID" class="StudentsData">Last Name:</p>
-                    <p id="S_DateOfBirthID" class="StudentsData" >Date of Birth:</p>
-                    <p id="S_Fees" class="StudentsData">Fees:</p>
+                    <p id="S_DateOfBirthID" class="StudentsData">Date of Birth:</p>
+                    <p id="S_FeesID" class="StudentsData">Fees:</p>
                 </div>
                 <div id="checkStudent5" class="checkStudent">
                     <p id="S_FirstNameID" class="StudentsData">First Name:</p>
                     <p id="S_LastNameID" class="StudentsData">Last Name:</p>
-                    <p id="S_DateOfBirthID" class="StudentsData" >Date of Birth:</p>
-                    <p id="S_Fees" class="StudentsData">Fees:</p>
+                    <p id="S_DateOfBirthID" class="StudentsData">Date of Birth:</p>
+                    <p id="S_FeesID" class="StudentsData">Fees:</p>
                 </div>
                 <div id="checkStudent6" class="checkStudent">
                     <p id="S_FirstNameID" class="StudentsData">First Name:</p>
                     <p id="S_LastNameID" class="StudentsData">Last Name:</p>
-                    <p id="S_DateOfBirthID" class="StudentsData" >Date of Birth:</p>
-                    <p id="S_Fees" class="StudentsData">Fees:</p>
+                    <p id="S_DateOfBirthID" class="StudentsData">Date of Birth:</p>
+                    <p id="S_FeesID" class="StudentsData">Fees:</p>
                 </div>
             </div>
 
@@ -204,126 +206,158 @@
             <!-- Students In school Forms -->
             <div class="studentsListToDrug" id="studentsListToDrug">
                 <h1 class="listOfDragableStudentsH1">List of Students</h1>
-                <div id="checkStudentDrugable1" class="checkStudentDragable" draggable="true" ondragover="allowDropCS(event)" ondragstart="dragCS(event)">
-                    <p id="S_FirstNameID" class="StudentsData">First Name:</p>
-                    <p id="S_LastNameID" class="StudentsData">Last Name:</p>
-                    <p id="S_DateOfBirthID" class="StudentsData" >Date of Birth:</p>
-                    <p id="S_Fees" class="StudentsData">Fees:</p>
-                </div>
-                <div id="checkStudentDrugable2" class="checkStudentDragable" draggable="true" ondragover="allowDropCS(event)" ondragstart="dragCS(event)">
-                    <p id="S_FirstNameID" class="StudentsData">First Name:</p>
-                    <p id="S_LastNameID" class="StudentsData">Last Name:</p>
-                    <p id="S_DateOfBirthID" class="StudentsData" >Date of Birth:</p>
-                    <p id="S_Fees" class="StudentsData">Fees:</p>
-                </div>
-                <div id="checkStudentDrugable3" class="checkStudentDragable" draggable="true" ondragover="allowDropCS(event)" ondragstart="dragCS(event)">
-                    <p id="S_FirstNameID" class="StudentsData">First Name:</p>
-                    <p id="S_LastNameID" class="StudentsData">Last Name:</p>
-                    <p id="S_DateOfBirthID" class="StudentsData" >Date of Birth:</p>
-                    <p id="S_Fees" class="StudentsData">Fees:</p>
-                </div>
-                <div id="checkStudentDrugable4" class="checkStudentDragable" draggable="true" ondragover="allowDropCS(event)" ondragstart="dragCS(event)">
-                    <p id="S_FirstNameID" class="StudentsData">First Name:</p>
-                    <p id="S_LastNameID" class="StudentsData">Last Name:</p>
-                    <p id="S_DateOfBirthID" class="StudentsData" >Date of Birth:</p>
-                    <p id="S_Fees" class="StudentsData">Fees:</p>
-                </div>
-                <div id="checkStudentDrugable5" class="checkStudentDragable" draggable="true" ondragover="allowDropCS(event)" ondragstart="dragCS(event)">
-                    <p id="S_FirstNameID" class="StudentsData">First Name:</p>
-                    <p id="S_LastNameID" class="StudentsData">Last Name:</p>
-                    <p id="S_DateOfBirthID" class="StudentsData" >Date of Birth:</p>
-                    <p id="S_Fees" class="StudentsData">Fees:</p>
-                </div>
-                <div id="checkStudentDrugable6" class="checkStudentDragable" draggable="true" ondragover="allowDropCS(event)" ondragstart="dragCS(event)">
-                    <p id="S_FirstNameID" class="StudentsData">First Name:</p>
-                    <p id="S_LastNameID" class="StudentsData">Last Name:</p>
-                    <p id="S_DateOfBirthID" class="StudentsData" >Date of Birth:</p>
-                    <p id="S_Fees" class="StudentsData">Fees:</p>
+                <div id="checkStudentDragableSpace" class="checkDragableSpace" ondrop="dropCS(event)"
+                    ondragover="allowDropCS(event)">
+                    <div id="checkStudentDrugable1" class="checkStudentDragable" draggable="true"
+                        ondragover="allowDropCS(event)" ondragstart="dragCS(event)">
+                        <p id="S_FirstNameID11" class="StudentsData">First Name:</p>
+                        <p id="S_LastNameID11" class="StudentsData">Last Name:</p>
+                        <p id="S_DateOfBirthID11" class="StudentsData">Date of Birth:</p>
+                        <p id="S_FeesID11" class="StudentsData">Fees:</p>
+                    </div>
+                    <div id="checkStudentDrugable2" class="checkStudentDragable" draggable="true"
+                        ondragover="allowDropCS(event)" ondragstart="dragCS(event)">
+                        <p id="S_FirstNameID12" class="StudentsData">First Name:</p>
+                        <p id="S_LastNameID12" class="StudentsData">Last Name:</p>
+                        <p id="S_DateOfBirthID12" class="StudentsData">Date of Birth:</p>
+                        <p id="S_FeesID12" class="StudentsData">Fees:</p>
+                    </div>
+                    <div id="checkStudentDrugable3" class="checkStudentDragable" draggable="true"
+                        ondragover="allowDropCS(event)" ondragstart="dragCS(event)">
+                        <p id="S_FirstNameID13" class="StudentsData">First Name:</p>
+                        <p id="S_LastNameID13" class="StudentsData">Last Name:</p>
+                        <p id="S_DateOfBirthID13" class="StudentsData">Date of Birth:</p>
+                        <p id="S_FeesID13" class="StudentsData">Fees:</p>
+                    </div>
+                    <div id="checkStudentDrugable4" class="checkStudentDragable" draggable="true"
+                        ondragover="allowDropCS(event)" ondragstart="dragCS(event)">
+                        <p id="S_FirstNameID14" class="StudentsData">First Name:</p>
+                        <p id="S_LastNameID14" class="StudentsData">Last Name:</p>
+                        <p id="S_DateOfBirthID14" class="StudentsData">Date of Birth:</p>
+                        <p id="S_FeesID14" class="StudentsData">Fees:</p>
+                    </div>
+                    <div id="checkStudentDrugable5" class="checkStudentDragable" draggable="true"
+                        ondragover="allowDropCS(event)" ondragstart="dragCS(event)">
+                        <p id="S_FirstNameID15" class="StudentsData">First Name:</p>
+                        <p id="S_LastNameID15" class="StudentsData">Last Name:</p>
+                        <p id="S_DateOfBirthID15" class="StudentsData">Date of Birth:</p>
+                        <p id="S_FeesID15" class="StudentsData">Fees:</p>
+                    </div>
+                    <div id="checkStudentDrugable6" class="checkStudentDragable" draggable="true"
+                        ondragover="allowDropCS(event)" ondragstart="dragCS(event)">
+                        <p id="S_FirstNameID16" class="StudentsData">First Name:</p>
+                        <p id="S_LastNameID16" class="StudentsData">Last Name:</p>
+                        <p id="S_DateOfBirthID16" class="StudentsData">Date of Birth:</p>
+                        <p id="S_FeesID16" class="StudentsData">Fees:</p>
+                    </div>
                 </div>
             </div>
 
             <!-- Courses in Private School Forms -->
             <!-- When we will have DB this section will constist only from the CheckCourse1, all the others will be generated throught hte code (it already can be done if you dont renew tha page or use server) -->
-            <div class="coursesListToDrug" id="coursesListToDrug">
+            <form class="coursesListToDrug" id="coursesListToDrug">
                 <h1 class="CourseOfDragableListH1">List of Courses</h1>
                 <div class="datacontainerstudent">
-                    <div id="checkCourseDragable1" class="checkCourseDragable" onclick="OpencheckCourseDragableSpace(1)">
-                        <p id="C_TitleID" class="CoursesData">Course Title:</p>
-                        <p id="C_StreamID" class="CoursesData">Course Stream:</p>
-                        <p id="C_TypeID" class="CoursesData" >Course Type:</p>
-                        <p id="C_StartDateID" class="CoursesData">Course Start Date:</p>
-                        <p id="C_EndDateID" class="CoursesData" >Course End Date:</p>
+                    <div id="checkCourseDragable1" class="checkCourseDragable"
+                        onclick="OpencheckCourseDragableSpace(1)">
+                        <p id="C_TitleID11" class="CoursesData">Course Title:</p>
+                        <p id="C_StreamID11" class="CoursesData">Course Stream:</p>
+                        <p id="C_TypeID11" class="CoursesData">Course Type:</p>
+                        <p id="C_StartDateID11" class="CoursesData">Course Start Date:</p>
+                        <p id="C_EndDateID11" class="CoursesData">Course End Date:</p>
                     </div>
-                    <div id="checkCourseDragableSpace1" class="checkCourseDragableSpace" ondrop="dropCS(event)" ondragover="allowDropCS(event)">            
-                    </div>
-                    <input type="button" value="Save" class="SaveTheEnroll" id="SaveTheEnrollID1">
-                    <input type="button" value="Clear" class="ClearTheEnroll" id="ClearTheEnrollID1"> 
-                
-                <div class="datacontainerstudent">
-                    <div id="checkCourseDragable2" class="checkCourseDragable" onclick="OpencheckCourseDragableSpace(2)">
-                        <p id="C_TitleID" class="CoursesData">Course Title:</p>
-                        <p id="C_StreamID" class="CoursesData">Course Stream:</p>
-                        <p id="C_TypeID" class="CoursesData" >Course Type:</p>
-                        <p id="C_StartDateID" class="CoursesData">Course Start Date:</p>
-                        <p id="C_EndDateID" class="CoursesData" >Course End Date:</p>
-                    </div>
-                    <div id="checkCourseDragableSpace2" class="checkCourseDragableSpace" ondrop="dropCS(event)" ondragover="allowDropCS(event)"> 
+                    <div id="checkCourseDragableSpace1" class="checkCourseDragableSpace" ondrop="dropCS(event)"
+                        ondragover="allowDropCS(event)"> </div>
                 </div>
-                <input type="button" value="Save" class="SaveTheEnroll"id="SaveTheEnrollID2">
-                <input type="button" value="Clear" class="ClearTheEnroll"id="ClearTheEnrollID2"> 
+                <input type="submit" value="Save" class="SaveTheEnroll" id="SaveTheEnrollID1" onclick="saveContent(1)">
+                <input type="reset" value="Clear" class="ClearTheEnroll" id="ClearTheEnrollID1"
+                    onclick="clearContent(1)">
 
                 <div class="datacontainerstudent">
-                    <div id="checkCourseDragable3" class="checkCourseDragable" onclick="OpencheckCourseDragableSpace(3)">
-                        <p id="C_TitleID" class="CoursesData">Course Title:</p>
-                        <p id="C_StreamID" class="CoursesData">Course Stream:</p>
-                        <p id="C_TypeID" class="CoursesData" >Course Type:</p>
-                        <p id="C_StartDateID" class="CoursesData">Course Start Date:</p>
-                        <p id="C_EndDateID" class="CoursesData" >Course End Date:</p>
+                    <div id="checkCourseDragable2" class="checkCourseDragable"
+                        onclick="OpencheckCourseDragableSpace(2)">
+                        <p id="C_TitleID12" class="CoursesData">Course Title:</p>
+                        <p id="C_StreamID12" class="CoursesData">Course Stream:</p>
+                        <p id="C_TypeID12" class="CoursesData">Course Type:</p>
+                        <p id="C_StartDateID12" class="CoursesData">Course Start Date:</p>
+                        <p id="C_EndDateID12" class="CoursesData">Course End Date:</p>
                     </div>
-                    <div id="checkCourseDragableSpace3" class="checkCourseDragableSpace" ondrop="dropCS(event)" ondragover="allowDropCS(event)">     
+                    <div id="checkCourseDragableSpace2" class="checkCourseDragableSpace" ondrop="dropCS(event)"
+                        ondragover="allowDropCS(event)">
+                    </div>
                 </div>
-                <input type="button" value="Save" class="SaveTheEnroll"id="SaveTheEnrollID3">
-                <input type="button" value="Clear" class="ClearTheEnroll"id="ClearTheEnrollID3">
+                <input type="submit" value="Save" class="SaveTheEnroll" id="SaveTheEnrollID2" onclick="saveContent(1)">
+                <input type="reset" value="Clear" class="ClearTheEnroll" id="ClearTheEnrollID2"
+                    onclick="clearContent(1)">
 
                 <div class="datacontainerstudent">
-                    <div id="checkCourseDragable4" class="checkCourseDragable" onclick="OpencheckCourseDragableSpace(4)">
-                        <p id="C_TitleID" class="CoursesData">Course Title:</p>
-                        <p id="C_StreamID" class="CoursesData">Course Stream:</p>
-                        <p id="C_TypeID" class="CoursesData" >Course Type:</p>
-                        <p id="C_StartDateID" class="CoursesData">Course Start Date:</p>
-                        <p id="C_EndDateID" class="CoursesData" >Course End Date:</p>
+                    <div id="checkCourseDragable3" class="checkCourseDragable"
+                        onclick="OpencheckCourseDragableSpace(3)">
+                        <p id="C_TitleID13" class="CoursesData">Course Title:</p>
+                        <p id="C_StreamID13" class="CoursesData">Course Stream:</p>
+                        <p id="C_TypeID13" class="CoursesData">Course Type:</p>
+                        <p id="C_StartDateID13" class="CoursesData">Course Start Date:</p>
+                        <p id="C_EndDateID13" class="CoursesData">Course End Date:</p>
                     </div>
-                    <div id="checkCourseDragableSpace4" class="checkCourseDragableSpace" ondrop="dropCS(event)" ondragover="allowDropCS(event)">     
+                    <div id="checkCourseDragableSpace3" class="checkCourseDragableSpace" ondrop="dropCS(event)"
+                        ondragover="allowDropCS(event)">
+                    </div>
                 </div>
-                <input type="button" value="Save" class="SaveTheEnroll"id="SaveTheEnrollID4">
-                <input type="button" value="Clear" class="ClearTheEnroll"id="ClearTheEnrollID4">
+                <input type="submit" value="Save" class="SaveTheEnroll" id="SaveTheEnrollID3" onclick="saveContent(1)">
+                <input type="reset" value="Clear" class="ClearTheEnroll" id="ClearTheEnrollID3"
+                    onclick="clearContent(1)">
 
                 <div class="datacontainerstudent">
-                    <div id="checkCourseDragable5" class="checkCourseDragable" onclick="OpencheckCourseDragableSpace(5)">
-                        <p id="C_TitleID" class="CoursesData">Course Title:</p>
-                        <p id="C_StreamID" class="CoursesData">Course Stream:</p>
-                        <p id="C_TypeID" class="CoursesData" >Course Type:</p>
-                        <p id="C_StartDateID" class="CoursesData">Course Start Date:</p>
-                        <p id="C_EndDateID" class="CoursesData" >Course End Date:</p>
+                    <div id="checkCourseDragable4" class="checkCourseDragable"
+                        onclick="OpencheckCourseDragableSpace(4)">
+                        <p id="C_TitleID14" class="CoursesData">Course Title:</p>
+                        <p id="C_StreamID14" class="CoursesData">Course Stream:</p>
+                        <p id="C_TypeID14" class="CoursesData">Course Type:</p>
+                        <p id="C_StartDateID14" class="CoursesData">Course Start Date:</p>
+                        <p id="C_EndDateID14" class="CoursesData">Course End Date:</p>
                     </div>
-                    <div id="checkCourseDragableSpace5" class="checkCourseDragableSpace" ondrop="dropCS(event)" ondragover="allowDropCS(event)">      
+                    <div id="checkCourseDragableSpace4" class="checkCourseDragableSpace" ondrop="dropCS(event)"
+                        ondragover="allowDropCS(event)">
+                    </div>
                 </div>
-                <input type="button" value="Save" class="SaveTheEnroll"id="SaveTheEnrollID5">
-                <input type="button" value="Clear" class="ClearTheEnroll"id="ClearTheEnrollID5">
+                <input type="submit" value="Save" class="SaveTheEnroll" id="SaveTheEnrollID4" onclick="saveContent(1)">
+                <input type="reset" value="Clear" class="ClearTheEnroll" id="ClearTheEnrollID4"
+                    onclick="clearContent(1)">
 
                 <div class="datacontainerstudent">
-                    <div id="checkCourseDragable6" class="checkCourseDragable" onclick="OpencheckCourseDragableSpace(6)">
-                        <p id="C_TitleID" class="CoursesData">Course Title:</p>
-                        <p id="C_StreamID" class="CoursesData">Course Stream:</p>
-                        <p id="C_TypeID" class="CoursesData" >Course Type:</p>
-                        <p id="C_StartDateID" class="CoursesData">Course Start Date:</p>
-                        <p id="C_EndDateID" class="CoursesData" >Course End Date:</p>
+                    <div id="checkCourseDragable5" class="checkCourseDragable"
+                        onclick="OpencheckCourseDragableSpace(5)">
+                        <p id="C_TitleID15" class="CoursesData">Course Title:</p>
+                        <p id="C_StreamID15" class="CoursesData">Course Stream:</p>
+                        <p id="C_TypeID15" class="CoursesData">Course Type:</p>
+                        <p id="C_StartDateID15" class="CoursesData">Course Start Date:</p>
+                        <p id="C_EndDateID15" class="CoursesData">Course End Date:</p>
                     </div>
-                    <div id="checkCourseDragableSpace6" class="checkCourseDragableSpace" ondrop="dropCS(event)" ondragover="allowDropCS(event)">     
+                    <div id="checkCourseDragableSpace5" class="checkCourseDragableSpace" ondrop="dropCS(event)"
+                        ondragover="allowDropCS(event)">
+                    </div>
                 </div>
-                <input type="button" value="Save" class="SaveTheEnroll" id="SaveTheEnrollID6">
-                <input type="button" value="Clear" class="ClearTheEnroll" id="ClearTheEnrollID6">
-            </div>
+                <input type="submit" value="Save" class="SaveTheEnroll" id="SaveTheEnrollID5" onclick="saveContent(1)">
+                <input type="reset" value="Clear" class="ClearTheEnroll" id="ClearTheEnrollID5"
+                    onclick="clearContent(1)">
+
+                <div class="datacontainerstudent">
+                    <div id="checkCourseDragable6" class="checkCourseDragable"
+                        onclick="OpencheckCourseDragableSpace(6)">
+                        <p id="C_TitleID16" class="CoursesData">Course Title:</p>
+                        <p id="C_StreamID16" class="CoursesData">Course Stream:</p>
+                        <p id="C_TypeID16" class="CoursesData">Course Type:</p>
+                        <p id="C_StartDateID16" class="CoursesData">Course Start Date:</p>
+                        <p id="C_EndDateID16" class="CoursesData">Course End Date:</p>
+                    </div>
+                    <div id="checkCourseDragableSpace6" class="checkCourseDragableSpace" ondrop="dropCS(event)"
+                        ondragover="allowDropCS(event)">
+                    </div>
+                </div>
+                <input type="submit" value="Save" class="SaveTheEnroll" id="SaveTheEnrollID6" onclick="saveContent(1)">
+                <input type="reset" value="Clear" class="ClearTheEnroll" id="ClearTheEnrollID6"
+                    onclick="clearContent(1)">
+            </form>
         </div>
     </section>
 
@@ -373,65 +407,66 @@
         <div class="maskSection" id="maskSectionE" onclick="POPUP_checkStudentsMoreThanOneCourses_QuitSection()"></div>
     </section>
 
-<!-- Footer Section -->
-<footer>
+    <!-- Footer Section -->
+    <footer>
 
-    <!-- Prodict Company Learn More Section with drop down menu, it does not have content but its a nice practice -->
-    <div class="learnMore">
-        <div class="menu1" id="Product">PRODUCT
-            <li class="productLI">Bussiness</li>
-            <li class="productLI">Compare</li>
-            <li class="productLI">Features</li>
-            <li class="productLI">Pricing</li>
-            <li class="productLI">Mobile</li>
-            <li class="productLI">Download</li>
+        <!-- Prodict Company Learn More Section with drop down menu, it does not have content but its a nice practice -->
+        <div class="learnMore">
+            <div class="menu1" id="Product">PRODUCT
+                <li class="productLI">Bussiness</li>
+                <li class="productLI">Compare</li>
+                <li class="productLI">Features</li>
+                <li class="productLI">Pricing</li>
+                <li class="productLI">Mobile</li>
+                <li class="productLI">Download</li>
+            </div>
+            <div class="menu1" id="Company">COMPANY
+                <li class="productLI">About Us</li>
+                <li class="productLI">Blog</li>
+                <li class="productLI">News</li>
+                <li class="productLI">Press Released</li>
+                <li class="productLI">Jobs</li>
+                <li class="productLI">Contuct Us</li>
+            </div>
+            <div class="menu1" id="LearnMore">LEARN MORE
+                <li class="productLI">Support</li>
+                <li class="productLI">Developers</li>
+                <li class="productLI">Referal Program</li>
+                <li class="productLI">Afiliate Program</li>
+                <li class="productLI">Reseller Program</li>
+                <li class="productLI">FAQ</li>
+            </div>
+            <div class="menu1" id="privacyUse">PRIVACY
+                <li class="productLI">GDPR</li>
+                <li class="productLI">Idnividual</li>
+                <li class="productLI">Security</li>
+                <li class="productLI">Company</li>
+            </div>
         </div>
-        <div class="menu1" id="Company">COMPANY
-            <li class="productLI">About Us</li>
-            <li class="productLI">Blog</li>
-            <li class="productLI">News</li>
-            <li class="productLI">Press Released</li>
-            <li class="productLI">Jobs</li>
-            <li class="productLI">Contuct Us</li>
-        </div>
-        <div class="menu1" id="LearnMore">LEARN MORE
-            <li class="productLI">Support</li>
-            <li class="productLI">Developers</li>
-            <li class="productLI">Referal Program</li>
-            <li class="productLI">Afiliate Program</li>
-            <li class="productLI">Reseller Program</li>
-            <li class="productLI">FAQ</li>
-        </div>
-        <div class="menu1" id="privacyUse">PRIVACY
-            <li class="productLI">GDPR</li>
-            <li class="productLI">Idnividual</li>
-            <li class="productLI">Security</li>
-            <li class="productLI">Company</li>
-        </div>
-    </div>
 
 
 
-    <!-- Social Media Section -->
-    <i class="fas fa-copyright" id="copyRigth">Dark@Side 2019</i>
-    <div class="footerContainer">
-        <div class="facebook">
-            <i class="fab fa-facebook-square" id="facebookImg"></i>
+        <!-- Social Media Section -->
+        <i class="fas fa-copyright" id="copyRigth">Dark@Side 2019</i>
+        <div class="footerContainer">
+            <div class="facebook">
+                <i class="fab fa-facebook-square" id="facebookImg"></i>
+            </div>
+            <div class="twitter">
+                <i class="fab fa-twitter-square" id="twitterImg"></i>
+            </div>
+            <div class="youtube">
+                <i class="fab fa-youtube-square" id="youtubeImg"></i>
+            </div>
+            <div class="linkedin">
+                <i class="fab fa-linkedin" id="linkedinImg"></i>
+            </div>
+            <div class="instagram">
+                <i class="fab fa-instagram" id="instagramImg"></i>
+            </div>
         </div>
-        <div class="twitter">
-            <i class="fab fa-twitter-square" id="twitterImg"></i>
-        </div>
-        <div class="youtube">
-            <i class="fab fa-youtube-square" id="youtubeImg"></i>
-        </div>
-        <div class="linkedin">
-            <i class="fab fa-linkedin" id="linkedinImg"></i>
-        </div>
-        <div class="instagram">
-            <i class="fab fa-instagram" id="instagramImg"></i>
-        </div>
-    </div>        
-</footer>   </body>
+    </footer>
+</body>
 
 <script src="JSForPrivateSchool.js"></script>
 <script src="https://kit.fontawesome.com/1703bdbf18.js" crossorigin="anonymous"></script>
