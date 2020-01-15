@@ -41,6 +41,18 @@ function clearContent(num) {
       y.appendChild(x);
     }
   }
+  else if (num === 4) {
+    var y = document.getElementById("checkAssignmentToStudentDragableSpace1");
+
+    for (
+      var i = 0;
+      i < document.getElementsByClassName("checkAssignmentToStudentDrugable").length;
+      i++
+    ) {
+      var x = document.getElementsByClassName("checkAssignmentToStudentDrugable")[i];
+      y.appendChild(x);
+    }
+  }
 }
 
 // general onload function to print the data needed at the html pages
@@ -1119,6 +1131,122 @@ function EnrollAssignmentsToStudents() {
   document.getElementById("maskSectionE").style.display = "block";
 }
 
+// Dragable Content for Assignment to Enroll them to Students Block of Code
+function allowDropSA(ev) {
+  ev.preventDefault();
+}
+
+function dragSA(ev) {
+  ev.dataTransfer.setData("div", ev.target.id);
+}
+
+function dropSA(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("div");
+  ev.target.appendChild(document.getElementById(data));
+}
+
+// Drop down for dragable divs
+function OpencheckcheckStudentsWithAssignmentsDragable1Space(num) {
+  if (num == 1) {
+    var checkStudentsWithAssignmentsSpace1 = document.getElementById(
+      "checkStudentsWithAssignmentsSpace1"
+    );
+    var SaveTheEnrollIDSA1 = document.getElementById("SaveTheEnrollIDSA1");
+    var ClearTheEnrollIDSA1 = document.getElementById("ClearTheEnrollIDSA1");
+
+    if (checkStudentsWithAssignmentsSpace1.style.display === "block") {
+      checkStudentsWithAssignmentsSpace1.style.display = "none";
+      SaveTheEnrollIDSA1.style.display = "none";
+      ClearTheEnrollIDSA1.style.display = "none";
+    } else {
+      checkStudentsWithAssignmentsSpace1.style.display = "block";
+      SaveTheEnrollIDSA1.style.display = "block";
+      ClearTheEnrollIDSA1.style.display = "block";
+    }
+  } else if (num == 2) {
+    var checkStudentsWithAssignmentsSpace2 = document.getElementById(
+      "checkStudentsWithAssignmentsSpace2"
+    );
+    var SaveTheEnrollIDSA2 = document.getElementById("SaveTheEnrollID1SA2");
+    var ClearTheEnrollIDSA2 = document.getElementById("ClearTheEnrollID1SA2");
+
+    if (checkStudentsWithAssignmentsSpace2.style.display === "block") {
+      checkStudentsWithAssignmentsSpace2.style.display = "none";
+      SaveTheEnrollIDSA2.style.display = "none";
+      ClearTheEnrollIDSA2.style.display = "none";
+    } else {
+      checkStudentsWithAssignmentsSpace2.style.display = "block";
+      SaveTheEnrollIDSA2.style.display = "block";
+      ClearTheEnrollIDSA2.style.display = "block";
+    }
+  } else if (num == 3) {
+    var checkStudentsWithAssignmentsSpace3 = document.getElementById(
+      "checkStudentsWithAssignmentsSpace3"
+    );
+    var SaveTheEnrollIDSA3 = document.getElementById("SaveTheEnrollID1SA3");
+    var ClearTheEnrollIDSA3 = document.getElementById("ClearTheEnrollID1SA3");
+
+    if (checkStudentsWithAssignmentsSpace3.style.display === "block") {
+      checkStudentsWithAssignmentsSpace3.style.display = "none";
+      SaveTheEnrollIDSA3.style.display = "none";
+      ClearTheEnrollIDSA3.style.display = "none";
+    } else {
+      checkStudentsWithAssignmentsSpace3.style.display = "block";
+      SaveTheEnrollIDSA3.style.display = "block";
+      ClearTheEnrollIDSA3.style.display = "block";
+    }
+  } else if (num == 4) {
+    var checkStudentsWithAssignmentsSpace4 = document.getElementById(
+      "checkStudentsWithAssignmentsSpace4"
+    );
+    var SaveTheEnrollIDSA4 = document.getElementById("SaveTheEnrollID1SA4");
+    var ClearTheEnrollIDSA4 = document.getElementById("ClearTheEnrollID1SA4");
+
+    if (checkStudentsWithAssignmentsSpace4.style.display === "block") {
+      checkStudentsWithAssignmentsSpace4.style.display = "none";
+      SaveTheEnrollIDSA4.style.display = "none";
+      ClearTheEnrollIDSA4.style.display = "none";
+    } else {
+      checkStudentsWithAssignmentsSpace4.style.display = "block";
+      SaveTheEnrollIDSA4.style.display = "block";
+      ClearTheEnrollIDSA4.style.display = "block";
+    }
+  } else if (num == 5) {
+    var checkStudentsWithAssignmentsSpace5 = document.getElementById(
+      "checkStudentsWithAssignmentsSpace5"
+    );
+    var SaveTheEnrollIDSA5 = document.getElementById("SaveTheEnrollID1SA5");
+    var ClearTheEnrollIDSA5 = document.getElementById("ClearTheEnrollID1SA5");
+
+    if (checkStudentsWithAssignmentsSpace5.style.display === "block") {
+      checkStudentsWithAssignmentsSpace5.style.display = "none";
+      SaveTheEnrollIDSA5.style.display = "none";
+      ClearTheEnrollIDSA5.style.display = "none";
+    } else {
+      checkStudentsWithAssignmentsSpace5.style.display = "block";
+      SaveTheEnrollIDSA5.style.display = "block";
+      ClearTheEnrollIDSA5.style.display = "block";
+    }
+  } else if (num == 6) {
+    var checkStudentsWithAssignmentsSpace6 = document.getElementById(
+      "checkStudentsWithAssignmentsSpace6"
+    );
+    var SaveTheEnrollIDSA6 = document.getElementById("SaveTheEnrollID1SA6");
+    var ClearTheEnrollIDSA6 = document.getElementById("ClearTheEnrollID1SA6");
+
+    if (checkStudentsWithAssignmentsSpace6.style.display === "block") {
+      checkStudentsWithAssignmentsSpace6.style.display = "none";
+      SaveTheEnrollIDSA6.style.display = "none";
+      ClearTheEnrollIDSA6.style.display = "none";
+    } else {
+      checkStudentsWithAssignmentsSpace6.style.display = "block";
+      SaveTheEnrollIDSA6.style.display = "block";
+      ClearTheEnrollIDSA6.style.display = "block";
+    }
+  }
+}
+
 // Check assignments per Student per Course
 function CheckAssignmentsPerStudentPerCourse() {
   document.getElementById(
@@ -1290,6 +1418,32 @@ function CheckAssignmentsData() {
   type31.innerHTML = "Type: " + course.C_Type;
   startDate31.innerHTML = "Starting Date: " + course.C_StartDate;
   endDate31.innerHTML = "Ending Date: " + course.C_EndDate;
+
+  // Section for Assignment enroll to Students
+  var student = {
+    S_FirstName: "Daniel",
+    S_LastName: "Bogdan",
+    S_BirthDay: "26/4/1995",
+    S_Fees: "1980 euros"
+  };
+
+  var sfn3 = document.getElementById("S_FirstNameID21");
+  var sln3 = document.getElementById("S_LastNameID21");
+  var sdob3 = document.getElementById("S_DateOfBirthID21");
+  var sf3 = document.getElementById("S_FeesID21");
+
+  sfn3.innerHTML = "First Name: " + student.S_FirstName;
+  sln3.innerHTML = "Last Name: " + student.S_LastName;
+  sdob3.innerHTML = "Date of Birth: " + student.S_BirthDay;
+  sf3.innerHTML = "Fees: " + student.S_Fees;
+
+  var at123 = document.getElementById("A_TitleID113");
+  var adesc123 = document.getElementById("A_DescreptionID113");
+  var asubd123 = document.getElementById("A_SubDateID113");
+
+  at123.innerHTML = "Title: " + assignment.A_Title;
+  adesc123.innerHTML = "Descreption: " + assignment.A_Descreption;
+  asubd123.innerHTML = "Deadline: " + assignment.A_SubDateTime;
 
 }
 

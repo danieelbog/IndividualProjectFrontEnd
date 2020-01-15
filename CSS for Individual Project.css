@@ -4748,6 +4748,521 @@ div i:hover {
   animation: slideFromRight 0.7s;
 }
 
+/* Dragable content for Trainer styles  */
+
+.assignmentsToStudentsListToDrug {
+  top: 3em;
+  position: absolute;
+  display: flexbox;
+  flex-direction: column;
+  background-color: white;
+  height: 70%;
+  width: auto;
+  overflow: scroll;
+  margin: 2em;
+  left: 4.5em;
+  justify-content: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.studentsWithAssignmentsListToDrug {
+  top: 3em;
+  position: absolute;
+  display: flexbox;
+  flex-direction: column;
+  background-color: white;
+  height: 70%;
+  width: auto;
+  overflow: scroll;
+  margin: 2em;
+  left: 30em;
+  justify-content: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+#checkAssignmentToStudentDragableSpace1 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkAssignmentToStudentDragableSpace2 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkAssignmentToStudentDragableSpace3 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkAssignmentToStudentDragableSpace4 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkAssignmentToStudentDragableSpace5 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkAssignmentToStudentDragableSpace6 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkAssignmentToStudentDragableSpace1 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 100%;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-bottom: solid 1px #b7bcc5;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkStudentsWithAssignmentsDragable1 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkStudentsWithAssignmentsDragable2 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkStudentsWithAssignmentsDragable3 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkStudentsWithAssignmentsDragable4 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkStudentsWithAssignmentsDragable5 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkStudentsWithAssignmentsDragable6 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkStudentsWithAssignmentsSpace1 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 20em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-bottom: solid 1px #b7bcc5;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: none;
+  padding-left: 1em;
+  padding-top: 1em;
+  animation: slideFromRight 0.7s;
+
+}
+#checkStudentsWithAssignmentsSpace2 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 20em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-bottom: solid 1px #b7bcc5;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: none;
+  padding-left: 1em;
+  padding-top: 1em;
+  animation: slideFromRight 0.7s;
+
+
+}
+#checkStudentsWithAssignmentsSpace3 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 20em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-bottom: solid 1px #b7bcc5;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: none;
+  padding-left: 1em;
+  padding-top: 1em;
+  animation: slideFromRight 0.7s;
+
+
+}
+#checkStudentsWithAssignmentsSpace4 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 20em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-bottom: solid 1px #b7bcc5;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: none;
+  padding-left: 1em;
+  padding-top: 1em;
+  animation: slideFromRight 0.7s;
+
+
+}
+#checkStudentsWithAssignmentsSpace5 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 20em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-bottom: solid 1px #b7bcc5;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: none;
+  padding-left: 1em;
+  padding-top: 1em;
+  animation: slideFromRight 0.7s;
+
+
+}
+#checkStudentsWithAssignmentsSpace6 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 20em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-bottom: solid 1px #b7bcc5;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: none;
+  padding-left: 1em;
+  padding-top: 1em;
+  animation: slideFromRight 0.7s;
+
+
+}
+
+/* Forms for Assignments dragable into students */
+
+#checkAssignmentToStudentDrugable1 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkAssignmentToStudentDrugable2 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkAssignmentToStudentDrugable3 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkAssignmentToStudentDrugable4 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkAssignmentToStudentDrugable5 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkAssignmentToStudentDrugable6 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+.listOfDragableAssignmentsToStudentsH1 {
+  margin-bottom: 1em;
+  position: relative;
+  top: -1em;
+  left: -1em;
+  color: #2f3542;
+  cursor: pointer;
+}
+
+.StudentsWithAssignmentsOfDragableListH1 {
+  margin-bottom: 1em;
+  position: relative;
+  top: -1em;
+  left: -2em;
+  color: #2f3542;
+  cursor: pointer;
+}
+
+.listOfDragableAssignmentsToStudentsH1:hover {
+  color: #ff4757;
+}
+
+.StudentsWithAssignmentsOfDragableListH1:hover {
+  color: #ff4757;
+}
+
+
+.checkAssignmentToStudentDrugable {
+  cursor: pointer;
+}
+
+.checkAssignmentToStudentDrugable:hover {
+  -webkit-box-shadow: inset 0px 0px 0px 0px rgba(255, 71, 87, 1);
+  -moz-box-shadow: inset 0px 0px 1px -1px rgba(255, 71, 87, 1);
+  box-shadow: inset 3px 0px 1px -1px rgba(255, 71, 87, 1);
+  opacity: 0.8;
+  border: none !important;
+}
+
+.checkStudentsWithAssignmentsDragable {
+  cursor: pointer;
+}
+
+.checkStudentsWithAssignmentsDragable:hover {
+  -webkit-box-shadow: inset 0px 0px 0px 0px rgba(255, 71, 87, 1);
+  -moz-box-shadow: inset 0px 0px 1px -1px rgba(255, 71, 87, 1);
+  box-shadow: inset 3px 0px 1px -1px rgba(255, 71, 87, 1);
+  opacity: 0.8;
+  border: none !important;
+}
+
 /* Check Assignments Per Student Per Course */
 .POPUP_checkAssignmentsPerStudentPerCourse {
   background-color: white;
