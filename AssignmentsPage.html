@@ -62,7 +62,7 @@
                 Add Assignments to your Private school. <br><br> 2) Check available Assignments in the private
                 school. <br><br> 3) Enroll Assignments to Courses. Click on Enroll Assignments To Courses. 
                 A new window will appear. Click on the Course Form you want to enroll the Assignment. Drag the Assignment to the Course you clicked previously. 
-                To delete an Assignment. Drag the Assignment from the Course List to the Assignments List. <br><br> 4) Check Assignments per Course
+                To delete an Assignment. Drag the Assignment from the Course List to the Assignments List. <br><br> 4) Check Assignments per Course, click on the Course and Check its enrolled Assignments.
                 <br><br> 5) Enroll Assignments to Students. Click on Enroll Assignments To Students. 
                 A new window will appear. Click on the Student Form you want to enroll the Assignment. Drag the Assignment to the Student you clicked previously. 
                 To delete an Assignment. Drag the Assignment from the Student List to the Assignments List. <br><br> 6) Check Assignments per Student per Course.</p>
@@ -338,17 +338,69 @@
                 <i class="far fa-times-circle" id="quitImage"></i>
             </span>
 
-            <!-- Assignments Per Course school Forms -->
-            <div class="assignmentsList" id="assignmentsList">
-                <h1 class="listOfAssignmentsH1">List of Assignments per Course</h1>
-                <div id="checkAssignmentPerCourse1" class="checkAssignment"></div>
-                <div id="checkAssignmentPerCourse2" class="checkAssignment"></div>
-                <div id="checkAssignmentPerCourse3" class="checkAssignment"></div>
-                <div id="checkAssignmentPerCourse4" class="checkAssignment"></div>
-                <div id="checkAssignmentPerCourse5" class="checkAssignment"></div>
-                <div id="checkAssignmentPerCourse6" class="checkAssignment"></div>
-            </div>
+            <!-- Assignments In school per Course -->
+            <div class="assignmentsPerCourseList" id="assignmentsPerCourseList">
+                <h1 class="ListofAssignmentsPerCourseListH1">List of Assignments per Course</h1>
+                <div class="datacontainerAssignmentsPerCourse">
+                    <div id="checkAssignmentsPerCourse1" class="checkAssignmentsPerCourse"
+                        onclick="OpencheckAssignmentsPerCourse(1)">
+                        <p id="C_TitleID37" class="CoursesData">Course Title:</p>
+                        <p id="C_StreamID37" class="CoursesData">Course Stream:</p>
+                        <p id="C_TypeID37" class="CoursesData">Course Type:</p>
+                        <p id="C_StartDateID37" class="CoursesData">Course Start Date:</p>
+                        <p id="C_EndDateID37" class="CoursesData">Course End Date:</p>
+                    </div>
+                    <div id="checkAssignmentsPerCourseSpace1" class="checkAssignmentsPerCourseSpace">
+                        <div id="checkAssignmentPerCourse1" class="checkAssignmentPerCourse">
+                            <p id="A_TitleID17" class="AssignmentData">Title:</p>
+                            <p id="A_DescreptionID17" class="AssignmentData">Descreption:</p>
+                            <p id="A_SubDateID17" class="AssignmentData">Deadline:</p>
+                        </div>
 
+                        <div id="checkAssignmentPerCourse2" class="checkAssignmentPerCourse">
+                            <p id="A_TitleID18" class="AssignmentData">Title:</p>
+                            <p id="A_DescreptionID18" class="AssignmentData">Descreption:</p>
+                            <p id="A_SubDateID18" class="AssignmentData">Deadline:</p>
+                        </div>
+
+                        <div id="checkAssignmentPerCourse3" class="checkAssignmentPerCourse">
+                            <p id="A_TitleID19" class="AssignmentData">Title:</p>
+                            <p id="A_DescreptionID19" class="AssignmentData">Descreption:</p>
+                            <p id="A_SubDateID19" class="AssignmentData">Deadline:</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="datacontainerAssignmentsPerCourse">
+                    <div id="checkAssignmentsPerCourse2" class="checkAssignmentsPerCourse"
+                        onclick="OpencheckAssignmentsPerCourse(2)">
+                        <p id="C_TitleID38" class="CoursesData">Course Title:</p>
+                        <p id="C_StreamID38" class="CoursesData">Course Stream:</p>
+                        <p id="C_TypeID38" class="CoursesData">Course Type:</p>
+                        <p id="C_StartDateID38" class="CoursesData">Course Start Date:</p>
+                        <p id="C_EndDateID38" class="CoursesData">Course End Date:</p>
+                    </div>
+                    <div id="checkAssignmentsPerCourseSpace2" class="checkAssignmentsPerCourseSpace">
+                        <div id="checkAssignmentPerCourse4" class="checkAssignmentPerCourse">
+                            <p id="A_TitleID10" class="AssignmentData">Title:</p>
+                            <p id="A_DescreptionID10" class="AssignmentData">Descreption:</p>
+                            <p id="A_SubDateID10" class="AssignmentData">Deadline:</p>
+                        </div>
+
+                        <div id="checkAssignmentPerCourse5" class="checkAssignmentPerCourse">
+                            <p id="A_TitleID111" class="AssignmentData">Title:</p>
+                            <p id="A_DescreptionID111" class="AssignmentData">Descreption:</p>
+                            <p id="A_SubDateID111" class="AssignmentData">Deadline:</p>
+                        </div>
+
+                        <div id="checkAssignmentPerCourse6" class="checkAssignmentPerCourse">
+                            <p id="A_TitleID112" class="AssignmentData">Title:</p>
+                            <p id="A_DescreptionID112" class="AssignmentData">Descreption:</p>
+                            <p id="A_SubDateID112" class="AssignmentData">Deadline:</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="maskSection" id="maskSectionD" onclick="POPUP_checkAssignmnetPerCourse_QuitSection()"></div>
     </section>

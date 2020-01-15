@@ -48,23 +48,14 @@ function onloadDisplayData(num) {
   // Num 1 is Student
   if (num === 1) {
     CheckStudentData();
-    CheckStudentDataForEnroll();
-    CheckCoursesDataInStudent();
-    CheckStudentPerCourseData();
-    StudentPerCourseDataCourse();
   }
   // Num 2 is Trainer
   else if (num === 2) {
-    CheckTrainersData();
-    checkTrainersDataToEnroll();
-    CheckCoursesDataInTrainer();
-    
+    CheckTrainersData();    
   }
   // Num 3 is Assignment
   else if (num === 3) {
     CheckAssignmentsData();
-    CheckCoursesDataInAssignment();
-    CheckAssignmentsDataToEnroll();
   }
   // Num 4 or Else is Courses
   else {
@@ -211,99 +202,6 @@ function CheckCoursesData() {
   startDate.innerHTML = "Starting Date: " + course.C_StartDate;
   endDate.innerHTML = "Ending Date: " + course.C_EndDate;
 }
-
-// An object to print courses at the Student Page
-function CheckCoursesDataInStudent() {
-  var course = {
-    C_Title: "BC9",
-    C_Stream: "C#",
-    C_Type: "Part-Time",
-    C_StartDate: "7/9/2019",
-    C_EndDate: "26/4/2020"
-  };
-
-  var title1 = document.getElementById("C_TitleID11");
-  var stream1 = document.getElementById("C_StreamID11");
-  var type1 = document.getElementById("C_TypeID11");
-  var startDate1 = document.getElementById("C_StartDateID11");
-  var endDate1 = document.getElementById("C_EndDateID11");
-
-  title1.innerHTML = "Course title: " + course.C_Title;
-  stream1.innerHTML = "Stream: " + course.C_Stream;
-  type1.innerHTML = "Type: " + course.C_Type;
-  startDate1.innerHTML = "Starting Date: " + course.C_StartDate;
-  endDate1.innerHTML = "Ending Date: " + course.C_EndDate;
-}
-
-// A function to prin Course object at the Trainer page
-function CheckCoursesDataInTrainer() {
-  var course = {
-    C_Title: "BC9",
-    C_Stream: "C#",
-    C_Type: "Part-Time",
-    C_StartDate: "7/9/2019",
-    C_EndDate: "26/4/2020"
-  };
-
-  var title2 = document.getElementById("C_TitleID21");
-  var stream2 = document.getElementById("C_StreamID21");
-  var type2 = document.getElementById("C_TypeID21");
-  var startDate2 = document.getElementById("C_StartDateID21");
-  var endDate2 = document.getElementById("C_EndDateID21");
-
-  title2.innerHTML = "Course title: " + course.C_Title;
-  stream2.innerHTML = "Stream: " + course.C_Stream;
-  type2.innerHTML = "Type: " + course.C_Type;
-  startDate2.innerHTML = "Starting Date: " + course.C_StartDate;
-  endDate2.innerHTML = "Ending Date: " + course.C_EndDate;
-}
-
-// function to see courses in Student per Course section
-function StudentPerCourseDataCourse() {
-  var course = {
-    C_Title: "BC9",
-    C_Stream: "C#",
-    C_Type: "Part-Time",
-    C_StartDate: "7/9/2019",
-    C_EndDate: "26/4/2020"
-  };
-
-  var title2 = document.getElementById("C_TitleID17");
-  var stream2 = document.getElementById("C_StreamID17");
-  var type2 = document.getElementById("C_TypeID17");
-  var startDate2 = document.getElementById("C_StartDateID17");
-  var endDate2 = document.getElementById("C_EndDateID17");
-
-  title2.innerHTML = "Course title: " + course.C_Title;
-  stream2.innerHTML = "Stream: " + course.C_Stream;
-  type2.innerHTML = "Type: " + course.C_Type;
-  startDate2.innerHTML = "Starting Date: " + course.C_StartDate;
-  endDate2.innerHTML = "Ending Date: " + course.C_EndDate;
-}
-
-// A function to print Course in Assignment page
-function CheckCoursesDataInAssignment() {
-  var course = {
-    C_Title: "BC9",
-    C_Stream: "C#",
-    C_Type: "Part-Time",
-    C_StartDate: "7/9/2019",
-    C_EndDate: "26/4/2020"
-  };
-
-  var title3 = document.getElementById("C_TitleID31");
-  var stream3 = document.getElementById("C_StreamID31");
-  var type3 = document.getElementById("C_TypeID31");
-  var startDate3 = document.getElementById("C_StartDateID31");
-  var endDate3 = document.getElementById("C_EndDateID31");
-
-  title3.innerHTML = "Course title: " + course.C_Title;
-  stream3.innerHTML = "Stream: " + course.C_Stream;
-  type3.innerHTML = "Type: " + course.C_Type;
-  startDate3.innerHTML = "Starting Date: " + course.C_StartDate;
-  endDate3.innerHTML = "Ending Date: " + course.C_EndDate;
-}
-
 /* Courses Page Section Ends */
 
 /* Students Page Section Start */
@@ -482,6 +380,29 @@ function CheckStudentsMoreThanOneCourses() {
   document.getElementById("maskSectionE").style.display = "block";
 }
 
+function OpencheckStudentsMoreThanOne(num) {
+
+  var checkStudentsMoreThanOneSpace1 = document.getElementById("checkStudentsMoreThanOneSpace1");
+  var checkStudentsMoreThanOneSpace2 = document.getElementById("checkStudentsMoreThanOneSpace2");
+
+  if (num == 1) {
+    if (checkStudentsMoreThanOneSpace1.style.display == "block") {
+      checkStudentsMoreThanOneSpace1.style.display = "none";
+    }
+    else {
+      checkStudentsMoreThanOneSpace1.style.display = "block";
+    }
+  }
+  else if (num == 2) {
+    if (checkStudentsMoreThanOneSpace2.style.display == "block") {
+      checkStudentsMoreThanOneSpace2.style.display = "none";
+    }
+    else {
+      checkStudentsMoreThanOneSpace2.style.display = "block";
+    }
+  }
+}
+
 // Add students to Courses Quit Section
 function POPUP_addStudents_QuitSection() {
   document.getElementById("POPUP_addStudents").style.display = "none";
@@ -513,6 +434,18 @@ function POPUP_checkStudentsMoreThanOneCourses_QuitSection() {
     "POPUP_checkStudentsMoreThanOneCourses"
   ).style.display = "none";
   document.getElementById("maskSectionE").style.display = "none";
+}
+
+function OpenMe() {
+  var lola = document.getElementById("Tanasakis");
+
+  if (lola.style.display == "block") {
+    lola.style.display = "none";
+
+  }
+  else {
+    lola.style.display = "block";
+  }
 }
 
 // Block of code that will be creating new Divs when there is new input keeping stable my desing
@@ -588,6 +521,7 @@ function CheckStudentData() {
     S_Fees: "1980 euros"
   };
 
+  // Section for Check Students in Private School
   var sfn = document.getElementById("S_FirstNameID");
   var sln = document.getElementById("S_LastNameID");
   var sdob = document.getElementById("S_DateOfBirthID");
@@ -597,17 +531,8 @@ function CheckStudentData() {
   sln.innerHTML = "Last Name: " + student.S_LastName;
   sdob.innerHTML = "Date of Birth: " + student.S_BirthDay;
   sf.innerHTML = "Fees: " + student.S_Fees;
-}
 
-// Function to print students for enrollement
-function CheckStudentDataForEnroll() {
-  var student = {
-    S_FirstName: "Daniel",
-    S_LastName: "Bogdan",
-    S_BirthDay: "26/4/1995",
-    S_Fees: "1980 euros"
-  };
-
+  // Section for Enroll Students to Course
   var sfn1 = document.getElementById("S_FirstNameID11");
   var sln1 = document.getElementById("S_LastNameID11");
   var sdob1 = document.getElementById("S_DateOfBirthID11");
@@ -617,17 +542,28 @@ function CheckStudentDataForEnroll() {
   sln1.innerHTML = "Last Name: " + student.S_LastName;
   sdob1.innerHTML = "Date of Birth: " + student.S_BirthDay;
   sf1.innerHTML = "Fees: " + student.S_Fees;
-}
 
-// Function to display Students in Students Per Course Section
-function CheckStudentPerCourseData() {
-  var student = {
-    S_FirstName: "Daniel",
-    S_LastName: "Bogdan",
-    S_BirthDay: "26/4/1995",
-    S_Fees: "1980 euros"
+  var course = {
+    C_Title: "BC9",
+    C_Stream: "C#",
+    C_Type: "Part-Time",
+    C_StartDate: "7/9/2019",
+    C_EndDate: "26/4/2020"
   };
 
+  var title1 = document.getElementById("C_TitleID11");
+  var stream1 = document.getElementById("C_StreamID11");
+  var type1 = document.getElementById("C_TypeID11");
+  var startDate1 = document.getElementById("C_StartDateID11");
+  var endDate1 = document.getElementById("C_EndDateID11");
+
+  title1.innerHTML = "Course title: " + course.C_Title;
+  stream1.innerHTML = "Stream: " + course.C_Stream;
+  type1.innerHTML = "Type: " + course.C_Type;
+  startDate1.innerHTML = "Starting Date: " + course.C_StartDate;
+  endDate1.innerHTML = "Ending Date: " + course.C_EndDate;
+
+  // Section for Check Students Per Courses
   var sfn1 = document.getElementById("S_FirstNameID17");
   var sln1 = document.getElementById("S_LastNameID17");
   var sdob1 = document.getElementById("S_DateOfBirthID17");
@@ -637,6 +573,41 @@ function CheckStudentPerCourseData() {
   sln1.innerHTML = "Last Name: " + student.S_LastName;
   sdob1.innerHTML = "Date of Birth: " + student.S_BirthDay;
   sf1.innerHTML = "Fees: " + student.S_Fees;
+
+  var title2 = document.getElementById("C_TitleID17");
+  var stream2 = document.getElementById("C_StreamID17");
+  var type2 = document.getElementById("C_TypeID17");
+  var startDate2 = document.getElementById("C_StartDateID17");
+  var endDate2 = document.getElementById("C_EndDateID17");
+
+  title2.innerHTML = "Course title: " + course.C_Title;
+  stream2.innerHTML = "Stream: " + course.C_Stream;
+  type2.innerHTML = "Type: " + course.C_Type;
+  startDate2.innerHTML = "Starting Date: " + course.C_StartDate;
+  endDate2.innerHTML = "Ending Date: " + course.C_EndDate;
+
+  // Section for Check students in more than one Courses
+  var sfn13 = document.getElementById("S_FirstNameID113");
+  var sln13 = document.getElementById("S_LastNameID113");
+  var sdob13 = document.getElementById("S_DateOfBirthID113");
+  var sf13 = document.getElementById("S_FeesID113");
+
+  sfn13.innerHTML = "First Name: " + student.S_FirstName;
+  sln13.innerHTML = "Last Name: " + student.S_LastName;
+  sdob13.innerHTML = "Date of Birth: " + student.S_BirthDay;
+  sf13.innerHTML = "Fees: " + student.S_Fees;
+
+  var title23 = document.getElementById("C_TitleID113");
+  var stream23 = document.getElementById("C_StreamID113");
+  var type23 = document.getElementById("C_TypeID113");
+  var startDate23 = document.getElementById("C_StartDateID113");
+  var endDate23 = document.getElementById("C_EndDateID113");
+
+  title23.innerHTML = "Course title: " + course.C_Title;
+  stream23.innerHTML = "Stream: " + course.C_Stream;
+  type23.innerHTML = "Type: " + course.C_Type;
+  startDate23.innerHTML = "Starting Date: " + course.C_StartDate;
+  endDate23.innerHTML = "Ending Date: " + course.C_EndDate;
 }
 
 /* Students Page Section Ends */
@@ -785,6 +756,30 @@ function CheckTrainersPerCourse() {
   document.getElementById("maskSectionD").style.display = "block";
 }
 
+// function for drop down section with the trainers insances
+function OpencheckTrainersPerCourse(num) {
+
+  var checkTrainersPerCourseSpace1 = document.getElementById("checkTrainersPerCourseSpace1");
+  var checkTrainersPerCourseSpace2 = document.getElementById("checkTrainersPerCourseSpace2");
+
+  if (num == 1) {
+    if (checkTrainersPerCourseSpace1.style.display == "block") {
+      checkTrainersPerCourseSpace1.style.display = "none";
+    }
+    else {
+      checkTrainersPerCourseSpace1.style.display = "block";
+    }
+  }
+  else if (num == 2) {
+    if (checkTrainersPerCourseSpace2.style.display == "block") {
+      checkTrainersPerCourseSpace2.style.display = "none";
+    }
+    else {
+      checkTrainersPerCourseSpace2.style.display = "block";
+    }
+  }
+}
+
 // Slide for marks
 function PutMarks() {
   document.getElementById("POPUP_putMarks").style.display = "block";
@@ -885,6 +880,7 @@ function CheckTrainersData() {
     T_Subject: "C#"
   };
 
+  // Section for Check Trainers in Private School
   var tfn = document.getElementById("T_FirstNameID");
   var tln = document.getElementById("T_LastNameID");
   var tsub = document.getElementById("T_SubjectID");
@@ -892,16 +888,8 @@ function CheckTrainersData() {
   tfn.innerHTML = "First Name: " + trainer.T_FirstName;
   tln.innerHTML = "Last Name: " + trainer.T_LastName;
   tsub.innerHTML = "Subject: " + trainer.T_Subject;
-}
 
-// Function to print entity at the enrollement section
-function checkTrainersDataToEnroll() {
-  var trainer = {
-    T_FirstName: "Periklis",
-    T_LastName: "Aidinopoulos",
-    T_Subject: "C#"
-  };
-
+  // Section for Enroll Trainers to Course
   var tfn1 = document.getElementById("T_FirstNameID11");
   var tln1 = document.getElementById("T_LastNameID11");
   var tsub1 = document.getElementById("T_SubjectID11");
@@ -909,6 +897,50 @@ function checkTrainersDataToEnroll() {
   tfn1.innerHTML = "First Name: " + trainer.T_FirstName;
   tln1.innerHTML = "Last Name: " + trainer.T_LastName;
   tsub1.innerHTML = "Subject: " + trainer.T_Subject;
+
+  var course = {
+    C_Title: "BC9",
+    C_Stream: "C#",
+    C_Type: "Part-Time",
+    C_StartDate: "7/9/2019",
+    C_EndDate: "26/4/2020"
+  };
+
+
+  var title1 = document.getElementById("C_TitleID21");
+  var stream1 = document.getElementById("C_StreamID21");
+  var type1 = document.getElementById("C_TypeID21");
+  var startDate1 = document.getElementById("C_StartDateID21");
+  var endDate1 = document.getElementById("C_EndDateID21");
+
+  title1.innerHTML = "Course title: " + course.C_Title;
+  stream1.innerHTML = "Stream: " + course.C_Stream;
+  type1.innerHTML = "Type: " + course.C_Type;
+  startDate1.innerHTML = "Starting Date: " + course.C_StartDate;
+  endDate1.innerHTML = "Ending Date: " + course.C_EndDate;
+
+  // Section for Check Trainers Per Courses
+
+  var title2 = document.getElementById("C_TitleID27");
+  var stream2 = document.getElementById("C_StreamID27");
+  var type2 = document.getElementById("C_TypeID27");
+  var startDate2 = document.getElementById("C_StartDateID27");
+  var endDate2 = document.getElementById("C_EndDateID27");
+
+  title2.innerHTML = "Course title: " + course.C_Title;
+  stream2.innerHTML = "Stream: " + course.C_Stream;
+  type2.innerHTML = "Type: " + course.C_Type;
+  startDate2.innerHTML = "Starting Date: " + course.C_StartDate;
+  endDate2.innerHTML = "Ending Date: " + course.C_EndDate;
+
+  var tfn2 = document.getElementById("T_FirstNameID17");
+  var tln2 = document.getElementById("T_LastNameID17");
+  var tsub2 = document.getElementById("T_SubjectID17");
+
+  tfn2.innerHTML = "First Name: " + trainer.T_FirstName;
+  tln2.innerHTML = "Last Name: " + trainer.T_LastName;
+  tsub2.innerHTML = "Subject: " + trainer.T_Subject;
+
 }
 
 /* Trainers Page Section Ends */
@@ -1049,18 +1081,45 @@ function OpencheckCourseDragableSpaceCA(num) {
   }
 }
 
+// Check Assignments Per Courses
 function CheckAssignmnetPerCourse() {
   document.getElementById("POPUP_checkAssignmnetPerCourse").style.display =
     "block";
   document.getElementById("maskSectionD").style.display = "block";
 }
 
+// Function to drop down the space with the students enrolled in the courses
+function OpencheckAssignmentsPerCourse(num) {
+
+  var checkAssignmnetsPerCourseSpace1 = document.getElementById("checkAssignmentsPerCourseSpace1");
+  var checkAssignmnetsPerCourseSpace2 = document.getElementById("checkAssignmentsPerCourseSpace2");
+
+  if (num == 1) {
+    if (checkAssignmnetsPerCourseSpace1.style.display == "block") {
+      checkAssignmnetsPerCourseSpace1.style.display = "none";
+    }
+    else {
+      checkAssignmnetsPerCourseSpace1.style.display = "block";
+    }
+  }
+  else if (num == 2) {
+    if (checkAssignmnetsPerCourseSpace2.style.display == "block") {
+      checkAssignmnetsPerCourseSpace2.style.display = "none";
+    }
+    else {
+      checkAssignmnetsPerCourseSpace2.style.display = "block";
+    }
+  }
+}
+
+// Enroll Assignments to Students
 function EnrollAssignmentsToStudents() {
   document.getElementById("POPUP_enrollAssignmentsToStudents").style.display =
     "block";
   document.getElementById("maskSectionE").style.display = "block";
 }
 
+// Check assignments per Student per Course
 function CheckAssignmentsPerStudentPerCourse() {
   document.getElementById(
     "POPUP_checkAssignmentsPerStudentPerCourse"
@@ -1068,33 +1127,39 @@ function CheckAssignmentsPerStudentPerCourse() {
   document.getElementById("maskSectionF").style.display = "block";
 }
 
+// Add assignments quit section
 function POPUP_addAssignments_QuitSection() {
   document.getElementById("POPUP_addAssignments").style.display = "none";
   document.getElementById("maskSectionA").style.display = "none";
 }
 
+// Check assignments quit section
 function POPUP_seeAssignments_QuitSection() {
   document.getElementById("POPUP_seeAssignments").style.display = "none";
   document.getElementById("maskSectionB").style.display = "none";
 }
 
+// Enroll assignments quit section
 function POPUP_enrollAssignmnets_QuitSection() {
   document.getElementById("POPUP_enrollAssignmnets").style.display = "none";
   document.getElementById("maskSectionC").style.display = "none";
 }
 
+// Chech assignment per course Quit Section
 function POPUP_checkAssignmnetPerCourse_QuitSection() {
   document.getElementById("POPUP_checkAssignmnetPerCourse").style.display =
     "none";
   document.getElementById("maskSectionD").style.display = "none";
 }
 
+// Enroll assignmnets to Students Quit Section
 function POPUP_enrollAssignmentsToStudents_QuitSection() {
   document.getElementById("POPUP_enrollAssignmentsToStudents").style.display =
     "none";
   document.getElementById("maskSectionE").style.display = "none";
 }
 
+// Check assignmnets per Students Per Course Section
 function POPUP_checkAssignmentsPerStudentPerCourse_QuitSection() {
   document.getElementById(
     "POPUP_checkAssignmentsPerStudentPerCourse"
@@ -1167,6 +1232,7 @@ function CheckAssignmentsData() {
     A_SubDateTime: "17/1/2020"
   };
 
+  // Section Check Assignments in Private School
   var at = document.getElementById("A_TitleID");
   var adesc = document.getElementById("A_DescreptionID");
   var asubd = document.getElementById("A_SubDateID");
@@ -1174,17 +1240,8 @@ function CheckAssignmentsData() {
   at.innerHTML = "Title: " + assignment.A_Title;
   adesc.innerHTML = "Descreption: " + assignment.A_Descreption;
   asubd.innerHTML = "Deadline: " + assignment.A_SubDateTime;
-}
 
-// Function to prin Assignment entity in the enrollement section
-function CheckAssignmentsDataToEnroll() {
-  var assignment = {
-    A_Title: "Create Private School Back End",
-    A_Descreption:
-      "You must create private school back end with the following functionalities:.....",
-    A_SubDateTime: "17/1/2020"
-  };
-
+  // Section Enroll Assignments to Courses
   var at1 = document.getElementById("A_TitleID11");
   var adesc1 = document.getElementById("A_DescreptionID11");
   var asubd1 = document.getElementById("A_SubDateID11");
@@ -1192,6 +1249,49 @@ function CheckAssignmentsDataToEnroll() {
   at1.innerHTML = "Title: " + assignment.A_Title;
   adesc1.innerHTML = "Descreption: " + assignment.A_Descreption;
   asubd1.innerHTML = "Deadline: " + assignment.A_SubDateTime;
+
+  var course = {
+    C_Title: "BC9",
+    C_Stream: "C#",
+    C_Type: "Part-Time",
+    C_StartDate: "7/9/2019",
+    C_EndDate: "26/4/2020"
+  };
+
+  var title3 = document.getElementById("C_TitleID31");
+  var stream3 = document.getElementById("C_StreamID31");
+  var type3 = document.getElementById("C_TypeID31");
+  var startDate3 = document.getElementById("C_StartDateID31");
+  var endDate3 = document.getElementById("C_EndDateID31");
+
+  title3.innerHTML = "Course title: " + course.C_Title;
+  stream3.innerHTML = "Stream: " + course.C_Stream;
+  type3.innerHTML = "Type: " + course.C_Type;
+  startDate3.innerHTML = "Starting Date: " + course.C_StartDate;
+  endDate3.innerHTML = "Ending Date: " + course.C_EndDate;
+
+  // Section for check Assignmnets per Courses
+  var at12 = document.getElementById("A_TitleID17");
+  var adesc12 = document.getElementById("A_DescreptionID17");
+  var asubd12 = document.getElementById("A_SubDateID17");
+
+  at12.innerHTML = "Title: " + assignment.A_Title;
+  adesc12.innerHTML = "Descreption: " + assignment.A_Descreption;
+  asubd12.innerHTML = "Deadline: " + assignment.A_SubDateTime;
+
+  var title31 = document.getElementById("C_TitleID37");
+  var stream31 = document.getElementById("C_StreamID37");
+  var type31 = document.getElementById("C_TypeID37");
+  var startDate31 = document.getElementById("C_StartDateID37");
+  var endDate31 = document.getElementById("C_EndDateID37");
+
+  title31.innerHTML = "Course title: " + course.C_Title;
+  stream31.innerHTML = "Stream: " + course.C_Stream;
+  type31.innerHTML = "Type: " + course.C_Type;
+  startDate31.innerHTML = "Starting Date: " + course.C_StartDate;
+  endDate31.innerHTML = "Ending Date: " + course.C_EndDate;
+
 }
+
 
 /* Assignments Page Section Ends */

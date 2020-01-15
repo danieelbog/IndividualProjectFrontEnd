@@ -47,7 +47,7 @@
                 <li>Assignments</li>
                 <i class="fab fa-leanpub"></i>
             </a>
-            <a href="#">
+            <a href="#" onclick="OpenMe()">
                 <li>About</li>
                 <i class="fas fa-surprise"></i>
             </a>
@@ -66,9 +66,9 @@
                 A new window will appear. Click on the Course Form you want to enroll the Student. Drag the Student to
                 the Course you clicked previously.
                 To delete a Student. Drag the Student from the Course List to the Student List. <br /><br />
-                4) Check each Student based on the Course he is studying.
+                4) Check each Student based on the Course he is studying. Click on the course and check the students that are enrolled in it.
                 <br /><br />
-                5) Check the students that belong to more than one Courses.
+                5) Check the students that belong to more than one Courses. Click on the students that you will see and check the courses they are enrolled in.
             </p>
         </div>
 
@@ -453,18 +453,78 @@
                 <i class="far fa-times-circle" id="quitImage"></i>
             </span>
 
-            <div class="studentsList" id="studentsList">
-                <h1 class="listOfStudentsH1">List of Students in more than one Courses</h1>
-                <div id="checkStudentMoreThanOne1" class="checkStudent"></div>
-                <div id="checkStudentMoreThanOne2" class="checkStudent"></div>
-                <div id="checkStudentMoreThanOne3" class="checkStudent"></div>
-                <div id="checkStudentMoreThanOne4" class="checkStudent"></div>
-                <div id="checkStudentMoreThanOne5" class="checkStudent"></div>
-                <div id="checkStudentMoreThanOne6" class="checkStudent"></div>
-            </div>
+            <!-- Students In school per Course -->
+            <div class="studentsMoreThanOneList" id="studentsMoreThanOneList">
+                <h1 class="ListofStudentsMoreThanOneListH1">List of Students in more than one Courses</h1>
+                <div class="datacontainerStudentsMoreThanOne">
+                    <div id="checkStudentsMoreThanOne1" class="checkStudentsMoreThanOne"
+                        onclick="OpencheckStudentsMoreThanOne(1)">
+                            <p id="S_FirstNameID113" class="StudentsData">First Name:</p>
+                            <p id="S_LastNameID113" class="StudentsData">Last Name:</p>
+                            <p id="S_DateOfBirthID113" class="StudentsData">Date of Birth:</p>
+                            <p id="S_FeesID113" class="StudentsData">Fees:</p>
+                    </div>
+                    <div id="checkStudentsMoreThanOneSpace1" class="checkStudentsMoreThanOneSpace">
+                        <div id="checkStudentMoreThanOne1" class="checkStudentMoreThanOne">
+                            <p id="C_TitleID113" class="CoursesData">Course Title:</p>
+                            <p id="C_StreamID113" class="CoursesData">Course Stream:</p>
+                            <p id="C_TypeID113" class="CoursesData">Course Type:</p>
+                            <p id="C_StartDateID113" class="CoursesData">Course Start Date:</p>
+                            <p id="C_EndDateID113" class="CoursesData">Course End Date:</p>
+                        </div>
 
+                        <div id="checkStudentMoreThanOne2" class="checkStudentMoreThanOne">
+                            <p id="C_TitleID114" class="CoursesData">Course Title:</p>
+                            <p id="C_StreamID114" class="CoursesData">Course Stream:</p>
+                            <p id="C_TypeID114" class="CoursesData">Course Type:</p>
+                            <p id="C_StartDateID114" class="CoursesData">Course Start Date:</p>
+                            <p id="C_EndDateID114" class="CoursesData">Course End Date:</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="datacontainerStudentsMoreThanOne">
+                    <div id="checkStudentsMoreThanOne2" class="checkStudentsMoreThanOne"
+                        onclick="OpencheckStudentsMoreThanOne(2)">
+                            <p id="S_FirstNameID114" class="StudentsData">First Name:</p>
+                            <p id="S_LastNameID114" class="StudentsData">Last Name:</p>
+                            <p id="S_DateOfBirthID114" class="StudentsData">Date of Birth:</p>
+                            <p id="S_FeesID114" class="StudentsData">Fees:</p>
+                    </div>
+                    <div id="checkStudentsMoreThanOneSpace2" class="checkStudentsMoreThanOneSpace">
+                        <div id="checkStudentMoreThanOne3" class="checkStudentMoreThanOne">
+                            <p id="C_TitleID115" class="CoursesData">Course Title:</p>
+                            <p id="C_StreamID115" class="CoursesData">Course Stream:</p>
+                            <p id="C_TypeID115" class="CoursesData">Course Type:</p>
+                            <p id="C_StartDateID115" class="CoursesData">Course Start Date:</p>
+                            <p id="C_EndDateID115" class="CoursesData">Course End Date:</p>
+                        </div>
+
+                        <div id="checkStudentMoreThanOne4" class="checkStudentMoreThanOne">
+                            <p id="C_TitleID116" class="CoursesData">Course Title:</p>
+                            <p id="C_StreamID116" class="CoursesData">Course Stream:</p>
+                            <p id="C_TypeID116" class="CoursesData">Course Type:</p>
+                            <p id="C_StartDateID116" class="CoursesData">Course Start Date:</p>
+                            <p id="C_EndDateID116" class="CoursesData">Course End Date:</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="maskSection" id="maskSectionE" onclick="POPUP_checkStudentsMoreThanOneCourses_QuitSection()"></div>
+    </section>
+
+    <section class="Tanasis" id="Tanasakis">
+        <div class="yolo">
+            <p class="lola">Αν βρεθηκες τυχαια σε αυτην την σελιδα τοτε μολις ανακαλυψες ενα easterEgg σε αυτο που εχω φτιαξει. Ναι χαμογελα :). Που λες επειδη θα μου λειψει να με πιανεις στα καλα καθουμενα στον ωμο μου και να πεταγομαι σαν να με χτυπησε ρευμα, και να με ρωτας γαματη περιεργεια για το τι μουσικη ακουω, θα σου ανεβασω εδω 4 κομματια που τα ακουγα καθε μερα. Ειναι πολυ πιθανο εσυ να μην ακους τετοιο ηχο αλλα εμενα με βοηθαει να ειμαι συγκεντρωμενος.
+                Υπαρχουν 2 ηδη αφηγησης σε μια ιστορια, ο πρωτος ειναι ο πιο 'συνηθησμενος'... Απλα λες μια ιστορια με αρχη μεση και τελος. Ο Δευτερος ειναι ενας τροπος που δεν υπαρχει αρχη μεση και τελος, αλλα υπαρχουν κρυμμενα κομματια της ιστοριας παντου και ο αναγνωστης θα πρεπει να τα συνθεσει στο μυαλο του.              
+                <a href="https://www.youtube.com/watch?v=FnkTuHP9q3o&list=RDFnkTuHP9q3o&start_radio=1" target="_blank">Το πρωτο τραγουδι:</a>
+                <a href="https://www.youtube.com/watch?v=XDvwJckkZTY" target="_blank">Το δευετρο τραγουδι:</a>
+                <a href="https://www.youtube.com/watch?v=Fwi1qgSaxZY" target="_blank">Το τριτο τραγουδι:</a>
+                <a href="https://www.youtube.com/watch?v=3TOzkCIaXjI&list=RD3TOzkCIaXjI&start_radio=1" target="_blank">Το τελευταιο τραγουδι:</a>
+                Ελπιζω να το βρηκες κανοντας κλικ και οχι απλα κοιταζοντας τα αρχεια μου....
+            </p>
+        </div>
     </section>
 
     <!-- Footer Section -->

@@ -1913,6 +1913,131 @@ div i:hover {
   text-align: center;
 }
 
+/* section for drop down divs with courses data */
+
+.studentsMoreThanOneList {
+  top: 3em;
+  position: absolute;
+  display: flexbox;
+  flex-direction: column;
+  background-color: white;
+  height: 70%;
+  width: auto;
+  overflow: scroll;
+  margin: 2em;
+  left: 4.5em;
+  justify-content: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+#checkStudentsMoreThanOne1 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkStudentsMoreThanOne2 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkStudentsMoreThanOneSpace1 {
+  background-color: white;
+  flex-flow: 8em;
+  left: 1em;
+  height: 100%;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-bottom: solid 1px #b7bcc5;
+  border-left: solid 1px #b7bcc5;
+  padding: 1em;
+  /* border-radius: 18px; */
+  display: none;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+  animation: slideFromRight 0.7s;
+}
+
+#checkStudentsMoreThanOneSpace2 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 100%;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-bottom: solid 1px #b7bcc5;
+  border-left: solid 1px #b7bcc5;
+  padding: 1em;
+  /* border-radius: 18px; */
+  display: none;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+  left: 1em;
+  animation: slideFromRight 0.7s;
+}
+
+.ListofStudentsMoreThanOneListH1 {
+  margin-bottom: 1em;
+  position: relative;
+  top: -1em;
+  color: #2f3542;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.ListofStudentsMoreThanOneListH1:hover {
+  color: #ff4757;
+}
+
+.checkStudentsMoreThanOne {
+  cursor: pointer;
+}
+
+.checkStudentsMoreThanOne:hover {
+  -webkit-box-shadow: inset 0px 0px 0px 0px rgba(255, 71, 87, 1);
+  -moz-box-shadow: inset 0px 0px 1px -1px rgba(255, 71, 87, 1);
+  box-shadow: inset 3px 0px 1px -1px rgba(255, 71, 87, 1);
+  opacity: 0.8;
+  border: none !important;
+}
+
+.checkStudentMoreThanOne {
+  cursor: pointer;
+}
+
+.checkStudentMoreThanOne:hover {
+  -webkit-box-shadow: inset 0px 0px 0px 0px rgba(255, 71, 87, 1);
+  -moz-box-shadow: inset 0px 0px 1px -1px rgba(255, 71, 87, 1);
+  box-shadow: inset 3px 0px 1px -1px rgba(255, 71, 87, 1);
+  opacity: 0.8;
+  border: none !important;
+}
+
 #checkStudentMoreThanOne1 {
   background-color: white;
   flex-flow: 8em;
@@ -2148,6 +2273,30 @@ div i:hover {
   height: 4em;
   pointer-events: none;
   border-bottom: solid black;
+}
+
+/* Higgs */
+.Tanasis {
+  z-index: 100;
+  height: 100vh;
+  width: 100%;
+  display: none;
+}
+
+.yolo {
+  z-index: 100;
+  height: 100vh;
+  width: 100%;
+}
+
+.lola {
+  position: relative;
+  top: 40em;
+  z-index: 100;
+  background-color: orange;
+  color: green;
+  height: 100vh;
+  width: 100%;
 }
 
 /* Animation for input Tables, i know its wierd i know this could be done better with JS BUT.....*/
@@ -2521,7 +2670,7 @@ div i:hover {
   color: #ff4757;
 }
 
-/* Student Object and Data Printed */
+/* Trainer Object and Data Printed */
 
 .TrainersData {
   width: 15em;
@@ -2998,6 +3147,133 @@ div i:hover {
   text-align: center;
 }
 
+/* Sectionn for drop down data for Trainers per Course */
+
+.trainersPerCourseList {
+  top: 3em;
+  position: absolute;
+  display: flexbox;
+  flex-direction: column;
+  background-color: white;
+  height: 70%;
+  width: auto;
+  overflow: scroll;
+  margin: 2em;
+  left: 4.5em;
+  justify-content: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+#checkTrainersPerCourse1 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkTrainersPerCourse2 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkTrainersPerCourseSpace1 {
+  background-color: white;
+  flex-flow: 8em;
+  left: 1em;
+  height: 100%;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-bottom: solid 1px #b7bcc5;
+  border-left: solid 1px #b7bcc5;
+  padding: 1em;
+  /* border-radius: 18px; */
+  display: none;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+  animation: slideFromRight 0.7s;
+}
+
+#checkTrainersPerCourseSpace2 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 100%;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-bottom: solid 1px #b7bcc5;
+  border-left: solid 1px #b7bcc5;
+  padding: 1em;
+  /* border-radius: 18px; */
+  display: none;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+  left: 1em;
+  animation: slideFromRight 0.7s;
+}
+
+.ListofTrainersPerCourseListH1 {
+  margin-bottom: 1em;
+  position: relative;
+  top: -1em;
+  color: #2f3542;
+  cursor: pointer;
+  left: -1em;
+  font-size: 26px;
+}
+
+.ListofTrainersPerCourseListH1:hover {
+  color: #ff4757;
+}
+
+.checkTrainersPerCourse {
+  cursor: pointer;
+}
+
+.checkTrainersPerCourse:hover {
+  -webkit-box-shadow: inset 0px 0px 0px 0px rgba(255, 71, 87, 1);
+  -moz-box-shadow: inset 0px 0px 1px -1px rgba(255, 71, 87, 1);
+  box-shadow: inset 3px 0px 1px -1px rgba(255, 71, 87, 1);
+  opacity: 0.8;
+  border: none !important;
+}
+
+.checkTrainerPerCourse {
+  cursor: pointer;
+}
+
+.checkTrainerPerCourse:hover {
+  -webkit-box-shadow: inset 0px 0px 0px 0px rgba(255, 71, 87, 1);
+  -moz-box-shadow: inset 0px 0px 1px -1px rgba(255, 71, 87, 1);
+  box-shadow: inset 3px 0px 1px -1px rgba(255, 71, 87, 1);
+  opacity: 0.8;
+  border: none !important;
+}
+
+/* Trainers per Course */
 #checkTrainerPerCourse1 {
   background-color: white;
   flex-flow: 8em;
@@ -4242,6 +4518,131 @@ div i:hover {
   overflow-x: hidden;
   flex-wrap: wrap;
   text-align: center;
+}
+
+/* Sectionn for drop down data for Assignments per Course */
+
+.assignmentsPerCourseList {
+  top: 3em;
+  position: absolute;
+  display: flexbox;
+  flex-direction: column;
+  background-color: white;
+  height: 70%;
+  width: auto;
+  overflow: scroll;
+  margin: 2em;
+  left: 4.5em;
+  justify-content: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+#checkAssignmentsPerCourse1 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkAssignmentsPerCourse2 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 8em;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-left: solid 1px #b7bcc5;
+  /* border-radius: 18px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+}
+
+#checkAssignmentsPerCourseSpace1 {
+  background-color: white;
+  flex-flow: 8em;
+  left: 1em;
+  height: 100%;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-bottom: solid 1px #b7bcc5;
+  border-left: solid 1px #b7bcc5;
+  padding: 1em;
+  /* border-radius: 18px; */
+  display: none;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+  animation: slideFromRight 0.7s;
+}
+
+#checkAssignmentsPerCourseSpace2 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 100%;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-bottom: solid 1px #b7bcc5;
+  border-left: solid 1px #b7bcc5;
+  padding: 1em;
+  /* border-radius: 18px; */
+  display: none;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+  left: 1em;
+  animation: slideFromRight 0.7s;
+}
+
+.ListofAssignmentsPerCourseListH1 {
+  margin-bottom: 1em;
+  position: relative;
+  top: -1em;
+  color: #2f3542;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.ListofAssignmentsPerCourseListH1:hover {
+  color: #ff4757;
+}
+
+.checkAssignmentsPerCourse {
+  cursor: pointer;
+}
+
+.checkAssignmentsPerCourse:hover {
+  -webkit-box-shadow: inset 0px 0px 0px 0px rgba(255, 71, 87, 1);
+  -moz-box-shadow: inset 0px 0px 1px -1px rgba(255, 71, 87, 1);
+  box-shadow: inset 3px 0px 1px -1px rgba(255, 71, 87, 1);
+  opacity: 0.8;
+  border: none !important;
+}
+
+.checkAssignmentPerCourse {
+  cursor: pointer;
+}
+
+.checkAssignmentPerCourse:hover {
+  -webkit-box-shadow: inset 0px 0px 0px 0px rgba(255, 71, 87, 1);
+  -moz-box-shadow: inset 0px 0px 1px -1px rgba(255, 71, 87, 1);
+  box-shadow: inset 3px 0px 1px -1px rgba(255, 71, 87, 1);
+  opacity: 0.8;
+  border: none !important;
 }
 
 #checkAssignmentPerCourse1 {

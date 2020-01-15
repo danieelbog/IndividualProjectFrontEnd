@@ -63,7 +63,7 @@
                 your private school. <br><br> 3) Enroll Trainers to Courses. Click on Enroll Trainers To Courses. 
                 A new window will appear. Click on the Course Form you want to enroll the Trainer. Drag the Trainer to the Course you clicked previously. 
                 To delete a Trainer. Drag the Trainer from the Course List to the Trainer List. <br><br> 4) Check each Trainer
-                based on the Course he is teaching. <br><br> 5) Put Marks for Assginments of each Student based on
+                based on the Course he is teaching. Click on the Course and check its respective Trainers.<br><br> 5) Put Marks for Assginments of each Student based on
                 Trainers feedback.</p>
         </div>
 
@@ -332,17 +332,69 @@
                 <i class="far fa-times-circle" id="quitImage"></i>
             </span>
 
-            <!-- Trainers per Course Forms -->
-            <div class="trainerList" id="trainerList">
-                <h1 class="listOfTrainersH1">List of Trainers Per Course</h1>
-                <div id="checkTrainerPerCourse1" class="checkTrainer"></div>
-                <div id="checkTrainerPerCourse1" class="checkTrainer"></div>
-                <div id="checkTrainerPerCourse1" class="checkTrainer"></div>
-                <div id="checkTrainerPerCourse1" class="checkTrainer"></div>
-                <div id="checkTrainerPerCourse1" class="checkTrainer"></div>
-                <div id="checkTrainerPerCourse1" class="checkTrainer"></div>
-            </div>
+            <!-- Students In school per Course -->
+            <div class="trainersPerCourseList" id="trainersPerCourseList">
+                <h1 class="ListofTrainersPerCourseListH1">List of Trainers per Course</h1>
+                <div class="datacontainerTrainersPerCourse">
+                    <div id="checkTrainersPerCourse1" class="checkTrainersPerCourse"
+                        onclick="OpencheckTrainersPerCourse(1)">
+                        <p id="C_TitleID27" class="CoursesData">Course Title:</p>
+                        <p id="C_StreamID27" class="CoursesData">Course Stream:</p>
+                        <p id="C_TypeID27" class="CoursesData">Course Type:</p>
+                        <p id="C_StartDateID27" class="CoursesData">Course Start Date:</p>
+                        <p id="C_EndDateID27" class="CoursesData">Course End Date:</p>
+                    </div>
+                    <div id="checkTrainersPerCourseSpace1" class="checkTrainersPerCourseSpace">
+                        <div id="checkTrainerPerCourse1" class="checkTrainersPerCourse">
+                            <p id="T_FirstNameID17" class="TrainersData">First Name:</p>
+                            <p id="T_LastNameID17" class="TrainersData">Last Name:</p>
+                            <p id="T_SubjectID17" class="TrainersData">Subject:</p>
+                        </div>
 
+                        <div id="checkTrainerPerCourse2" class="checkTrainersPerCourse">
+                            <p id="T_FirstNameID18" class="TrainersData">First Name:</p>
+                            <p id="T_LastNameID18" class="TrainersData">Last Name:</p>
+                            <p id="T_SubjectID18" class="TrainersData">Subject:</p>
+                        </div>
+
+                        <div id="checkTrainerPerCourse3" class="checkTrainersPerCourse">
+                            <p id="T_FirstNameID19" class="TrainersData">First Name:</p>
+                            <p id="T_LastNameID19" class="TrainersData">Last Name:</p>
+                            <p id="T_SubjectID19" class="TrainersData">Subject:</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="datacontainerTrainersPerCourse">
+                    <div id="checkTrainersPerCourse2" class="checkTrainersPerCourse"
+                        onclick="OpencheckTrainersPerCourse(2)">
+                        <p id="C_TitleID28" class="CoursesData">Course Title:</p>
+                        <p id="C_StreamID28" class="CoursesData">Course Stream:</p>
+                        <p id="C_TypeID28" class="CoursesData">Course Type:</p>
+                        <p id="C_StartDateID28" class="CoursesData">Course Start Date:</p>
+                        <p id="C_EndDateID28" class="CoursesData">Course End Date:</p>
+                    </div>
+                    <div id="checkTrainersPerCourseSpace2" class="checkTrainersPerCourseSpace">
+                        <div id="checkTrainerPerCourse4" class="checkStudentPerCourse">
+                            <p id="T_FirstNameID111" class="TrainersData">First Name:</p>
+                            <p id="T_LastNameID111" class="TrainersData">Last Name:</p>
+                            <p id="T_SubjectID111" class="TrainersData">Subject:</p>
+                        </div>
+
+                        <div id="checkTrainerPerCourse5" class="checkTrainersPerCourse">
+                            <p id="T_FirstNameID112" class="TrainersData">First Name:</p>
+                            <p id="T_LastNameID112" class="TrainersData">Last Name:</p>
+                            <p id="T_SubjectID112" class="TrainersData">Subject:</p>
+                        </div>
+
+                        <div id="checkTrainerPerCourse6" class="checkTrainersPerCourse">
+                            <p id="T_FirstNameID113" class="TrainersData">First Name:</p>
+                            <p id="T_LastNameID113" class="TrainersData">Last Name:</p>
+                            <p id="T_SubjectID113" class="TrainersData">Subject:</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="maskSection" id="maskSectionD" onclick="POPUP_checkTrainersPerCourse_QuitSection()"></div>
     </section>
