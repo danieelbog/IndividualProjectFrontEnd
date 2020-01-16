@@ -3574,12 +3574,14 @@ div i:hover {
 }
 
 .A_firstConstainerA {
-  width: 65%;
   box-sizing: border-box;
   background-color: #2f3542;
   color: #f5f6fa;
   display: flex;
   flex-basis: 50%;
+  height: 30em;
+  top: -5em;
+  position: relative;
 }
 
 .A_textSection {
@@ -5295,7 +5297,27 @@ div i:hover {
   text-align: center;
 }
 
-#checkAssignmentPerCoursePerStudent1 {
+/* Sectionn for drop down data for Assignments per Course */
+
+.assignmentsPerCoursePerStudentList {
+  top: 3em;
+  position: absolute;
+  display: flexbox;
+  flex-direction: column;
+  background-color: white;
+  height: 70%;
+  width: auto;
+  overflow: scroll;
+  margin: 2em;
+  left: 4.5em;
+  justify-content: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+#checkAssignmentsPerCoursePerStudent1 {
   background-color: white;
   flex-flow: 8em;
   height: 8em;
@@ -5310,7 +5332,94 @@ div i:hover {
   text-align: start;
 }
 
-#checkAssignmentPerCoursePerStudent2 {
+#checkAssignmentsPerCoursePerStudentSpace1 {
+  background-color: white;
+  flex-flow: 8em;
+  left: 1em;
+  height: 100%;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-bottom: solid 1px #b7bcc5;
+  border-left: solid 1px #b7bcc5;
+  padding: 1em;
+  /* border-radius: 18px; */
+  display: none;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+  animation: slideFromRight 0.7s;
+}
+
+#checkAssignmentsPerCoursePerStudentSpaceSA1 {
+  background-color: white;
+  flex-flow: 8em;
+  height: 100%;
+  width: 20em;
+  position: relative;
+  margin-bottom: 1em;
+  border-bottom: solid 1px #b7bcc5;
+  border-left: solid 1px #b7bcc5;
+  padding: 1em;
+  /* border-radius: 18px; */
+  display: none;
+  flex-direction: column;
+  justify-items: start;
+  text-align: start;
+  left: 1em;
+  animation: slideFromRight 0.7s;
+}
+
+.ListofAssignmentsPerCoursePerStudentListH1 {
+  margin-bottom: 1em;
+  position: relative;
+  top: -1em;
+  color: #2f3542;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.ListofAssignmentsPerCoursePerStudentListH1:hover {
+  color: #ff4757;
+}
+
+.checkAssignmentsPerCoursePerStudent {
+  cursor: pointer;
+}
+
+.checkAssignmentsPerCoursePerStudent:hover {
+  -webkit-box-shadow: inset 0px 0px 0px 0px rgba(255, 71, 87, 1);
+  -moz-box-shadow: inset 0px 0px 1px -1px rgba(255, 71, 87, 1);
+  box-shadow: inset 3px 0px 1px -1px rgba(255, 71, 87, 1);
+  opacity: 0.8;
+  border: none !important;
+}
+
+.checkAssignmentPerCoursePerStudentSA {
+  cursor: pointer;
+}
+
+.checkAssignmentPerCoursePerStudentSA:hover {
+  -webkit-box-shadow: inset 0px 0px 0px 0px rgba(255, 71, 87, 1);
+  -moz-box-shadow: inset 0px 0px 1px -1px rgba(255, 71, 87, 1);
+  box-shadow: inset 3px 0px 1px -1px rgba(255, 71, 87, 1);
+  opacity: 0.8;
+  border: none !important;
+}
+
+.checkAssignmentPerCourseperStudent {
+  cursor: pointer;
+}
+
+.checkAssignmentPerCourseperStudent:hover {
+  -webkit-box-shadow: inset 0px 0px 0px 0px rgba(255, 71, 87, 1);
+  -moz-box-shadow: inset 0px 0px 1px -1px rgba(255, 71, 87, 1);
+  box-shadow: inset 3px 0px 1px -1px rgba(255, 71, 87, 1);
+  opacity: 0.8;
+  border: none !important;
+}
+
+#checkAssignmentsPerCoursePerStudent1 {
   background-color: white;
   flex-flow: 8em;
   height: 8em;
@@ -5325,7 +5434,7 @@ div i:hover {
   text-align: start;
 }
 
-#checkAssignmentPerCoursePerStudent3 {
+#checkAssignmentPerCoursePerStudentSA1 {
   background-color: white;
   flex-flow: 8em;
   height: 8em;
@@ -5340,7 +5449,7 @@ div i:hover {
   text-align: start;
 }
 
-#checkAssignmentPerCoursePerStudent4 {
+#checkAssignmentPerCourseperStudent1 {
   background-color: white;
   flex-flow: 8em;
   height: 8em;
@@ -5355,7 +5464,7 @@ div i:hover {
   text-align: start;
 }
 
-#checkAssignmentPerCoursePerStudent5 {
+#checkAssignmentPerCourseperStudent2 {
   background-color: white;
   flex-flow: 8em;
   height: 8em;
@@ -5370,7 +5479,7 @@ div i:hover {
   text-align: start;
 }
 
-#checkAssignmentPerCoursePerStudent6 {
+#checkAssignmentPerCourseperStudent3 {
   background-color: white;
   flex-flow: 8em;
   height: 8em;

@@ -85,6 +85,33 @@ function addCourses() {
   document.getElementById("maskSectionA").style.display = "block";
 }
 
+// Checks for adding courses 
+  
+
+  $(document).ready(function(){
+
+    $("#ipnutTitle").keypress(function() {
+      var title = document.getElementById("ipnutTitle").value;
+
+      if(title.length <= 2) {
+        $("#contentRules").css("display", "block");
+      }
+      else {
+        $("#contentRules").css("display", "none");
+      }
+    })
+    
+  });
+
+
+
+
+
+  var stream = document.getElementById("inputStream").value;
+  var type = document.getElementById("inputType").value;
+  var startDate = document.getElementById("inputStartDate").value;
+  var endDate = document.getElementById("inputEndDate").value;
+
 // Slide page to check Courses
 function seeCourses() {
   document.getElementById("POPUP_seeCourses").style.display = "block";
@@ -1295,6 +1322,35 @@ function POPUP_checkAssignmentsPerStudentPerCourse_QuitSection() {
   document.getElementById("maskSectionF").style.display = "none";
 }
 
+// Function to drop down the space within the Courses to check Students with the assignments
+function OpencheckAssignmentsPerStudentPerCourse(num) {
+
+  var checkAssignmentsPerCoursePerStudentSpace1 = document.getElementById("checkAssignmentsPerCoursePerStudentSpace1");
+
+  if (num == 1) {
+    if (checkAssignmentsPerCoursePerStudentSpace1.style.display == "block") {
+      checkAssignmentsPerCoursePerStudentSpace1.style.display = "none";
+    }
+    else {
+      checkAssignmentsPerCoursePerStudentSpace1.style.display = "block";
+    }
+  }
+}
+
+// Function to drop down the space within the Courses to check Students with the assignments
+function OpencheckAssignmentsPerStudentPerCourseSA(num) {
+
+  var checkAssignmentsPerCoursePerStudentSpaceSA1 = document.getElementById("checkAssignmentsPerCoursePerStudentSpaceSA1");
+
+  if (num == 1) {
+    if (checkAssignmentsPerCoursePerStudentSpaceSA1.style.display == "block") {
+      checkAssignmentsPerCoursePerStudentSpaceSA1.style.display = "none";
+    }
+    else {
+      checkAssignmentsPerCoursePerStudentSpaceSA1.style.display = "block";
+    }
+  }
+}
 // Block of code that will be creating new Divs when there is new input keeping stable my desing
 function CreateAssignment() {
   // Taking valiues from inputs forms and initializing values for usage in the algorithm
@@ -1444,6 +1500,37 @@ function CheckAssignmentsData() {
   at123.innerHTML = "Title: " + assignment.A_Title;
   adesc123.innerHTML = "Descreption: " + assignment.A_Descreption;
   asubd123.innerHTML = "Deadline: " + assignment.A_SubDateTime;
+
+  // Assignments per Student Per Course
+  var title313 = document.getElementById("C_TitleID313");
+  var stream313 = document.getElementById("C_StreamID313");
+  var type313 = document.getElementById("C_TypeID313");
+  var startDate313 = document.getElementById("C_StartDateID313");
+  var endDate313 = document.getElementById("C_EndDateID313");
+
+  title313.innerHTML = "Course title: " + course.C_Title;
+  stream313.innerHTML = "Stream: " + course.C_Stream;
+  type313.innerHTML = "Type: " + course.C_Type;
+  startDate313.innerHTML = "Starting Date: " + course.C_StartDate;
+  endDate313.innerHTML = "Ending Date: " + course.C_EndDate;
+
+  var sfn33 = document.getElementById("S_FirstNameID113");
+  var sln33 = document.getElementById("S_LastNameID113");
+  var sdob33 = document.getElementById("S_DateOfBirthID113");
+  var sf33 = document.getElementById("S_FeesID113");
+
+  sfn33.innerHTML = "First Name: " + student.S_FirstName;
+  sln33.innerHTML = "Last Name: " + student.S_LastName;
+  sdob33.innerHTML = "Date of Birth: " + student.S_BirthDay;
+  sf33.innerHTML = "Fees: " + student.S_Fees;
+
+  var at1234 = document.getElementById("A_TitleID1133");
+  var adesc1234 = document.getElementById("A_DescreptionID1133");
+  var asubd1234 = document.getElementById("A_SubDateID1133");
+
+  at1234.innerHTML = "Title: " + assignment.A_Title;
+  adesc1234.innerHTML = "Descreption: " + assignment.A_Descreption;
+  asubd1234.innerHTML = "Deadline: " + assignment.A_SubDateTime;
 
 }
 

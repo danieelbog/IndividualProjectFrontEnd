@@ -46,8 +46,8 @@
                 <i class="fas fa-chalkboard-teacher"></i>
             </a>
             <a href="AssignmentsPage.html">
-                <li>Assignments</li>
-                <i class="fab fa-leanpub"></i>
+                <li style="color:#2f3542;">Assignments</li>
+                <i class="fab fa-leanpub" style="color:#2f3542;"></i>
             </a>
             <a href="#">
                 <li>About</li>
@@ -69,7 +69,8 @@
                 A new window will appear. Click on the Student Form you want to enroll the Assignment. Drag the
                 Assignment to the Student you clicked previously.
                 To delete an Assignment. Drag the Assignment from the Student List to the Assignments List. <br><br> 6)
-                Check Assignments per Student per Course.</p>
+                Check Assignments per Student per Course. A new window will popup. Click on the Course you want to check. then Click on the Student You want to check. You will
+                see all the assignments per student per course</p>
         </div>
 
         <div class="A_secondContainerB">
@@ -583,20 +584,48 @@
                 <i class="far fa-times-circle" id="quitImage"></i>
             </span>
 
-            <!-- Assignments Per Course school Forms -->
-            <div class="assignmentsList" id="assignmentsList">
-                <h1 class="listOfAssignmentsH1">List of Assignments per Course</h1>
-                <div id="checkAssignmentPerCoursePerStudent1" class="checkAssignment"></div>
-                <div id="checkAssignmentPerCoursePerStudent2" class="checkAssignment"></div>
-                <div id="checkAssignmentPerCoursePerStudent3" class="checkAssignment"></div>
-                <div id="checkAssignmentPerCoursePerStudent4" class="checkAssignment"></div>
-                <div id="checkAssignmentPerCoursePerStudent5" class="checkAssignment"></div>
-                <div id="checkAssignmentPerCoursePerStudent6" class="checkAssignment"></div>
+             <!-- Assignments In school per Course -->
+             <div class="assignmentsPerCoursePerStudentList" id="assignmentsPerCoursePerStudentList">
+                <h1 class="ListofAssignmentsPerCoursePerStudentListH1">List of Assignments per Student Per Course</h1>
+                <div class="datacontainerAssignmentsPerCoursePerStudent">
+                    <div id="checkAssignmentsPerCoursePerStudent1" class="checkAssignmentsPerCoursePerStudent"
+                        onclick="OpencheckAssignmentsPerStudentPerCourse(1)">
+                        <p id="C_TitleID313" class="CoursesData">Course Title:</p>
+                        <p id="C_StreamID313" class="CoursesData">Course Stream:</p>
+                        <p id="C_TypeID313" class="CoursesData">Course Type:</p>
+                        <p id="C_StartDateID313" class="CoursesData">Course Start Date:</p>
+                        <p id="C_EndDateID313" class="CoursesData">Course End Date:</p>
+                    </div>
+                    <div id="checkAssignmentsPerCoursePerStudentSpace1" class="checkAssignmentsPerCoursePerStudentSpace">
+                        <div id="checkAssignmentPerCoursePerStudentSA1" class="checkAssignmentPerCoursePerStudentSA" 
+                            onclick="OpencheckAssignmentsPerStudentPerCourseSA(1)">
+                            <p id="S_FirstNameID113" class="StudentsData">First Name:</p>
+                            <p id="S_LastNameID113" class="StudentsData">Last Name:</p>
+                            <p id="S_DateOfBirthID113" class="StudentsData">Date of Birth:</p>
+                            <p id="S_FeesID113" class="StudentsData">Fees:</p>
+                        </div>
+                        <div id="checkAssignmentsPerCoursePerStudentSpaceSA1" class="checkAssignmentsPerCoursePerStudentSpaceSA">
+                            <div id="checkAssignmentPerCourseperStudent1" class="checkAssignmentPerCourseperStudent">
+                                <p id="A_TitleID1133" class="AssignmentData">Title:</p>
+                                <p id="A_DescreptionID1133" class="AssignmentData">Descreption:</p>
+                                <p id="A_SubDateID1133" class="AssignmentData">Deadline:</p>
+                            </div>
+                            <div id="checkAssignmentPerCourseperStudent2" class="checkAssignmentPerCourseperStudent">
+                                <p id="A_TitleID1144" class="AssignmentData">Title:</p>
+                                <p id="A_DescreptionID1144" class="AssignmentData">Descreption:</p>
+                                <p id="A_SubDateID1144" class="AssignmentData">Deadline:</p>
+                            </div>
+                            <div id="checkAssignmentPerCourseperStudent3" class="checkAssignmentPerCourseperStudent">
+                                <p id="A_TitleID1155" class="AssignmentData">Title:</p>
+                                <p id="A_DescreptionID1155" class="AssignmentData">Descreption:</p>
+                                <p id="A_SubDateID1155" class="AssignmentData">Deadline:</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
         </div>
-        <div class="maskSection" id="maskSectionF" onclick="POPUP_checkAssignmentsPerStudentPerCourse_QuitSection()">
-        </div>
+        <div class="maskSection" id="maskSectionF" onclick="POPUP_checkAssignmentsPerStudentPerCourse_QuitSection()"></div>
     </section>
 
     <!-- Footer Section -->
