@@ -102,16 +102,22 @@
                     <label for="T_firstName" class="label_TFirstName">
                         <span class="contentName">First Name</span>
                     </label>
+                    <div id="TrainerFirstNameRules1">First Name must be more than 3 digits.</div>
+                    <div id="TrainerFirstNameRules2">First Name must start with a capital letter.</div>
                     <!-- Trainer Last Name -->
                     <input type="text" name="T_lastName" required autocomplete="off" id="inputTLastName" />
                     <label for="T_lastName" class="label_TLastName">
                         <span class="contentName">Last Name</span>
                     </label>
+                    <div id="TrainerLastNameRules1">Last Name must be more than 3 digits.</div>
+                    <div id="TrainerLastNameRules2">Last Name must start with a capital letter.</div>
                     <!-- Trainer Subject -->
                     <input type="text" name="trainerSubject" required autocomplete="off" id="inputTSubject" />
                     <label for="trainerSubject" class="labelSubject">
                         <span class="contentName">Subject</span>
                     </label>
+                    <div id="TrainerSubjectRules1">Subject must be more than 3 digits.</div>
+                    <div id="TrainerSubjectRules2">Subject must start with a capital letter.</div>
                     <input type="submit" class="submitCourse" value="Add new Trainer" onclick="CreateTrainer()" />
                 </form>
             </div>

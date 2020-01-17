@@ -1,9 +1,7 @@
 /* Home Page and general values Starts */
 
 // A function to save an create new divs when something is enrolled somewhere (not needed in this version)
-function saveContent(num) {
-  
-}
+function saveContent(num) {}
 
 // This function will clear the dropable space based uppon the html page it was called (it will clear everything form evrywhere)
 function clearContent(num) {
@@ -40,16 +38,19 @@ function clearContent(num) {
       var x = document.getElementsByClassName("checkAssignmentDragable")[i];
       y.appendChild(x);
     }
-  }
-  else if (num === 4) {
+  } else if (num === 4) {
     var y = document.getElementById("checkAssignmentToStudentDragableSpace1");
 
     for (
       var i = 0;
-      i < document.getElementsByClassName("checkAssignmentToStudentDrugable").length;
+      i <
+      document.getElementsByClassName("checkAssignmentToStudentDrugable")
+        .length;
       i++
     ) {
-      var x = document.getElementsByClassName("checkAssignmentToStudentDrugable")[i];
+      var x = document.getElementsByClassName(
+        "checkAssignmentToStudentDrugable"
+      )[i];
       y.appendChild(x);
     }
   }
@@ -63,7 +64,7 @@ function onloadDisplayData(num) {
   }
   // Num 2 is Trainer
   else if (num === 2) {
-    CheckTrainersData();    
+    CheckTrainersData();
   }
   // Num 3 is Assignment
   else if (num === 3) {
@@ -85,32 +86,90 @@ function addCourses() {
   document.getElementById("maskSectionA").style.display = "block";
 }
 
-// Checks for adding courses 
-  
+// Checks for adding courses
 
-  $(document).ready(function(){
+$(document).ready(function() {
+  $("#ipnutTitle").keypress(function() {
+    // Input for Course Title Checks
+    var title = document.getElementById("ipnutTitle").value;
 
-    $("#ipnutTitle").keypress(function() {
-      var title = document.getElementById("ipnutTitle").value;
+    if (title.length < 3) {
+      $("#CourseTitleRules1").css("display", "block");
 
-      if(title.length <= 2) {
-        $("#contentRules").css("display", "block");
+      if (!/^[A-Z]/.test(title.charAt(0))) {
+        $("#CourseTitleRules1").css("display", "none");
       }
-      else {
-        $("#contentRules").css("display", "none");
-      }
-    })
-    
+    } else {
+      $("#CourseTitleRules1").css("display", "none");
+    }
   });
 
+  $("#ipnutTitle").keypress(function() {
+    var title = document.getElementById("ipnutTitle").value;
 
+    if (/^[A-Z]/.test(title.charAt(0))) {
+      $("#CourseTitleRules2").css("display", "none");
+    } else {
+      $("#CourseTitleRules2").css("display", "block");
+    }
+  });
 
+  // Input for Stream Checks
+  $("#inputStream").keypress(function() {
+    var stream = document.getElementById("inputStream").value;
 
+    if (stream.length < 3) {
+      $("#StreamRules").css("display", "block");
+    } else {
+      $("#StreamRules").css("display", "none");
+    }
+  });
 
-  var stream = document.getElementById("inputStream").value;
-  var type = document.getElementById("inputType").value;
-  var startDate = document.getElementById("inputStartDate").value;
-  var endDate = document.getElementById("inputEndDate").value;
+  // Starting Date Input Checks
+  $("#inputStartDate").mouseleave(function() {
+    var startDate = document.getElementById("inputStartDate").value;
+    var CurrentDate = new Date();
+    var GivenDate = new Date(startDate);
+
+    if (GivenDate < CurrentDate) {
+      $("#StartingDateRules").css("display", "block");
+    } else {
+      $("#StartingDateRules").css("display", "none");
+    }
+  });
+  // Ending Date input Checks
+  $("#inputStartDate").mouseleave(function() {
+    var startDate = document.getElementById("inputEndDate").value;
+    var endingDate = document.getElementById("inputStartDate").value;
+
+    var CurrentDate = new Date();
+    var GivenDateEnd = new Date(endingDate);
+    var GivenDateStart = new Date(startDate);
+
+    if (GivenDateEnd < CurrentDate) {
+      $("#EndingDateRules1").css("display", "block");
+      if (GivenDateEnd < GivenDateStart) {
+        $("#EndingDateRules1").css("display", "none");
+      }
+    } else {
+      $("#EndingDateRules1").css("display", "none");
+    }
+  });
+
+  $("#inputEndDate").mouseleave(function() {
+    var startDate = document.getElementById("inputEndDate").value;
+    var endingDate = document.getElementById("inputStartDate").value;
+
+    var GivenDateEnd = new Date(endingDate);
+    var GivenDateStart = new Date(startDate);
+
+    if (GivenDateEnd > GivenDateStart) {
+      $("#EndingDateRules2").css("display", "block");
+    } else {
+      $("#EndingDateRules2").css("display", "none");
+    }
+  });
+});
 
 // Slide page to check Courses
 function seeCourses() {
@@ -245,6 +304,79 @@ function CheckCoursesData() {
 
 /* Students Page Section Start */
 
+// Checks for adding Students
+
+$(document).ready(function() {
+  $("#inputSFirstName").keypress(function() {
+    // Input for Course Title Checks
+    var S_FirstName = document.getElementById("inputSFirstName").value;
+
+    if (S_FirstName.length < 3) {
+      $("#StudentFirstNameRules1").css("display", "block");
+
+      if (!/^[A-Z]/.test(S_FirstName.charAt(0))) {
+        $("#StudentFirstNameRules1").css("display", "none");
+      }
+    } else {
+      $("#StudentFirstNameRules1").css("display", "none");
+    }
+  });
+
+  $("#inputSFirstName").keypress(function() {
+    var S_FirstName = document.getElementById("inputSFirstName").value;
+
+    if (/^[A-Z]/.test(S_FirstName.charAt(0))) {
+      $("#StudentFirstNameRules2").css("display", "none");
+    } else {
+      $("#StudentFirstNameRules2").css("display", "block");
+    }
+  });
+
+  $("#inputSLastName").keypress(function() {
+    // Input for Course Title Checks
+    var S_FirstName = document.getElementById("inputSLastName").value;
+
+    if (S_FirstName.length < 3) {
+      $("#StudentLastNameRules1").css("display", "block");
+
+      if (!/^[A-Z]/.test(S_FirstName.charAt(0))) {
+        $("#StudentLastNameRules1").css("display", "none");
+      }
+    } else {
+      $("#StudentLastNameRules1").css("display", "none");
+    }
+  });
+
+  $("#inputSLastName").keypress(function() {
+    var S_FirstName = document.getElementById("inputSLastName").value;
+
+    if (/^[A-Z]/.test(S_FirstName.charAt(0))) {
+      $("#StudentLastNameRules2").css("display", "none");
+    } else {
+      $("#StudentLastNameRules2").css("display", "block");
+    }
+  });
+
+  // Ending Date input Checks
+  $("#inputSBirthday").mouseleave (function() {
+    var GivenDateBirth = document.getElementById("inputSBirthday").value;
+    var minBirthDate = '2002-01-01';
+
+    var CurrentDate = new Date();
+    var GivenminBirthDate = new Date(minBirthDate);
+    var GivenDateBirthDate = new Date(GivenDateBirth);
+
+    if (GivenDateBirthDate < CurrentDate) {
+      $("#StudentDateRules1").css("display", "block");
+      if (GivenDateBirthDate < GivenminBirthDate) {
+        $("#StudentDateRules1").css("display", "none");
+      }
+    } else {
+      $("#StudentDateRules1").css("display", "none");
+    }
+  });
+});
+
 // Slide page for Add Student
 function AddStudents() {
   document.getElementById("POPUP_addStudents").style.display = "block";
@@ -377,7 +509,7 @@ function OpencheckCourseDragableSpace(num) {
       saveTheEnrollID6.style.display = "block";
       clearTheEnrollID6.style.display = "block";
     }
-  }  
+  }
 }
 
 // Check Students Per COurse Section
@@ -389,23 +521,23 @@ function CheckStudentsPerCourse() {
 
 // Function to drop down the space with the students enrolled in the courses
 function OpencheckStudentsPerCourse(num) {
-
-  var checkStudentsPerCourseSpace1 = document.getElementById("checkStudentsPerCourseSpace1");
-  var checkStudentsPerCourseSpace2 = document.getElementById("checkStudentsPerCourseSpace2");
+  var checkStudentsPerCourseSpace1 = document.getElementById(
+    "checkStudentsPerCourseSpace1"
+  );
+  var checkStudentsPerCourseSpace2 = document.getElementById(
+    "checkStudentsPerCourseSpace2"
+  );
 
   if (num == 1) {
     if (checkStudentsPerCourseSpace1.style.display == "block") {
       checkStudentsPerCourseSpace1.style.display = "none";
-    }
-    else {
+    } else {
       checkStudentsPerCourseSpace1.style.display = "block";
     }
-  }
-  else if (num == 2) {
+  } else if (num == 2) {
     if (checkStudentsPerCourseSpace2.style.display == "block") {
       checkStudentsPerCourseSpace2.style.display = "none";
-    }
-    else {
+    } else {
       checkStudentsPerCourseSpace2.style.display = "block";
     }
   }
@@ -420,23 +552,23 @@ function CheckStudentsMoreThanOneCourses() {
 }
 
 function OpencheckStudentsMoreThanOne(num) {
-
-  var checkStudentsMoreThanOneSpace1 = document.getElementById("checkStudentsMoreThanOneSpace1");
-  var checkStudentsMoreThanOneSpace2 = document.getElementById("checkStudentsMoreThanOneSpace2");
+  var checkStudentsMoreThanOneSpace1 = document.getElementById(
+    "checkStudentsMoreThanOneSpace1"
+  );
+  var checkStudentsMoreThanOneSpace2 = document.getElementById(
+    "checkStudentsMoreThanOneSpace2"
+  );
 
   if (num == 1) {
     if (checkStudentsMoreThanOneSpace1.style.display == "block") {
       checkStudentsMoreThanOneSpace1.style.display = "none";
-    }
-    else {
+    } else {
       checkStudentsMoreThanOneSpace1.style.display = "block";
     }
-  }
-  else if (num == 2) {
+  } else if (num == 2) {
     if (checkStudentsMoreThanOneSpace2.style.display == "block") {
       checkStudentsMoreThanOneSpace2.style.display = "none";
-    }
-    else {
+    } else {
       checkStudentsMoreThanOneSpace2.style.display = "block";
     }
   }
@@ -480,9 +612,7 @@ function OpenMe() {
 
   if (lola.style.display == "block") {
     lola.style.display = "none";
-
-  }
-  else {
+  } else {
     lola.style.display = "block";
   }
 }
@@ -653,6 +783,86 @@ function CheckStudentData() {
 
 /* Trainers Page Section Start */
 
+// Checks for adding trainers
+
+$(document).ready(function() {
+  $("#inputTFirstName").keypress(function() {
+    // Input for First Name Checks
+    var T_FirstName = document.getElementById("inputTFirstName").value;
+
+    if (T_FirstName.length < 3) {
+      $("#TrainerFirstNameRules1").css("display", "block");
+
+      if (!/^[A-Z]/.test(T_FirstName.charAt(0))) {
+        $("#TrainerFirstNameRules1").css("display", "none");
+      }
+    } else {
+      $("#TrainerFirstNameRules1").css("display", "none");
+    }
+  });
+
+  $("#inputTFirstName").keypress(function() {
+    var S_FirstName = document.getElementById("inputTFirstName").value;
+
+    if (/^[A-Z]/.test(S_FirstName.charAt(0))) {
+      $("#TrainerFirstNameRules2").css("display", "none");
+    } else {
+      $("#TrainerFirstNameRules2").css("display", "block");
+    }
+  });
+
+  $("#inputSLastName").keypress(function() {
+    // Input for Last Name Checks
+    var T_FirstName = document.getElementById("inputSLastName").value;
+
+    if (T_FirstName.length < 3) {
+      $("#TrainerLastNameRules1").css("display", "block");
+
+      if (!/^[A-Z]/.test(T_FirstName.charAt(0))) {
+        $("#TrainerLastNameRules1").css("display", "none");
+      }
+    } else {
+      $("#TrainerLastNameRules1").css("display", "none");
+    }
+  });
+
+  $("#inputTLastName").keypress(function() {
+    var S_FirstName = document.getElementById("inputTLastName").value;
+
+    if (/^[A-Z]/.test(S_FirstName.charAt(0))) {
+      $("#TrainerLastNameRules2").css("display", "none");
+    } else {
+      $("#TrainerLastNameRules2").css("display", "block");
+    }
+  });
+
+  $("#inputTSubject").keypress(function() {
+    // Input for Last Name Checks
+    var Subject  = document.getElementById("inputTSubject").value;
+
+    if (Subject.length < 3) {
+      $("#TrainerSubjectRules1").css("display", "block");
+
+      if (!/^[A-Z]/.test(Subject.charAt(0))) {
+        $("#TrainerSubjectRules1").css("display", "none");
+      }
+    } else {
+      $("#TrainerSubjectRules1").css("display", "none");
+    }
+  });
+
+  $("#inputTSubject").keypress(function() {
+    var Subject = document.getElementById("inputTSubject").value;
+
+    if (/^[A-Z]/.test(Subject.charAt(0))) {
+      $("#TrainerSubjectRules2").css("display", "none");
+    } else {
+      $("#TrainerSubjectRules2").css("display", "block");
+    }
+  });
+
+});
+
 // Slide for Add Trainer
 function AddTrainer() {
   document.getElementById("POPUP_addTrainers").style.display = "block";
@@ -797,23 +1007,23 @@ function CheckTrainersPerCourse() {
 
 // function for drop down section with the trainers insances
 function OpencheckTrainersPerCourse(num) {
-
-  var checkTrainersPerCourseSpace1 = document.getElementById("checkTrainersPerCourseSpace1");
-  var checkTrainersPerCourseSpace2 = document.getElementById("checkTrainersPerCourseSpace2");
+  var checkTrainersPerCourseSpace1 = document.getElementById(
+    "checkTrainersPerCourseSpace1"
+  );
+  var checkTrainersPerCourseSpace2 = document.getElementById(
+    "checkTrainersPerCourseSpace2"
+  );
 
   if (num == 1) {
     if (checkTrainersPerCourseSpace1.style.display == "block") {
       checkTrainersPerCourseSpace1.style.display = "none";
-    }
-    else {
+    } else {
       checkTrainersPerCourseSpace1.style.display = "block";
     }
-  }
-  else if (num == 2) {
+  } else if (num == 2) {
     if (checkTrainersPerCourseSpace2.style.display == "block") {
       checkTrainersPerCourseSpace2.style.display = "none";
-    }
-    else {
+    } else {
       checkTrainersPerCourseSpace2.style.display = "block";
     }
   }
@@ -945,7 +1155,6 @@ function CheckTrainersData() {
     C_EndDate: "26/4/2020"
   };
 
-
   var title1 = document.getElementById("C_TitleID21");
   var stream1 = document.getElementById("C_StreamID21");
   var type1 = document.getElementById("C_TypeID21");
@@ -979,7 +1188,6 @@ function CheckTrainersData() {
   tfn2.innerHTML = "First Name: " + trainer.T_FirstName;
   tln2.innerHTML = "Last Name: " + trainer.T_LastName;
   tsub2.innerHTML = "Subject: " + trainer.T_Subject;
-
 }
 
 /* Trainers Page Section Ends */
@@ -1129,23 +1337,23 @@ function CheckAssignmnetPerCourse() {
 
 // Function to drop down the space with the students enrolled in the courses
 function OpencheckAssignmentsPerCourse(num) {
-
-  var checkAssignmnetsPerCourseSpace1 = document.getElementById("checkAssignmentsPerCourseSpace1");
-  var checkAssignmnetsPerCourseSpace2 = document.getElementById("checkAssignmentsPerCourseSpace2");
+  var checkAssignmnetsPerCourseSpace1 = document.getElementById(
+    "checkAssignmentsPerCourseSpace1"
+  );
+  var checkAssignmnetsPerCourseSpace2 = document.getElementById(
+    "checkAssignmentsPerCourseSpace2"
+  );
 
   if (num == 1) {
     if (checkAssignmnetsPerCourseSpace1.style.display == "block") {
       checkAssignmnetsPerCourseSpace1.style.display = "none";
-    }
-    else {
+    } else {
       checkAssignmnetsPerCourseSpace1.style.display = "block";
     }
-  }
-  else if (num == 2) {
+  } else if (num == 2) {
     if (checkAssignmnetsPerCourseSpace2.style.display == "block") {
       checkAssignmnetsPerCourseSpace2.style.display = "none";
-    }
-    else {
+    } else {
       checkAssignmnetsPerCourseSpace2.style.display = "block";
     }
   }
@@ -1324,14 +1532,14 @@ function POPUP_checkAssignmentsPerStudentPerCourse_QuitSection() {
 
 // Function to drop down the space within the Courses to check Students with the assignments
 function OpencheckAssignmentsPerStudentPerCourse(num) {
-
-  var checkAssignmentsPerCoursePerStudentSpace1 = document.getElementById("checkAssignmentsPerCoursePerStudentSpace1");
+  var checkAssignmentsPerCoursePerStudentSpace1 = document.getElementById(
+    "checkAssignmentsPerCoursePerStudentSpace1"
+  );
 
   if (num == 1) {
     if (checkAssignmentsPerCoursePerStudentSpace1.style.display == "block") {
       checkAssignmentsPerCoursePerStudentSpace1.style.display = "none";
-    }
-    else {
+    } else {
       checkAssignmentsPerCoursePerStudentSpace1.style.display = "block";
     }
   }
@@ -1339,14 +1547,14 @@ function OpencheckAssignmentsPerStudentPerCourse(num) {
 
 // Function to drop down the space within the Courses to check Students with the assignments
 function OpencheckAssignmentsPerStudentPerCourseSA(num) {
-
-  var checkAssignmentsPerCoursePerStudentSpaceSA1 = document.getElementById("checkAssignmentsPerCoursePerStudentSpaceSA1");
+  var checkAssignmentsPerCoursePerStudentSpaceSA1 = document.getElementById(
+    "checkAssignmentsPerCoursePerStudentSpaceSA1"
+  );
 
   if (num == 1) {
     if (checkAssignmentsPerCoursePerStudentSpaceSA1.style.display == "block") {
       checkAssignmentsPerCoursePerStudentSpaceSA1.style.display = "none";
-    }
-    else {
+    } else {
       checkAssignmentsPerCoursePerStudentSpaceSA1.style.display = "block";
     }
   }
@@ -1531,8 +1739,6 @@ function CheckAssignmentsData() {
   at1234.innerHTML = "Title: " + assignment.A_Title;
   adesc1234.innerHTML = "Descreption: " + assignment.A_Descreption;
   asubd1234.innerHTML = "Deadline: " + assignment.A_SubDateTime;
-
 }
-
 
 /* Assignments Page Section Ends */

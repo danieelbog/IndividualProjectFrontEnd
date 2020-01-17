@@ -878,6 +878,55 @@ div i:hover {
   transform: translateY(0%);
 }
 
+/* Courses Check Rules for input section */
+#CourseTitleRules1 {
+  position: absolute;
+  top: 4.5em;
+  color: #ff4757;
+  animation: slideFromRight 1s;
+  display: none;
+}
+
+#CourseTitleRules2 {
+  position: absolute;
+  top: 4.5em;
+  color: #ff4757;
+  animation: slideFromRight 1s;
+  display: none;
+}
+
+#StreamRules {
+  position: absolute;
+  top: 10.5em;
+  color: #ff4757;
+  animation: slideFromRight 1s;
+  display: none;
+}
+
+#StartingDateRules {
+  position: absolute;
+  top: 22.3em;
+  color: #ff4757;
+  animation: slideFromRight 1s;
+  display: none;
+}
+
+#EndingDateRules1 {
+  position: absolute;
+  top: 28.3em;
+  color: #ff4757;
+  animation: slideFromRight 1s;
+  display: none;
+}
+
+#EndingDateRules2 {
+  position: absolute;
+  top: 28.3em;
+  color: #ff4757;
+  animation: slideFromRight 1s;
+  display: none;
+}
+
 /* Courses Page Section Ends */
 
 /* Students Page Section Start */
@@ -2360,6 +2409,48 @@ div i:hover {
   transform: translateY(0%);
 }
 
+/* Students Check Rules for input section */
+#StudentFirstNameRules1 {
+  position: absolute;
+  top: 4.5em;
+  color: #ff4757;
+  animation: slideFromRight 1s;
+  display: none;
+}
+
+#StudentFirstNameRules2 {
+  position: absolute;
+  top: 4.5em;
+  color: #ff4757;
+  animation: slideFromRight 1s;
+  display: none;
+}
+
+#StudentLastNameRules1 {
+  position: absolute;
+  top: 10.5em;
+  color: #ff4757;
+  animation: slideFromRight 1s;
+  display: none;
+}
+
+#StudentLastNameRules2 {
+  position: absolute;
+  top: 10.5em;
+  color: #ff4757;
+  animation: slideFromRight 1s;
+  display: none;
+}
+
+#StudentDateRules1 {
+  position: absolute;
+  top: 16.5em;
+  color: #ff4757;
+  animation: slideFromRight 1s;
+  display: none;
+}
+
+
 /* Students Page Section Ends */
 
 /* Trainers Page Section Start */
@@ -3559,6 +3650,56 @@ div i:hover {
 .courseForm input:valid + .labelSubject .contentName::after {
   transform: translateY(0%);
 }
+
+/* Students Check Rules for input section */
+#TrainerFirstNameRules1 {
+  position: absolute;
+  top: 4.5em;
+  color: #ff4757;
+  animation: slideFromRight 1s;
+  display: none;
+}
+
+#TrainerFirstNameRules2 {
+  position: absolute;
+  top: 4.5em;
+  color: #ff4757;
+  animation: slideFromRight 1s;
+  display: none;
+}
+
+#TrainerLastNameRules1 {
+  position: absolute;
+  top: 10.5em;
+  color: #ff4757;
+  animation: slideFromRight 1s;
+  display: none;
+}
+
+#TrainerLastNameRules2 {
+  position: absolute;
+  top: 10.5em;
+  color: #ff4757;
+  animation: slideFromRight 1s;
+  display: none;
+}
+
+#TrainerSubjectRules1 {
+  position: absolute;
+  top: 16.5em;
+  color: #ff4757;
+  animation: slideFromRight 1s;
+  display: none;
+}
+
+#TrainerSubjectRules2 {
+  position: absolute;
+  top: 16.5em;
+  color: #ff4757;
+  animation: slideFromRight 1s;
+  display: none;
+}
+
 
 /* Trainers Page Section Ends */
 

@@ -85,11 +85,14 @@
                     <label for="CourseTitle" class="labelTitle">
                         <span class="contentName">Course Title</span>
                     </label>
+                    <div id="CourseTitleRules1">The title must be more than 3 digits.</div>
+                    <div id="CourseTitleRules2">The title must start with a capital letter.</div>
                     <!-- Course Stream -->
                     <input type="text" name="courseStream" required autocomplete="off" id="inputStream"/>
                     <label for="courseStream" class="labelStream">
                         <span class="contentName">Course Stream</span>
                     </label>
+                    <div id="StreamRules">The Stream must be more than 3 digits</div>
                     <!-- Course Type -->
                     <input type="text" name="courseType" required autocomplete="off" id="inputType"/>
                     <label for="courseType" class="labelType">
@@ -100,11 +103,14 @@
                     <label for="startingDate" class="labelStartDate">
                         <span class="contentName">Starting Date</span>
                     </label>
+                    <div id="StartingDateRules">The Course must start today or later</div>
                     <!-- Course Ending Date -->
                     <input type="date" name="endingDate" required autocomplete="off" id="inputEndDate"/>
                     <label for="endingDate" class="labelEndDate">
                         <span class="contentName">Ending Date</span>
                     </label>
+                    <div id="EndingDateRules1">The Course must end today or later</div>
+                    <div id="EndingDateRules2">The Course must end after it the starting date</div>
                     <input type="submit" class="submitCourse" value="Submit New Course" onclick="CreateCourse()"/>
                 </form>
             </div>
